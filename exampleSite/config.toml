@@ -1,0 +1,24 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Hugo Serif"
+theme = "hugo-serif-theme"
+
+[[menu.main]]
+	name = "Services"
+	url = "/services/"
+    weight = 1
+
+[[menu.main]]
+    name = "Team"
+    url = "/team/"
+    weight = 2
+
+[[menu.main]]
+	name = "Testimonials"
+	url = "/testimonials/"
+	weight = 3
+
+[[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 4

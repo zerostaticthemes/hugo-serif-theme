@@ -1,0 +1,23 @@
+{{ define "header_css" }}{{ end }}
+{{ define "body_classes" }}{{ end }}
+{{ define "header_classes" }}{{ end }}
+
+{{ define "main" }}
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-9">
+      <h1>{{.Title}}</h1>
+      {{ dateFormat "Monday, Jan 2, 2006" .Date }}
+      {{if .Params.author}}Author: {{.Params.Author}}{{end}}
+      <div class="content">
+      {{.Content}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="template-name">_default/single.html</div>
+
+{{ end }}
+

@@ -1,0 +1,7 @@
+<div class="summary">
+{{ if .Params.image }}
+    <img alt="{{ .Title }}" src="{{ .Params.image }}"/>
+{{ end}}
+    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    {{ .Content | truncate 100 }}
+</div>

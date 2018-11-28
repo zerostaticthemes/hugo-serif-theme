@@ -1,0 +1,15 @@
+.hero-image.hero-image-fixed {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-color: #FFFFFF;
+  height: 400px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    color: #FFF;
+    font-size: 48px;
+  }
+}

@@ -1,0 +1,20 @@
+.hero-image.hero-image-fullscreen {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-color: #FFFFFF;
+  height: 100vh;
+  position: relative;
+  &.hero-text-left {
+    text-align: left;
+  }
+  &.hero-text-center {
+    text-align: center;
+  }
+  .container {
+    height: 100%;
+  }
+  .row {
+    height: inherit;
+  }
+}

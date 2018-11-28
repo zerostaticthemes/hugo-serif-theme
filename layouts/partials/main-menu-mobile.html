@@ -1,0 +1,23 @@
+<div id="main-menu-mobile" class="main-menu-mobile">
+    <ul>
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+        {{ if .HasChildren }}
+          <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
+            <span>{{ .Pre }}{{ .Name }}</span>
+            <ul class="sub-menu">
+              {{ range .Children }}
+                <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                  <a href="{{ .URL }}">{{ .Name }}</a>
+              {{ end }}
+            </ul>
+        {{else}}
+          <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+            <a href="{{.URL}}">
+              {{ .Pre }}
+              <span>{{ .Name }}</span>
+            </a>
+        {{end}}
+      {{end}}
+    </ul>
+</div>

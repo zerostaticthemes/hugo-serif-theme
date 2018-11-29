@@ -1,31 +1,13 @@
-<!-- sidebar start -->
 <div id="main-menu" class="main-menu">
   <ul>
     {{ $currentPage := . }}
     {{ range .Site.Menus.main }}
-
-    <!--{{ printf "%#v" ($currentPage.IsMenuCurrent "main" .) }}-->
-    <!--{{ printf "%#v" ($currentPage.HasMenuCurrent "main" .) }}-->
-
-    {{ if .HasChildren }}
-    <li class="menu-item-{{ .Name | lower }}{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{ end }}">
-      <a href="{{ .URL }}">
-        {{ .Pre }}
-        <span>{{ .Name }}</span>
-      </a>
-      <ul class="sub-menu">
-        {{ range .Children }}
-        <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
-          <a href="{{ .URL }}">{{ .Name }}</a>
-          {{ end }}
-      </ul>
-      {{else}}
     <li class="menu-item-{{ .Name | lower }}{{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}">
       <a href="{{.URL}}">
         {{ .Pre }}
         <span>{{ .Name }}</span>
       </a>
-      {{end}}
-      {{end}}
+    </li>
+    {{end}}
   </ul>
 </div>

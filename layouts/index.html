@@ -11,7 +11,7 @@
   </div>
 </div>
 
-<div class="container pt-3">
+<div class="container pt-2">
   <div class="call">
     <div class="call-box-top">
       <div class="call-phone"><strong>Phone: </strong> {{ .Site.Data.contact.phone }} </div>
@@ -29,10 +29,10 @@
 
 {{ $services := where (where .Site.RegularPages "Type" "services") ".Params.featured" true }}
 {{if gt (len $services) 0}}
-<section class="container">
-  <div class="row pt-8 pb-8 pt-md-15 pb-md-15 justify-content-start">
+<div class="container pt-8 pt-md-10">
+  <div class="row justify-content-start">
     <div class="col-12">
-      <h2 class="title-3 text-dark mb-4">Our Services</h2>
+      <h2 class="title-3 text-dark mb-3">Our Services</h2>
     </div>
     {{ $services := where (where .Site.RegularPages "Type" "services") ".Params.featured" true }}
     {{ range first 6 (sort $services ".Params.weight") }}
@@ -44,11 +44,11 @@
       <a class="button button-primary" href="/services">View All Services</a>
     </div>
   </div>
-</section>
+</div>
 {{end}}
 
-<div class="container">
-  <div class="row pt-5 pb-5 pt-md-9 pb-md-9 justify-content-center">
+<div class="container pt-5 pb-5 pt-md-7 pb-md-7">
+  <div class="row justify-content-center">
     <div class="col-12">
       <h2 class="title-3 text-dark mb-4">Our Features</h2>
     </div>

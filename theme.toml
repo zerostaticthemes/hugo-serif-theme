@@ -4,9 +4,9 @@
 name = "hugo-serif-theme"
 description = "Serif is a beautiful small business theme for Hugo. It contains content types for the archetypical small business website. The theme is fully responsive, blazing fast and artfully illustrated."
 homepage = "https://github.com/jugglerx/hugo-serif-theme"
-tags = ["serif","minimal","business","company"]
+tags = ["responsive","minimal","business","bootstrap"]
 features = ["services","team","testimonials"]
-min_version = 0.51
+min_version = 0.44
 
 [author]
   name = "Robert Austin"

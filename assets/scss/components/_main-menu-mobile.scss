@@ -1,7 +1,6 @@
-
 $color-main: $primary;
-$color-active: #FFF;
-$color-link: #FFF;
+$color-active: #fff;
+$color-link: #fff;
 
 $button-height: 27px;
 $button-width: 35px;
@@ -14,12 +13,12 @@ $button-width: 35px;
   width: $button-width;
   cursor: pointer;
   z-index: 100;
-  transition: opacity .25s ease;
-  
+  transition: opacity 0.25s ease;
+
   &:hover {
-    opacity: .7;
+    opacity: 0.7;
   }
-  
+
   &.active {
     .top {
       transform: translateY(11px) translateX(0) rotate(45deg);
@@ -29,28 +28,28 @@ $button-width: 35px;
       opacity: 0;
       background: $color-active;
     }
-    
+
     .bottom {
       transform: translateY(-11px) translateX(0) rotate(-45deg);
       background: $color-active;
     }
   }
-  
+
   span {
-  background: $color-main;
-  border: none;
-  height: 5px;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition:  all .35s ease;
-  cursor: pointer;
-    
+    background: $color-main;
+    border: none;
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.35s ease;
+    cursor: pointer;
+
     &:nth-of-type(2) {
       top: 11px;
     }
-    
+
     &:nth-of-type(3) {
       top: 22px;
     }
@@ -66,34 +65,34 @@ $button-width: 35px;
   height: 100vh;
   opacity: 0;
   visibility: hidden;
-  transition: opacity .35s, visibility .35s, height .35s;
+  transition: opacity 0.35s, visibility 0.35s, height 0.35s;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   &.open {
-    opacity: .9;
+    opacity: 0.9;
     visibility: visible;
     height: 100%;
     z-index: 10;
     li {
-      animation: fadeInRight .5s ease forwards;
-      animation-delay: .35s;
+      animation: fadeInRight 0.5s ease forwards;
+      animation-delay: 0.35s;
       &:nth-of-type(2) {
-        animation-delay: .4s;
+        animation-delay: 0.4s;
       }
       &:nth-of-type(3) {
-        animation-delay: .45s;
+        animation-delay: 0.45s;
       }
       &:nth-of-type(4) {
-        animation-delay: .50s;
+        animation-delay: 0.5s;
       }
       &:nth-of-type(5) {
-        animation-delay: .55s;
+        animation-delay: 0.55s;
       }
       &:nth-of-type(6) {
-        animation-delay: .60s;
+        animation-delay: 0.6s;
       }
     }
   }
@@ -116,11 +115,11 @@ $button-width: 35px;
         text-decoration: none;
         overflow: hidden;
         &:hover:after,
-         &:focus:after,
-         &:active:after {
-           width: 100%;
-         }
-        
+        &:focus:after,
+        &:active:after {
+          width: 100%;
+        }
+
         &:after {
           content: '';
           position: absolute;
@@ -130,7 +129,7 @@ $button-width: 35px;
           transform: translateX(-50%);
           height: 3px;
           background: $color-link;
-          transition: .35s;
+          transition: 0.35s;
         }
       }
     }

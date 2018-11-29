@@ -16,8 +16,8 @@
 
 $grid-gutter-width: 20px;
 
-$white: #fff;
-$black: #000;
+$white: #ffffff;
+$black: #000000;
 $primary: #1c3ed3;
 $secondary: #414156;
 
@@ -28,9 +28,9 @@ $link-hover-color: lighten($primary, 20%);
 $link-hover-decoration: underline;
 
 // Fonts
-$font-family-base: "Open Sans", "Helvetica Neue", Arial, sans-serif,
+$font-family-base: 'Open Sans', 'Helvetica Neue', Arial, sans-serif,
   -apple-system;
-$font-family-heading: "Lora", "Helvetica Neue", Arial, sans-serif, -apple-system;
+$font-family-heading: 'Lora', 'Helvetica Neue', Arial, sans-serif, -apple-system;
 $font-size-base: 1rem; // Assumes the browser default, typically `16px`
 $font-weight-thin: 200;
 $font-weight-light: 300;
@@ -65,7 +65,7 @@ $spacers: map-merge(
     17: 170px,
     18: 180px,
     19: 190px,
-    20: 200px
+    20: 200px,
   ),
   $spacers
 );

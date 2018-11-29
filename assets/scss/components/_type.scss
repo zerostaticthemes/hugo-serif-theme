@@ -1,6 +1,5 @@
-
-
-ul, ol {
+ul,
+ol {
   color: rgb(78, 78, 78);
   margin: 0;
   padding: 0;
@@ -67,7 +66,8 @@ h3 {
 
 // Body copy only
 article {
-  ul, ol {
+  ul,
+  ol {
     color: $primary;
     font-weight: $font-weight-light;
     letter-spacing: 0.79px;

@@ -1,6 +1,7 @@
 // Type Styling for body content
 .content {
-  ul, ol {
+  ul,
+  ol {
     margin-top: 10px;
     margin-bottom: 20px;
     li {
@@ -11,33 +12,29 @@
   a {
     text-decoration: underline;
   }
- 
   p {
     color: rgb(78, 78, 78);
     font-family: $font-family-base;
   }
-  
   h1 {
     font-family: $font-family-heading;
     line-height: 1.2;
     font-weight: $font-weight-light;
-    color: #333;
+    color: #333333;
     @include media-breakpoint-up(md) {
       line-height: 1.2;
       font-weight: $font-weight-light;
     }
   }
-  
   h2 {
     font-family: $font-family-heading;
     line-height: 1.4;
     font-weight: 400;
-    color: #333;
+    color: #333333;
     @include media-breakpoint-up(md) {
       line-height: 1.4;
     }
   }
-  
   // Subheading
   h3 {
     color: $primary;

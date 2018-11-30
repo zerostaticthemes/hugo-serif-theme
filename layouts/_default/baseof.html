@@ -6,15 +6,14 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>{{ block "title" . }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/favicon.png">
+  <link rel="icon" href="{{ .Site.BaseURL }}favicon.png">
 
-  {{ $styles := resources.Get "scss/style.scss" | toCSS (dict "targetPath" "css/style.css" "enableSourceMap" true) }}
-
-  {{ if .Site.IsServer }}
-  <link rel="stylesheet" href="{{ $styles.Permalink }}">
-  {{ else }}
-  <link rel="stylesheet" href="{{ ($styles | minify | fingerprint).Permalink }}">
-  {{ end }}
+  <!-- CSS -->
+  {{- $inServerMode := .Site.IsServer }}
+  {{- $cssTarget := "css/style.css" }}
+  {{- $cssOptions := cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true) (dict "targetPath" $cssTarget "outputStyle" "compressed") }}
+  {{- $style := resources.Get "scss/style.scss" | toCSS $cssOptions }}
+  <link rel="stylesheet" href="{{ ($style | minify | fingerprint).RelPermalink }}">
 
   {{ block "header_css" . }}{{ end }}
 
@@ -35,9 +34,9 @@
     {{ end }}
 
     {{ if .Site.IsServer }}
-    <script type="text/javascript" src="{{ $scripts.Permalink }}"></script>
+    <script type="text/javascript" src="{{ $scripts.RelPermalink }}"></script>
     {{ else }}
-    <script type="text/javascript" src="{{ ($scripts | minify | fingerprint).Permalink }}"></script>
+    <script type="text/javascript" src="{{ ($scripts | minify | fingerprint).RelPermalink }}"></script>
     {{ end }}
 
   </div>
@@ -56,7 +55,5 @@
     gtag('config', 'UA-129779774-1');
   </script>
 
-
 </body>
-
 </html>

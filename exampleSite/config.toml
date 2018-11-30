@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "www.example.com"
 languageCode = "en-us"
 title = "Hugo Serif"
 theme = "hugo-serif-theme"

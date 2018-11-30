@@ -3,7 +3,7 @@
 {{ define "header_classes" }}{{ end }}
 
 {{ define "main" }}
-<div class="intro">
+<div class="intro intro-small">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -20,7 +20,9 @@
         <li><strong>Phone: </strong>{{ .Site.Data.contact.phone }}</li>
         <li><strong>Email: </strong><a href="mailto:{{ .Site.Data.contact.email }}">
             {{ .Site.Data.contact.email }}</a></li>
+        {{ if .Site.Data.contact.address }}
         <li><strong>Address: </strong>{{ .Site.Data.contact.address }}</li>
+        {{ end }}
       </ul>
       <h4 class="mt-4">Business Hours</h4>
       <table class="table table-sm opening-hours-table">

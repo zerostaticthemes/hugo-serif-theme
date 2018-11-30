@@ -4,6 +4,7 @@ date: {{ .Date }}
 image: "/services/default.png"
 featured: true
 draft: false
+weight: 100
 ---
 
 Lorem markdownum aequalis strigis. Saetigeri iubeas, vultu huic alvum nondum

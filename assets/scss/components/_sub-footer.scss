@@ -5,6 +5,8 @@
   padding-bottom: 10px;
 }
 .sub-footer {
+  display: flex;
+  justify-content: space-between;
   ul {
     list-style: none;
     margin: 0;

@@ -2,7 +2,7 @@
 
 Serif is a beautiful small business theme for Hugo. It contains content types for the archetypical small business website. The theme is fully responsive, blazing fast and artfully illustrated.
 
-![Hugo Serif Theme screenshot](/images/screenshot-with-border.png)
+[Live Demo](https://hugo-serif.netlify.com/)
 
 ## Theme features
 

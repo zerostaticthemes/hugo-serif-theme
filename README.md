@@ -36,6 +36,14 @@ After installing the Serif theme successfully it requires a just a few more step
 
 The fastest way to get started is to copy the example content. Copy the contents of the `exampleSite` folder to the root folder of your Hugo site. This theme comes with content for the following content types: `services`, `team`, `testimonials` and includes JSON data for `features` and `contact`. It also includes the `config.toml` file which has an example menu.
 
+### Edit config
+
+After you copy the `config.toml` into the root folder of your Hugo site you will need to update the `baseURL`
+
+```
+baseURL = "/"
+```
+
 ## Running Hugo
 
 After installing the theme, generate the Hugo site.

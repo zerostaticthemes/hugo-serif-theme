@@ -22,38 +22,26 @@
 <body class='page {{ block "body_classes" . }}{{ end }}'>
   {{ partial "main-menu-mobile.html" . }}
   <div id="wrapper" class="wrapper">
-
     {{ partial "header.html" . }}
-
     {{ block "main" . }}
     {{ end }}
-
-    {{ $scripts := resources.Get "js/scripts.js" }}
-
-    {{ block "footer_js" . }}
-    {{ end }}
-
-    {{ if .Site.IsServer }}
-    <script type="text/javascript" src="{{ $scripts.RelPermalink }}"></script>
-    {{ else }}
-    <script type="text/javascript" src="{{ ($scripts | minify | fingerprint).RelPermalink }}"></script>
-    {{ end }}
-
   </div>
+
   {{ partial "footer.html" . }}
   {{ partial "sub-footer.html" . }}
-  {{ block "modal" . }}
+
+  {{ $scripts := resources.Get "js/scripts.js" }}
+
+  {{ block "footer_js" . }}
   {{ end }}
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129779774-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+  {{ if .Site.IsServer }}
+  <script type="text/javascript" src="{{ $scripts.RelPermalink }}"></script>
+  {{ else }}
+  <script type="text/javascript" src="{{ ($scripts | minify | fingerprint).RelPermalink }}"></script>
+  {{ end }}
 
-    gtag('config', 'UA-129779774-1');
-  </script>
+  {{ partial "google-analytics.html" }}
 
 </body>
 </html>

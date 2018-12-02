@@ -4,6 +4,8 @@ Serif is a beautiful small business theme for Hugo. It contains content types fo
 
 [Live Demo](https://hugo-serif.netlify.com/)
 
+![Hugo Serif Theme screenshot](https://github.com/JugglerX/hugo-serif-theme/blob/master/images/screenshot-with-border.png)
+
 ## Theme features
 
 - Services (Content Type)

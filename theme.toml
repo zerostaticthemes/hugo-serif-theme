@@ -3,7 +3,7 @@ license = "MIT"
 licenselink = "https://github.com/JugglerX/hugo-serif-theme/blob/master/LICENSE"
 description = "Serif is a beautiful small business theme for Hugo. It contains content types for the archetypical small business website. The theme is fully responsive, blazing fast and artfully illustrated."
 homepage = "https://github.com/jugglerx/hugo-serif-theme"
-tags = ["responsive","minimal","business","company","bootstrap"]
+tags = ["responsive","minimal","business","company","bootstrap","clean"]
 features = ["services","team","testimonials"]
 min_version = 0.51
 

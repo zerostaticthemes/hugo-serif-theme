@@ -3,6 +3,6 @@
     <h2 class="service-title">
       <a href="{{ .Permalink }}">{{ .Title }}</a>
     </h2>
-    {{ .Content | truncate 120 "..." }}
+    <p>{{ .Content | truncate 120 "..." | plainify }}</p>
   </div>
 </div>

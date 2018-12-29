@@ -1,17 +1,17 @@
-.footer-strip {
+.footer {
   background: $secondary;
   padding-top: 20px;
   padding-bottom: 20px;
-}
-.footer {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  align-items: flex-start;
-  @include media-breakpoint-up(sm) {
+  .footer-inner {
+    display: flex;
     justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    @include media-breakpoint-up(sm) {
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+    }
   }
   .footer-title {
     color: #ffffff;
@@ -21,6 +21,7 @@
     flex: 0;
     @include media-breakpoint-up(sm) {
       margin: 0;
+      flex: 0 0 120px;
     }
   }
   ul {
@@ -31,13 +32,12 @@
     li {
       display: block;
       margin-right: 10px;
-      font-size: 0.8rem;
-      color: #ffffff;
+      color: lighten($secondary, 60%);
       &:last-of-type {
         margin-right: 0;
       }
       a {
-        color: #ffffff;
+        color: lighten($secondary, 60%);
         text-decoration: none;
         &:hover {
           text-decoration: underline;
@@ -64,11 +64,6 @@
           padding: 10px 8px 10px 8px;
           font-weight: 300;
         }
-      }
-    }
-    @include media-breakpoint-up(md) {
-      li {
-        font-size: 0.9rem;
       }
     }
   }

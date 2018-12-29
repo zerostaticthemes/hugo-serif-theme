@@ -13,11 +13,8 @@
   .testimonials-meta {
     flex: 1;
     margin-bottom: 10px;
-
     p {
       margin: 0;
-    }
-    a {
     }
   }
   .testimonials-title {
@@ -33,7 +30,6 @@
   }
   .testimonials-content {
     flex: 1 0 100%;
-
     blockquote {
       display: block;
       border-width: 2px 0 0 0;
@@ -44,7 +40,7 @@
       position: relative;
     }
     blockquote:before {
-      content: "\201C";
+      content: '\201C';
       position: absolute;
       top: 0em;
       left: 50%;
@@ -52,16 +48,9 @@
       background: #fff;
       width: 3rem;
       height: 2rem;
-      font: 6em/1.08em "PT Sans", sans-serif;
+      font: 6em/1.08em 'PT Sans', sans-serif;
       color: $primary;
       text-align: center;
     }
-    // blockquote:after {
-    //   content: "\2013 \2003" attr(cite);
-    //   display: block;
-    //   text-align: right;
-    //   font-size: 0.875em;
-    //   color: #e74c3c;
-    // }
   }
 }

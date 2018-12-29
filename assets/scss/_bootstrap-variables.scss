@@ -1,18 +1,17 @@
-// Grid breakpoints
-// $grid-breakpoints: (
-//         xs: 0,
-//         sm: 576px,
-//         md: 768px,
-//         lg: 992px,
-//         xl: 1200px
-// );
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
 
-// $container-max-widths: (
-//         sm: 768px,
-//         md: 992px,
-//         lg: 1000px,
-//         xl: 1220px
-// );
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+);
 
 $grid-gutter-width: 20px;
 
@@ -38,7 +37,6 @@ $font-weight-normal: 400;
 $font-weight-bold: 700;
 $font-weight-base: $font-weight-normal;
 $line-height-base: 1.6;
-
 $headings-font-weight: 400;
 
 $spacer: 1rem;

@@ -1,4 +1,5 @@
 {{ if .Site.Params.google_analytics_id }}
+{{ if ne .Site.IsServer true}}
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.google_analytics_id }}"></script>
   <script>
@@ -8,4 +9,5 @@
   
     gtag('config', '{{ .Site.Params.google_analytics_id }}');
   </script>
+{{ end }}
 {{ end }}

@@ -6,6 +6,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>{{ block "title" . }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{ block "meta" . }}{{end}}
   <link rel="icon" href="{{ .Site.BaseURL }}favicon.png">
 
   <!-- CSS -->
@@ -21,7 +22,7 @@
 
 <body class='page {{ block "body_classes" . }}{{ end }}'>
   {{ partial "main-menu-mobile.html" . }}
-  <div id="wrapper" class="wrapper">
+  <div class="wrapper">
     {{ partial "header.html" . }}
     {{ block "main" . }}
     {{ end }}

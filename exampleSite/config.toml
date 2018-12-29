@@ -1,10 +1,10 @@
-baseURL = "www.example.com"
+baseURL = "/"
 languageCode = "en-us"
-title = "Hugo Serif"
+title = "Hugo Serif Theme"
 theme = "hugo-serif-theme"
 
 [params]
-#google_analytics_id=""
+    google_analytics_id="UA-130251315-2"
 
 [[menu.main]]
 	name = "Services"

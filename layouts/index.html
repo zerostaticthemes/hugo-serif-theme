@@ -1,7 +1,8 @@
-{{ define "title" }}{{ end}}
+{{ define "title" }}Hugo Serif Theme Demo{{ end}}
 {{ define "header_css" }}{{ end }}
 {{ define "body_classes" }}page-home{{ end }}
 {{ define "header_classes" }}header-transparent{{ end }}
+{{ define "meta"}}<meta name="description" content="Live demo of the Hugo Serif Theme">{{ end }}
 
 {{ define "main" }}
 
@@ -22,7 +23,7 @@
       </div>
     </div>
     <div class="call-box-bottom">
-      <a href="/contact" class="button">Contact</a>
+      <a href="{{ .Site.BaseURL }}contact" class="button">Contact</a>
     </div>
   </div>
 </div>
@@ -32,7 +33,7 @@
 <div class="container pt-8 pt-md-10">
   <div class="row justify-content-start">
     <div class="col-12">
-      <h2 class="title-3 text-dark mb-3">Our Services</h2>
+      <h2 class="title-3 text-dark mb-3">Services</h2>
     </div>
     {{ $services := where (where .Site.RegularPages "Type" "services") ".Params.featured" true }}
     {{ range first 6 (sort $services ".Params.weight") }}
@@ -41,7 +42,7 @@
     </div>
     {{ end }}
     <div class="col-12 text-center">
-      <a class="button button-primary" href="/services">View All Services</a>
+      <a class="button button-primary" href="{{ .Site.BaseURL }}services">View All Services</a>
     </div>
   </div>
 </div>
@@ -50,7 +51,7 @@
 <div class="container pt-5 pb-5 pt-md-7 pb-md-7">
   <div class="row justify-content-center">
     <div class="col-12">
-      <h2 class="title-3 text-dark mb-4">Our Features</h2>
+      <h2 class="title-3 text-dark mb-3">Features</h2>
     </div>
     {{ range .Site.Data.features }}
     <div class="col-12 col-md-6 col-lg-4 mb-2">

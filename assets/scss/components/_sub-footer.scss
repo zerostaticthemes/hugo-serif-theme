@@ -1,7 +1,11 @@
 .sub-footer {
   background: darken($secondary, 10%);
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @include media-breakpoint-up(md) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
   .sub-footer-inner {
     display: flex;
     flex-direction: column;
@@ -16,9 +20,15 @@
       li {
         list-style: none;
         display: block;
-        color: #ffffff;
-        a {
+        color: lighten($secondary, 40%);
+        font-size: 0.9rem;
+        line-height: 1.8;
+        strong {
+          font-weight: bold;
           color: #ffffff;
+        }
+        a {
+          color: lighten($secondary, 40%);
           text-decoration: none;
           &:hover {
             text-decoration: underline;
@@ -27,9 +37,14 @@
         span {
           display: inline-block;
           height: 40px;
-          padding: 10px 0px 10px 8px;
+          padding: 10px 0 10px 8px;
           font-weight: bold;
           color: #ffffff;
+        }
+        &.zerostatic {
+          a {
+            color: #ffffff;
+          }
         }
       }
       @include media-breakpoint-up(sm) {

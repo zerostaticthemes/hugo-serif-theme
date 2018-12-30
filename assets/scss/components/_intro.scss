@@ -36,9 +36,9 @@
   }
   p {
     width: 80%;
-    font-size: 1.1rem;
-    font-weight: lighter;
-    line-height: 1.4;
+    font-size: 1.2rem;
+    font-weight: light;
+    line-height: 1.5;
     color: $secondary;
     @include media-breakpoint-up(sm) {
       width: 70%;

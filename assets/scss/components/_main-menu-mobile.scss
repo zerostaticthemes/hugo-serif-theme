@@ -1,10 +1,9 @@
 $color-main: $primary;
-$color-active: #fff;
-$color-link: #fff;
+$color-active: #ffffff;
+$color-link: #ffffff;
 
 $button-height: 27px;
 $button-width: 35px;
-
 .button_container {
   position: fixed;
   top: 5%;
@@ -14,11 +13,9 @@ $button-width: 35px;
   cursor: pointer;
   z-index: 100;
   transition: opacity 0.25s ease;
-
   &:hover {
     opacity: 0.7;
   }
-
   &.active {
     .top {
       transform: translateY(11px) translateX(0) rotate(45deg);
@@ -28,13 +25,11 @@ $button-width: 35px;
       opacity: 0;
       background: $color-active;
     }
-
     .bottom {
       transform: translateY(-11px) translateX(0) rotate(-45deg);
       background: $color-active;
     }
   }
-
   span {
     background: $color-main;
     border: none;
@@ -45,17 +40,14 @@ $button-width: 35px;
     left: 0;
     transition: all 0.35s ease;
     cursor: pointer;
-
     &:nth-of-type(2) {
       top: 11px;
     }
-
     &:nth-of-type(3) {
       top: 22px;
     }
   }
 }
-
 .main-menu-mobile {
   position: fixed;
   background: $color-main;
@@ -114,13 +106,12 @@ $button-width: 35px;
         color: $color-link;
         text-decoration: none;
         overflow: hidden;
-        &:hover:after,
-        &:focus:after,
-        &:active:after {
+        &:hover::after,
+        &:focus::after,
+        &:active::after {
           width: 100%;
         }
-
-        &:after {
+        &::after {
           content: '';
           position: absolute;
           bottom: 0;
@@ -135,7 +126,6 @@ $button-width: 35px;
     }
   }
 }
-
 @keyframes fadeInRight {
   0% {
     opacity: 0;
@@ -146,7 +136,6 @@ $button-width: 35px;
     left: 0;
   }
 }
-
 .lock-scroll {
   overflow: hidden;
 }

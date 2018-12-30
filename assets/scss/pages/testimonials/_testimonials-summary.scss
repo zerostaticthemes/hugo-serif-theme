@@ -34,18 +34,18 @@
       display: block;
       border-width: 2px 0 0 0;
       border-style: solid;
-      border-color: #eee;
+      border-color: #eeeeee;
       padding: 1.5em 0 0.5em;
       margin: 1.5em 0;
       position: relative;
     }
-    blockquote:before {
+    blockquote::before {
       content: '\201C';
       position: absolute;
-      top: 0em;
+      top: 0;
       left: 50%;
       transform: translate(-50%, -50%);
-      background: #fff;
+      background: #ffffff;
       width: 3rem;
       height: 2rem;
       font: 6em/1.08em 'PT Sans', sans-serif;

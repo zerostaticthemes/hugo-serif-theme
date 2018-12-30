@@ -1,5 +1,5 @@
 // Font
-@import url('https://fonts.googleapis.com/css?family=Lora:400|Open+Sans:400');
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:300,400,700');
 
 // Bootstrap
 @import 'bootstrap/functions';
@@ -43,6 +43,7 @@
 @import 'libraries/hamburgers/hamburgers';
 
 // Components
+@import 'components/reset';
 @import 'components/page';
 @import 'components/header';
 @import 'components/footer';
@@ -50,7 +51,6 @@
 @import 'components/logo';
 @import 'components/main-menu';
 @import 'components/main-menu-mobile';
-@import 'components/social';
 @import 'components/hamburger';
 @import 'components/buttons';
 @import 'components/title';
@@ -68,8 +68,15 @@
 @import 'pages/testimonials/testimonials-summary';
 @import 'pages/services/page-services-list';
 @import 'pages/services/page-services-single';
-@import 'pages/services/service-single';
 @import 'pages/services/service-summary';
+body {
+  font-size: 1rem;
+  font-family: $font-family-base;
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
+  // -webkit-text-size-adjust: 100%;
+  // -ms-text-size-adjust: 100%;
+}
 
 // Display breakpoints for DEV
 // body:after {

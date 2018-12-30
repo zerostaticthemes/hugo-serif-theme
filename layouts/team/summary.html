@@ -1,7 +1,7 @@
-<article class="team team-summary">
+<div class="team team-summary">
   {{ if .Params.image }}
   <div class="team-image">
-    <img alt="{{ .Title }} logo" class="img-fluid mb-2" src="{{ .Site.BaseURL }}{{ .Params.image }}" />
+    <img alt="Photo of {{ .Title }}" class="img-fluid mb-2" src="{{ .Site.BaseURL }}{{ .Params.image }}" />
   </div>
   {{ end }}
   <div class="team-meta">
@@ -11,4 +11,4 @@
     <a target="_blank" href="{{ .Params.Linkedinurl }}">Linked In</a> {{ end }}
   </div>
   <div class="team-content">{{ .Content }}</div>
-</article>
+</div>

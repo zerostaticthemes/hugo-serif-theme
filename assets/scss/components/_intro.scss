@@ -49,6 +49,9 @@
     @include media-breakpoint-up(lg) {
       width: 55%;
     }
+    @include media-breakpoint-up(xl) {
+      width: 45%;
+    }
   }
 }
 .intro-small {

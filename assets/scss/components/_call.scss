@@ -1,0 +1,53 @@
+.call {
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+  width: 100%;
+  color: $secondary;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  @include media-breakpoint-up(sm) {
+    align-items: center;
+    flex-direction: row;
+    width: 90%;
+  }
+  @include media-breakpoint-up(md) {
+    width: 70%;
+  }
+  @include media-breakpoint-up(lg) {
+    width: 50%;
+  }
+  .call-box-top {
+    flex: 1 0 auto;
+    padding: 20px;
+    @include media-breakpoint-up(md) {
+      padding: 20px;
+    }
+  }
+  .call-box-bottom {
+    flex: 0 0 auto;
+    padding: 0 20px 20px 20px;
+    @include media-breakpoint-up(sm) {
+      padding: 20px;
+    }
+  }
+  .call-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  svg {
+    fill: lighten($secondary, 40%);
+    position: absolute;
+    bottom: -9px;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    @include media-breakpoint-up(sm) {
+      width: 120px;
+      height: 120px;
+    }
+  }
+}

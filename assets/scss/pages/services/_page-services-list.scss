@@ -15,4 +15,8 @@
     background-size: 57%;
     background-position: 90% -110px;
   }
+  @include media-breakpoint-up(xl) {
+    background-size: 54%;
+    background-position: 80% -120px;
+  }
 }

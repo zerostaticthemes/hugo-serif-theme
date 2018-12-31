@@ -22,15 +22,17 @@ Serif is a beautiful small business theme for Hugo (Static Site Generator). It c
 - Royalty free illustrations included
 - Set `body` classes on a per template basis
 - Inject javascript files on a per page basis (see services/single.html)
-- Plenty examples of using `range` and `where` to loop over various content types
+- Plenty of examples of using `range` and `where` to loop over various content types
 - Google analytics configured in `config.toml`
 
 ## Installation
 
 Inside the folder of your Hugo site run:
 
-    $ cd themes
-    $ git clone https://github.com/jugglerx/hugo-serif-theme.git
+```
+cd themes
+git clone https://github.com/jugglerx/hugo-serif-theme.git
+```
 
 For more information read the official [setup guide](//gohugo.io/overview/installing/) of Hugo.
 

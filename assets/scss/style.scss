@@ -53,6 +53,7 @@
 @import 'components/main-menu-mobile';
 @import 'components/hamburger';
 @import 'components/buttons';
+@import 'components/call';
 @import 'components/title';
 @import 'components/content';
 @import 'components/intro';
@@ -69,6 +70,7 @@
 @import 'pages/services/page-services-list';
 @import 'pages/services/page-services-single';
 @import 'pages/services/service-summary';
+
 body {
   font-size: 1rem;
   font-family: $font-family-base;
@@ -94,7 +96,7 @@ body {
 //   border: solid 1px #000000;
 //   @each $name, $value in $grid-breakpoints {
 //     @include media-breakpoint-up($name) {
-//       content: "#{$name} - min-width: #{$value}";
+//       content: '#{$name} - min-width: #{$value}';
 //     }
 //   }
 // }

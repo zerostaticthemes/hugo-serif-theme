@@ -1,6 +1,7 @@
 baseURL = "www.example.com"
 languageCode = "en-us"
 title = "Hugo Serif Theme"
+themesDir = "../.."
 theme = "hugo-serif-theme"
 
 [params]

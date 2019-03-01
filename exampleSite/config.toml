@@ -5,7 +5,18 @@ themesDir = "../.."
 theme = "hugo-serif-theme"
 
 [params]
-    google_analytics_id=""
+  google_analytics_id=""
+
+  [params.homepage_meta_tags]
+    meta_description = "Serif is a beautiful small business theme for Hugo (Static Site Generator). It contains content types for the archetypical small business website. The theme is fully responsive, blazing fast and artfully illustrated."
+    meta_og_title = "Hugo Serif Theme"
+    meta_og_type = "website"
+    meta_og_url = "https://hugo-serif.netlify.com"
+    meta_og_image = "https://raw.githubusercontent.com/JugglerX/hugo-serif-theme/master/images/tn.png"
+    meta_og_description = "Serif is a beautiful small business theme for Hugo (Static Site Generator). It contains content types for the archetypical small business website. The theme is fully responsive, blazing fast and artfully illustrated."
+    meta_twitter_card = "summary"
+    meta_twitter_site = "@zerostaticio"
+    meta_twitter_creator = "@zerostaticio"
 
 [[menu.main]]
 	name = "Services"

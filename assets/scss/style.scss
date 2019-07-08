@@ -1,42 +1,11 @@
 // Font
-@import url('https://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=DM+Sans:400,700|DM+Serif+Display');
 
 // Bootstrap
-@import 'bootstrap/functions';
 @import 'bootstrap-variables';
-@import 'bootstrap/variables';
+@import 'bootstrap/bootstrap-grid';
+@import 'variables';
 @import 'bootstrap/mixins';
-@import 'bootstrap/root';
-@import 'bootstrap/reboot';
-@import 'bootstrap/grid';
-@import 'bootstrap/type';
-@import 'bootstrap/tables';
-// @import "bootstrap/images";
-// @import "bootstrap/code";
-// @import "bootstrap/forms";
-// @import "bootstrap/buttons";
-// @import "bootstrap/transitions";
-// @import "bootstrap/dropdown";
-// @import "bootstrap/button-group";
-// @import "bootstrap/input-group";
-// @import "bootstrap/custom-forms";
-// @import "bootstrap/nav";
-// @import "bootstrap/navbar";
-// @import "bootstrap/card";
-// @import "bootstrap/breadcrumb";
-// @import "bootstrap/pagination";
-// @import "bootstrap/badge";
-// @import "bootstrap/jumbotron";
-// @import "bootstrap/alert";
-// @import "bootstrap/progress";
-// @import "bootstrap/media";
-// @import "bootstrap/list-group";
-// @import "bootstrap/close";
-// @import "bootstrap/modal";
-// @import "bootstrap/tooltip";
-// @import "bootstrap/popover";
-// @import "bootstrap/carousel";
-// @import "bootstrap/print";
 @import 'bootstrap/utilities';
 
 // Libraries
@@ -44,6 +13,7 @@
 
 // Components
 @import 'components/reset';
+@import 'components/type';
 @import 'components/page';
 @import 'components/header';
 @import 'components/footer';
@@ -65,38 +35,33 @@
 @import 'pages/home';
 @import 'pages/team/page-team-list';
 @import 'pages/team/team-summary';
-@import 'pages/testimonials/page-testimonials-list';
-@import 'pages/testimonials/testimonials-summary';
 @import 'pages/services/page-services-list';
 @import 'pages/services/page-services-single';
 @import 'pages/services/service-summary';
 
 body {
-  font-size: 1rem;
+  font-size: 17px;
+  line-height: 1.2;
   font-family: $font-family-base;
-  // -webkit-font-smoothing: antialiased;
-  // -moz-osx-font-smoothing: grayscale;
-  // -webkit-text-size-adjust: 100%;
-  // -ms-text-size-adjust: 100%;
 }
 
 // Display breakpoints for DEV
-// body:after {
-//   color: #000000;
-//   font-size: 12px;
-//   padding: 5px;
-//   font-weight: bold;
-//   right: 10px;
-//   position: fixed;
-//   text-align: center;
-//   text-transform: uppercase;
-//   bottom: 10px;
-//   width: 200px;
-//   z-index: 9999;
-//   border: solid 1px #000000;
-//   @each $name, $value in $grid-breakpoints {
-//     @include media-breakpoint-up($name) {
-//       content: '#{$name} - min-width: #{$value}';
-//     }
-//   }
-// }
+body:after {
+  color: #000000;
+  font-size: 12px;
+  padding: 5px;
+  font-weight: bold;
+  right: 10px;
+  position: fixed;
+  text-align: center;
+  text-transform: uppercase;
+  bottom: 10px;
+  width: 200px;
+  z-index: 9999;
+  border: solid 1px #000000;
+  @each $name, $value in $grid-breakpoints {
+    @include media-breakpoint-up($name) {
+      content: '#{$name} - min-width: #{$value}';
+    }
+  }
+}

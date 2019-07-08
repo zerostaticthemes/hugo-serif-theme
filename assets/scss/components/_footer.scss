@@ -17,18 +17,16 @@
     color: #ffffff;
     font-size: 1.3rem;
     font-family: $font-family-heading;
+    font-weight: normal;
     margin-bottom: 10px;
-    flex: 0;
     @include media-breakpoint-up(sm) {
       margin: 0;
-      flex: 0 0 120px;
     }
   }
   ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    flex: 1;
     li {
       display: block;
       margin-right: 10px;

@@ -7,35 +7,13 @@ $grid-breakpoints: (
 );
 
 $container-max-widths: (
-  sm: 540px,
-  md: 720px,
+  sm: 566px,
+  md: 740px,
   lg: 960px,
   xl: 1140px,
 );
 
 $grid-gutter-width: 20px;
-
-$white: #ffffff;
-$black: #000000;
-$primary: #1c3ed3;
-$secondary: #414156;
-
-// Links
-$link-color: $primary;
-$link-decoration: none;
-$link-hover-color: lighten($primary, 20%);
-$link-hover-decoration: underline;
-
-// Fonts
-$font-family-base: 'Open Sans', Arial, sans-serif, -apple-system;
-$font-family-heading: 'Lora', Arial, sans-serif, -apple-system;
-$font-weight-thin: 200;
-$font-weight-light: 300;
-$font-weight-normal: 400;
-$font-weight-bold: 700;
-$font-weight-base: $font-weight-normal;
-$line-height-base: 1.6;
-$headings-font-weight: 400;
 
 $spacer: 1rem;
 $spacers: ();

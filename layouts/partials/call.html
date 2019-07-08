@@ -1,0 +1,13 @@
+<div class="call">
+  <div class="call-box-top">
+    <div class="call-phone"><strong>Phone: </strong> {{ .Site.Data.contact.phone }} </div>
+    <div class="call-email"><strong>Email: </strong>
+      <a href="mailto:{{ .Site.Data.contact.email }}">
+        {{ .Site.Data.contact.email }}
+      </a>
+    </div>
+  </div>
+  <div class="call-box-bottom">
+    <a href="{{ .Site.BaseURL }}contact" class="button">Contact</a>
+  </div>
+</div>

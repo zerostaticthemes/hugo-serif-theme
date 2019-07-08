@@ -1,8 +1,8 @@
 ---
 title: 'Home'
-date: 2018-02-12T15:37:57+07:00
+intro_image: images/bulb.png
 ---
 
-# Serif - Hugo Small Business Theme.
+# A Classy Multi Page Theme for Hugo.
 
-Serif is a beautiful small business theme for Hugo. It contains content types for the archetypical small business website. The theme is fully responsive, blazing fast and artfully illustrated.
+## Serif contains content types for a typical business website. The theme is fully responsive, blazing fast and artfully illustrated.

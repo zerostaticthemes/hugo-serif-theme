@@ -3,7 +3,6 @@
   flex-wrap: wrap;
   flex-direction: row;
   .team-image {
-    flex: 0;
     margin-right: 10px;
     img {
       border-radius: 50%;
@@ -18,8 +17,6 @@
     }
     p {
       margin: 0;
-    }
-    a {
     }
   }
   .team-content {

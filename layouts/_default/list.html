@@ -1,22 +1,27 @@
-{{ define "header_css" }}{{ end }} 
-{{ define "body_classes" }}page-default-list{{ end }}
+{{ define "header_css" }}{{ end }}
+{{ define "body_classes" }}page-services-list{{ end }}
 {{ define "header_classes" }}{{ end }}
 
 {{ define "main" }}
 <div class="intro">
   <div class="container">
-    <div class="row">
-      <div class="col-12">
+    <div class="row justify-content-start">
+      <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
         {{ .Content }}
       </div>
+      {{ if .Params.intro_image }}
+      <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
+        <img class="intro-image-flying" src="{{ .Params.intro_image | relURL }}" />
+      </div>
+      {{ end }}
     </div>
   </div>
 </div>
 
-<div class="container pb-6">
+<div class="container pt-6 pb-md-12">
   <div class="row">
-    {{ range .Pages }}
-    <div class="col-12 col-md-6 mb-2 ">{{.Content}}</div>
+    {{ range .Pages.ByWeight }}
+    <div class="col-12 col-md-6 mb-2 ">{{ .Render "summary" }}</div>
     {{ end }}
   </div>
 </div>

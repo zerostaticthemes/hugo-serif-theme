@@ -3,23 +3,24 @@
   ol {
     margin-top: 10px;
     margin-bottom: 20px;
+    list-style: disc;
     li {
       margin-bottom: 5px;
       margin-left: 20px;
+      color: $steel;
     }
   }
   a {
     text-decoration: underline;
   }
   p {
-    color: rgb(78, 78, 78);
     font-family: $font-family-base;
+    color: $steel;
   }
   h1 {
     font-family: $font-family-heading;
     line-height: 1.2;
     font-weight: $font-weight-light;
-    color: #333333;
     @include media-breakpoint-up(md) {
       line-height: 1.2;
       font-weight: $font-weight-light;
@@ -27,14 +28,12 @@
   }
   h2 {
     font-family: $font-family-heading;
+    font-size: 24px;
     line-height: 1.4;
-    font-weight: 400;
-    color: #333333;
     @include media-breakpoint-up(md) {
       line-height: 1.4;
     }
   }
-  // Subheading
   h3 {
     color: $primary;
     line-height: 1.4;
@@ -44,6 +43,24 @@
       line-height: 1.4;
       letter-spacing: 1.8px;
       font-weight: $font-weight-thin;
+    }
+  }
+  table {
+    width: 100%;
+    th,
+    td {
+      padding: 5px;
+      vertical-align: top;
+      border-top: 1px solid $ghost;
+    }
+    thead th {
+      vertical-align: bottom;
+      border-bottom: 1px solid $ghost;
+      text-align: left;
+      font-weight: bold;
+    }
+    tbody + tbody {
+      border-top: 1px solid $ghost;
     }
   }
 }

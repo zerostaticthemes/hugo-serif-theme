@@ -5,15 +5,18 @@
 {{ define "main" }}
 <div class="intro">
   <div class="container">
-    <div class="row">
-      <div class="col-12">
+    <div class="row justify-content-start">
+      <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
         {{ .Content }}
+      </div>
+      <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
+        <img class="intro-image-flying" src="{{ .Params.intro_image | relURL }}" />
       </div>
     </div>
   </div>
 </div>
 
-<div class="container pb-6 pb-md-10">
+<div class="container pt-6 pb-md-12">
   <div class="row">
     {{ range .Pages.ByWeight }}
     <div class="col-12 col-md-6 mb-2 ">{{ .Render "summary" }}</div>

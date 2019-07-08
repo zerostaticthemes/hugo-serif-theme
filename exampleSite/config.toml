@@ -18,6 +18,7 @@ theme = "hugo-serif-theme"
     meta_twitter_site = "@zerostaticio"
     meta_twitter_creator = "@zerostaticio"
 
+# Main Menu
 [[menu.main]]
 	name = "Services"
 	url = "/services/"
@@ -29,11 +30,23 @@ theme = "hugo-serif-theme"
     weight = 2
 
 [[menu.main]]
-	name = "Testimonials"
-	url = "/testimonials/"
+	name = "About"
+	url = "/about/"
 	weight = 3
 
 [[menu.main]]
     name = "Contact"
     url = "/contact/"
     weight = 4
+
+
+# Footer Menu
+[[menu.footer]]
+	name = "Home"
+	url = "/"
+    weight = 1
+
+[[menu.footer]]
+	name = "Contact"
+	url = "/contact/"
+    weight = 2

@@ -12,11 +12,7 @@
   .service-content {
     flex: 1;
     .service-title {
-      font-family: $font-family-heading;
-      font-size: 1.6rem;
-    }
-    p {
-      color: $secondary;
+      font-size: 26px;
     }
   }
 }

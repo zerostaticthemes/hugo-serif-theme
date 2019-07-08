@@ -16,36 +16,25 @@
 {{ end }}
 
 {{ define "main" }}
-
-<div class="intro pb-4">
+<div class="intro">
   <div class="container">
-    {{ .Content }}
-  </div>
-</div>
-
-<div class="container pt-2">
-  <div class="call">
-    <div class="call-box-top">
-      <div class="call-phone"><strong>Phone: </strong> {{ .Site.Data.contact.phone }} </div>
-      <div class="call-email"><strong>Email: </strong>
-        <a href="mailto:{{ .Site.Data.contact.email }}">
-          {{ .Site.Data.contact.email }}
-        </a>
+    <div class="row justify-content-start">
+      <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
+        {{ .Content }}
+        {{ partial "call.html" . }}
+      </div>
+      <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
+        <img class="intro-image-flying" src="{{ .Params.intro_image | relURL }}" />
       </div>
     </div>
-    <div class="call-box-bottom">
-      <a href="{{ .Site.BaseURL }}contact" class="button">Contact</a>
-    </div>
   </div>
 </div>
+
 
 {{ $services := where (where .Site.RegularPages "Type" "services") ".Params.featured" true }}
 {{if gt (len $services) 0}}
-<div class="container pt-8 pt-md-12 pb-md-12">
+<div class="container pt-6 pb-md-12">
   <div class="row justify-content-start">
-    <div class="col-12">
-      <h2 class="mb-3">Services</h2>
-    </div>
     {{ $services := where (where .Site.RegularPages "Type" "services") ".Params.featured" true }}
     {{ range first 6 (sort $services ".Params.weight") }}
     <div class="col-12 col-md-4 mb-1">
@@ -60,22 +49,23 @@
 {{end}}
 
 <div class="strip strip-grey">
-<div class="container pt-5 pb-5 pt-md-8 pb-md-8">
-  <div class="row justify-content-center">
-    <div class="col-12">
-      <h2 class="text-center text-dark mb-3">Features</h2>
-    </div>
-    {{ range .Site.Data.features }}
-    <div class="col-12 col-md-6 col-lg-4 mb-2">
-      <div class="feature">
-        {{ if .image }}<div class="feature-image"><img alt="{{ .title }} logo" src="{{ .image }}" /></div> {{ end }}
-        <h2 class="feature-title">{{ .title }}</h2>
-        <div class="feature-content">{{ .description }}</div>
+  <div class="container pt-6 pb-6 pt-md-12 pb-md-12">
+    <div class="row justify-content-center">
+      {{ range .Site.Data.features }}
+      <div class="col-12 col-md-6 col-lg-4 mb-2">
+        <div class="feature">
+          {{ if .image }}
+          <div class="feature-image"><img alt="{{ .title }} logo" src="{{ .image | relURL }}" /></div>
+          {{ end }}
+          <h2 class="feature-title">{{ .title }}</h2>
+          <div class="feature-content">
+            <p>{{ .description }}</p>
+          </div>
+        </div>
       </div>
+      {{end}}
     </div>
-    {{end}}
   </div>
-</div>
 </div>
 {{ end }}
 

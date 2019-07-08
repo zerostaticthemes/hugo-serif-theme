@@ -10,7 +10,6 @@ Serif is a beautiful small business theme for Hugo (Static Site Generator). It c
 
 - Services (Content Type)
 - Team (Content Type)
-- Testimonials (Content Type)
 - Features (Data)
 - SCSS (Hugo Pipelines)
 - Responsive design
@@ -106,3 +105,7 @@ You can set meta tags on a per template basis using a block. For example, you mi
 {{ define main }}
 ...
 ```
+
+## Credits
+
+- Illustrations by https://absurd.design/

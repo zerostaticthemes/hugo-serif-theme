@@ -14,18 +14,16 @@
         padding: 10px 14px 10px 14px;
         display: inline-block;
         font-weight: regular;
-        text-transform: uppercase;
         text-decoration: none;
         color: $primary;
         &:hover {
-          background: $primary;
-          color: #ffffff;
-          text-decoration: none;
+          text-decoration: underline;
         }
       }
       &.active {
         > a {
           background: $primary;
+          border-radius: 3px;
           text-decoration: none;
           color: #ffffff;
           &:hover {

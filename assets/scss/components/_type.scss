@@ -1,3 +1,10 @@
+a {
+  color: $primary;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
 ul,
 ol {
   margin: 0;
@@ -8,19 +15,22 @@ ol {
   }
 }
 p {
-  color: rgb(78, 78, 78);
+  line-height: 26px;
+  color: $steel;
   font-family: $font-family-base;
+  margin-bottom: 20px;
 }
 h1 {
   font-size: 20px;
   font-family: $font-family-heading;
   line-height: 1.2;
-  font-weight: $font-weight-light;
-  color: #333333;
+  font-weight: 400;
+  color: $black;
+  margin-bottom: 20px;
   @include media-breakpoint-up(md) {
     font-size: 30px;
     line-height: 1.2;
-    font-weight: $font-weight-light;
+    font-weight: 400;
   }
 }
 h2 {
@@ -28,7 +38,8 @@ h2 {
   font-family: $font-family-heading;
   line-height: 1.4;
   font-weight: 400;
-  color: #333333;
+  color: $black;
+  margin-bottom: 10px;
   @include media-breakpoint-up(md) {
     font-size: 24px;
     line-height: 1.4;
@@ -38,13 +49,9 @@ h3 {
   color: $primary;
   font-size: 16px;
   line-height: 1.4;
-  font-weight: $font-weight-thin;
-  letter-spacing: 1px;
   @include media-breakpoint-up(md) {
     font-size: 20px;
     line-height: 1.4;
-    letter-spacing: 1.8px;
-    font-weight: $font-weight-thin;
   }
 }
 .display-1 {

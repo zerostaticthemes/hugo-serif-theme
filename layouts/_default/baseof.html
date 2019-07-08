@@ -9,12 +9,13 @@
   {{ block "meta_tags" . }}{{end}}
   <link rel="icon" href="{{ .Site.BaseURL }}favicon.png">
 
-  <!-- CSS -->
-  {{- $inServerMode := .Site.IsServer }}
-  {{- $cssTarget := "css/style.css" }}
-  {{- $cssOptions := cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true) (dict "targetPath" $cssTarget "outputStyle" "compressed") }}
-  {{- $style := resources.Get "scss/style.scss" | toCSS $cssOptions }}
+  {{ if .Site.IsServer }}
+  {{ $style := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "style.scss" . | toCSS (dict "targetPath" "css/style.css" "enableSourceMap" true) }}
+  <link rel="stylesheet" href="{{ ($style).RelPermalink }}">
+  {{ else }}
+  {{ $style := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "style.scss" . | toCSS (dict "targetPath" "css/style.css" "enableSourceMap" false) }}
   <link rel="stylesheet" href="{{ ($style | minify | fingerprint).RelPermalink }}">
+  {{ end }}
 
   {{ block "header_css" . }}{{ end }}
 
@@ -45,4 +46,5 @@
   {{ partial "google-analytics.html" . }}
 
 </body>
+
 </html>

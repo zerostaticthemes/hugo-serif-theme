@@ -2,37 +2,32 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 200px;
-  padding-bottom: 100px;
-  @include media-breakpoint-up(sm) {
-    padding-top: 160px;
-    padding-bottom: 80px;
-  }
+  padding-top: 60px;
+  padding-bottom: 60px;
+  overflow: hidden;
   @include media-breakpoint-up(md) {
     padding-top: 160px;
-    padding-bottom: 80px;
+    padding-bottom: 100px;
   }
   @include media-breakpoint-up(lg) {
-    padding-top: 200px;
-    padding-bottom: 100px;
+    padding-top: 160px;
+    padding-bottom: 160px;
   }
   h1 {
     color: $primary;
-    font-size: 2.4rem;
+    font-size: 48px;
     line-height: 1.2;
-    font-family: $font-family-heading;
-    width: 70%;
-    @include media-breakpoint-up(sm) {
-      width: 70%;
-    }
-    @include media-breakpoint-up(md) {
-      font-size: 3rem;
-      width: 70%;
-    }
     @include media-breakpoint-up(lg) {
-      font-size: 3rem;
-      width: 50%;
+      font-size: 50px;
     }
+  }
+  h2 {
+    width: 80%;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    margin-bottom: 30px;
+    color: $black;
+    font-family: $font-family-base;
   }
   p {
     width: 80%;
@@ -40,18 +35,31 @@
     font-weight: light;
     line-height: 1.5;
     color: $secondary;
-    @include media-breakpoint-up(sm) {
-      width: 70%;
-    }
-    @include media-breakpoint-up(md) {
-      width: 60%;
-    }
-    @include media-breakpoint-up(lg) {
-      width: 55%;
-    }
-    @include media-breakpoint-up(xl) {
-      width: 45%;
-    }
+  }
+}
+.intro-image-flying {
+  max-width: none;
+  width: 40%;
+  margin-bottom: 20px;
+  // @include media-breakpoint-up(sm) {
+  //   width: 60%;
+  // }
+  @include media-breakpoint-up(md) {
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 40px;
+    right: -140px;
+    width: 160%;
+  }
+  @include media-breakpoint-up(lg) {
+    bottom: -80px;
+    right: -120px;
+    width: 130%;
+  }
+  @include media-breakpoint-up(xl) {
+    bottom: -160px;
+    right: -100px;
+    width: 120%;
   }
 }
 .intro-small {

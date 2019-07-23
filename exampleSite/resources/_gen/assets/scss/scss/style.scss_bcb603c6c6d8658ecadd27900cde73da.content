@@ -3592,6 +3592,171 @@ html {
   .mx-xl-auto {
     margin-left: auto !important; } }
 
+.text-monospace {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important; }
+
+.text-justify {
+  text-align: justify !important; }
+
+.text-wrap {
+  white-space: normal !important; }
+
+.text-nowrap {
+  white-space: nowrap !important; }
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.text-left {
+  text-align: left !important; }
+
+.text-right {
+  text-align: right !important; }
+
+.text-center {
+  text-align: center !important; }
+
+@media (min-width: 576px) {
+  .text-sm-left {
+    text-align: left !important; }
+  .text-sm-right {
+    text-align: right !important; }
+  .text-sm-center {
+    text-align: center !important; } }
+
+@media (min-width: 768px) {
+  .text-md-left {
+    text-align: left !important; }
+  .text-md-right {
+    text-align: right !important; }
+  .text-md-center {
+    text-align: center !important; } }
+
+@media (min-width: 992px) {
+  .text-lg-left {
+    text-align: left !important; }
+  .text-lg-right {
+    text-align: right !important; }
+  .text-lg-center {
+    text-align: center !important; } }
+
+@media (min-width: 1300px) {
+  .text-xl-left {
+    text-align: left !important; }
+  .text-xl-right {
+    text-align: right !important; }
+  .text-xl-center {
+    text-align: center !important; } }
+
+.text-lowercase {
+  text-transform: lowercase !important; }
+
+.text-uppercase {
+  text-transform: uppercase !important; }
+
+.text-capitalize {
+  text-transform: capitalize !important; }
+
+.font-weight-light {
+  font-weight: 300 !important; }
+
+.font-weight-lighter {
+  font-weight: lighter !important; }
+
+.font-weight-normal {
+  font-weight: 400 !important; }
+
+.font-weight-bold {
+  font-weight: 700 !important; }
+
+.font-weight-bolder {
+  font-weight: bolder !important; }
+
+.font-italic {
+  font-style: italic !important; }
+
+.text-white {
+  color: #ffffff !important; }
+
+.text-primary {
+  color: #007bff !important; }
+
+a.text-primary:hover, a.text-primary:focus {
+  color: #0056b3 !important; }
+
+.text-secondary {
+  color: #6c757d !important; }
+
+a.text-secondary:hover, a.text-secondary:focus {
+  color: #494f54 !important; }
+
+.text-success {
+  color: #28a745 !important; }
+
+a.text-success:hover, a.text-success:focus {
+  color: #19692c !important; }
+
+.text-info {
+  color: #17a2b8 !important; }
+
+a.text-info:hover, a.text-info:focus {
+  color: #0f6674 !important; }
+
+.text-warning {
+  color: #ffc107 !important; }
+
+a.text-warning:hover, a.text-warning:focus {
+  color: #ba8b00 !important; }
+
+.text-danger {
+  color: #dc3545 !important; }
+
+a.text-danger:hover, a.text-danger:focus {
+  color: #a71d2a !important; }
+
+.text-light {
+  color: #f8f9fa !important; }
+
+a.text-light:hover, a.text-light:focus {
+  color: #cbd3da !important; }
+
+.text-dark {
+  color: #343a40 !important; }
+
+a.text-dark:hover, a.text-dark:focus {
+  color: #121416 !important; }
+
+.text-body {
+  color: #212529 !important; }
+
+.text-muted {
+  color: #6c757d !important; }
+
+.text-black-50 {
+  color: rgba(47, 47, 65, 0.5) !important; }
+
+.text-white-50 {
+  color: rgba(255, 255, 255, 0.5) !important; }
+
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0; }
+
+.text-decoration-none {
+  text-decoration: none !important; }
+
+.text-break {
+  word-break: break-word !important;
+  overflow-wrap: break-word !important; }
+
+.text-reset {
+  color: inherit !important; }
+
 /*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers
@@ -3936,8 +4101,7 @@ ol {
           .footer ul li a {
             display: inline-block;
             height: 40px;
-            padding: 10px 8px 10px 8px;
-            font-weight: 300; } }
+            padding: 10px 8px 10px 8px; } }
 
 .sub-footer {
   background: #1a1a23;

@@ -2,9 +2,8 @@
 @import 'bootstrap-variables';
 @import 'bootstrap/bootstrap-grid';
 @import 'variables';
-// @import "bootstrap/utilities/display";
-// @import "bootstrap/utilities/flex";
-// @import "bootstrap/utilities/spacing";
+@import 'bootstrap/mixins';
+@import "bootstrap/utilities/text";
 
 // Libraries
 @import 'libraries/hamburgers/hamburgers';

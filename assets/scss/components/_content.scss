@@ -20,10 +20,10 @@
   h1 {
     font-family: $font-family-heading;
     line-height: 1.2;
-    font-weight: $font-weight-light;
+    font-weight: 400;
     @include media-breakpoint-up(md) {
       line-height: 1.2;
-      font-weight: $font-weight-light;
+      font-weight: 400;
     }
   }
   h2 {
@@ -37,12 +37,12 @@
   h3 {
     color: $primary;
     line-height: 1.4;
-    font-weight: $font-weight-thin;
+    font-weight: 400;
     letter-spacing: 1px;
     @include media-breakpoint-up(md) {
       line-height: 1.4;
       letter-spacing: 1.8px;
-      font-weight: $font-weight-thin;
+      font-weight: 400;
     }
   }
   table {

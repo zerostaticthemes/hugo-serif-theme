@@ -1,8 +1,7 @@
-$primary: #2e86f8;
-// $primary: #f88379;
+$primary: #106be0;
 $secondary: #f88379;
-$white: #ffffff;
 $black: #2f2f41;
+$white: #ffffff;
 $steel: rgb(92, 90, 90);
 $ghost: #f4f5fb;
 
@@ -13,12 +12,5 @@ $link-hover-color: lighten($primary, 20%);
 $link-hover-decoration: underline;
 
 // Fonts
-$font-family-base: 'DM Sans', Arial, sans-serif, -apple-system;
+$font-family-base: 'DM Sans', Arial, Helvetica, sans-serif, -apple-system;
 $font-family-heading: 'DM Serif Display', serif, -apple-system;
-$font-weight-thin: 200;
-$font-weight-light: 300;
-$font-weight-normal: 400;
-$font-weight-bold: 700;
-$font-weight-base: $font-weight-normal;
-$line-height-base: 1.6;
-$headings-font-weight: 400;

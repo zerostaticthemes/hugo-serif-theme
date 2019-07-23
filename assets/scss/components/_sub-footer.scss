@@ -10,8 +10,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    font-size: 1rem;
     @include media-breakpoint-up(md) {
       flex-direction: row;
+      font-size: 0.9rem;
     }
     ul {
       list-style: none;
@@ -21,29 +23,23 @@
         list-style: none;
         display: block;
         color: lighten($black, 40%);
-        font-size: 0.9rem;
-        line-height: 1.8;
+
         strong {
           font-weight: bold;
           color: #ffffff;
-        }
-        a {
-          color: lighten($black, 40%);
-          text-decoration: none;
-          &:hover {
-            text-decoration: underline;
-          }
+          display: none;
         }
         span {
+          padding: 10px 10px 10px 0;
           display: inline-block;
-          height: 40px;
-          padding: 10px 0 10px 8px;
-          font-weight: bold;
-          color: #ffffff;
         }
-        &.zerostatic {
-          a {
-            color: #ffffff;
+        a {
+          display: inline-block;
+          color: lighten($black, 40%);
+          text-decoration: none;
+          padding: 10px 10px 10px 0;
+          &:hover {
+            text-decoration: underline;
           }
         }
       }
@@ -51,11 +47,27 @@
         li {
           display: inline-block;
           margin-left: 10px;
+
           &:first-of-type {
             margin-left: 0;
           }
+          strong {
+            font-weight: bold;
+            color: #ffffff;
+            display: inline-block;
+            margin-right: 4px;
+          }
         }
       }
+    }
+  }
+  .zerostatic {
+    display: inline-block;
+    padding: 10px 10px 10px 0;
+    color: #ffffff;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
     }
   }
 }

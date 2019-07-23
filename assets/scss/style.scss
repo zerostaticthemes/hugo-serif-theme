@@ -1,5 +1,5 @@
 // Font
-@import url('https://fonts.googleapis.com/css?family=DM+Sans:400,700|DM+Serif+Display');
+@import url('https://fonts.googleapis.com/css?family=DM+Sans:400,700|DM+Serif+Display&display=auto');
 
 // Bootstrap
 @import 'bootstrap-variables';
@@ -34,7 +34,6 @@
 
 // Pages
 @import 'pages/home';
-@import 'pages/team/page-team-list';
 @import 'pages/team/team-summary';
 @import 'pages/services/page-services-list';
 @import 'pages/services/page-services-single';

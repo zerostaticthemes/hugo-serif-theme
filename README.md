@@ -5,7 +5,7 @@ Serif is a modern business theme for Hugo. It contains content types for the arc
 [Live Demo](https://hugo-serif.netlify.com/) |
 [Zerostatic Themes](https://www.zerostatic.io/theme/hugo-serif/)
 
-![Hugo Serif Theme screenshot](https://github.com/JugglerX/hugo-serif-theme/blob/master/images/screenshot-with-border.png)
+![Hugo Serif Theme screenshot](https://github.com/JugglerX/hugo-serif-theme/blob/master/images/screenshot.png)
 
 ## Theme features
 
@@ -99,7 +99,7 @@ Copy the entire contents of the `mynewsite/themes/hugo-serif-theme/exampleSite/`
 To copy the files using terminal, make sure you are still in the projects root, ie the `mynewsite` folder.
 
 ```
-cp -a themes/hugo-whisper-theme/exampleSite/. .
+cp -a themes/hugo-serif-theme/exampleSite/. .
 ```
 
 ### Update config.toml

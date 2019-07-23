@@ -1,12 +1,10 @@
-// Font
-@import url('https://fonts.googleapis.com/css?family=DM+Sans:400,700|DM+Serif+Display&display=auto');
-
 // Bootstrap
 @import 'bootstrap-variables';
 @import 'bootstrap/bootstrap-grid';
 @import 'variables';
-@import 'bootstrap/mixins';
-@import 'bootstrap/utilities';
+// @import "bootstrap/utilities/display";
+// @import "bootstrap/utilities/flex";
+// @import "bootstrap/utilities/spacing";
 
 // Libraries
 @import 'libraries/hamburgers/hamburgers';
@@ -35,9 +33,7 @@
 // Pages
 @import 'pages/home';
 @import 'pages/team/team-summary';
-@import 'pages/services/page-services-list';
 @import 'pages/services/page-services-single';
-@import 'pages/services/service-summary';
 
 body {
   font-size: 16px;
@@ -51,23 +47,23 @@ body {
 
 // Display breakpoints for DEV
 {{ if .Site.IsServer }}
-// body:after {
-//   color: #000000;
-//   font-size: 12px;
-//   padding: 5px;
-//   font-weight: bold;
-//   right: 10px;
-//   position: fixed;
-//   text-align: center;
-//   text-transform: uppercase;
-//   bottom: 10px;
-//   width: 200px;
-//   z-index: 9999;
-//   border: solid 1px #000000;
-//   @each $name, $value in $grid-breakpoints {
-//     @include media-breakpoint-up($name) {
-//       content: '#{$name} - min-width: #{$value}';
-//     }
-//   }
-// }
+body:after {
+  color: #000000;
+  font-size: 12px;
+  padding: 5px;
+  font-weight: bold;
+  right: 10px;
+  position: fixed;
+  text-align: center;
+  text-transform: uppercase;
+  bottom: 10px;
+  width: 200px;
+  z-index: 9999;
+  border: solid 1px #000000;
+  @each $name, $value in $grid-breakpoints {
+    @include media-breakpoint-up($name) {
+      content: '#{$name} - min-width: #{$value}';
+    }
+  }
+}
 {{ end }}

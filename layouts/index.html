@@ -37,7 +37,7 @@
 
 {{ $services := where (where .Site.RegularPages "Type" "services") ".Params.featured" true }}
 {{if gt (len $services) 0}}
-<div class="container pt-6 pb-md-12">
+<div class="container pt-6 pb-md-5">
   <div class="row justify-content-start">
     {{ $services := where (where .Site.RegularPages "Type" "services") ".Params.featured" true }}
     {{ range first 6 (sort $services ".Params.weight") }}
@@ -53,7 +53,7 @@
 {{end}}
 
 <div class="strip strip-grey">
-  <div class="container pt-6 pb-6 pt-md-12 pb-md-12">
+  <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
     <div class="row justify-content-center">
       {{ range .Site.Data.features }}
       <div class="col-12 col-md-6 col-lg-4 mb-2">

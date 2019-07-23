@@ -1,5 +1,5 @@
 .footer {
-  background: $secondary;
+  background: $black;
   padding-top: 20px;
   padding-bottom: 20px;
   .footer-inner {
@@ -30,14 +30,14 @@
     li {
       display: block;
       margin-right: 10px;
-      color: lighten($secondary, 50%);
+      color: lighten($black, 50%);
       font-size: 0.9rem;
       line-height: 1.8;
       &:last-of-type {
         margin-right: 0;
       }
       a {
-        color: lighten($secondary, 50%);
+        color: lighten($black, 50%);
         text-decoration: none;
         &:hover {
           text-decoration: underline;
@@ -45,7 +45,7 @@
       }
       &.copyright {
         font-weight: bold;
-        color: lighten($secondary, 50%);
+        color: lighten($black, 50%);
         display: none;
         @include media-breakpoint-up(md) {
           display: inline-block;

@@ -1,5 +1,5 @@
 .sub-footer {
-  background: darken($secondary, 10%);
+  background: darken($black, 10%);
   padding-top: 20px;
   padding-bottom: 20px;
   @include media-breakpoint-up(md) {
@@ -20,7 +20,7 @@
       li {
         list-style: none;
         display: block;
-        color: lighten($secondary, 40%);
+        color: lighten($black, 40%);
         font-size: 0.9rem;
         line-height: 1.8;
         strong {
@@ -28,7 +28,7 @@
           color: #ffffff;
         }
         a {
-          color: lighten($secondary, 40%);
+          color: lighten($black, 40%);
           text-decoration: none;
           &:hover {
             text-decoration: underline;

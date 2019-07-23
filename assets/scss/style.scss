@@ -27,6 +27,7 @@
 @import 'components/title';
 @import 'components/content';
 @import 'components/intro';
+@import 'components/intro-image';
 @import 'components/strip';
 @import 'components/whitebox';
 @import 'components/feature';
@@ -40,12 +41,17 @@
 @import 'pages/services/service-summary';
 
 body {
-  font-size: 17px;
-  line-height: 1.2;
+  font-size: 16px;
+  line-height: 1.1;
   font-family: $font-family-base;
+  @include media-breakpoint-up(md) {
+    font-size: 17px;
+    line-height: 1.2;
+  }
 }
 
 // Display breakpoints for DEV
+{{ if .Site.IsServer }}
 body:after {
   color: #000000;
   font-size: 12px;
@@ -65,3 +71,4 @@ body:after {
     }
   }
 }
+{{ end }}

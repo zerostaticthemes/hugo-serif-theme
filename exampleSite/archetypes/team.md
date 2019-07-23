@@ -1,11 +1,13 @@
 ---
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
 date: {{ .Date }}
-draft: false
+intro_image: images/undraw_selection_92i4.svg
+intro_image_absolute: false
+intro_image_hide_on_mobile: true
 image: "/team/default.png"
 jobtitle: "Employee"
-email: 'test@test.com'
 linkedinurl: 'https://www.linkedin.com/'
+draft: false
 weight: 100
 ---
 

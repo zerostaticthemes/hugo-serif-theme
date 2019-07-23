@@ -5,15 +5,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-ul,
-ol {
-  margin: 0;
-  padding: 0;
-  li {
-    padding: 0;
-    margin: 0;
-  }
-}
 p {
   line-height: 26px;
   color: $steel;
@@ -24,29 +15,23 @@ h1 {
   font-size: 20px;
   font-family: $font-family-heading;
   line-height: 1.2;
-  font-weight: 400;
-  color: $black;
   margin-bottom: 20px;
   @include media-breakpoint-up(md) {
-    font-size: 30px;
+    font-size: 32px;
     line-height: 1.2;
-    font-weight: 400;
   }
 }
 h2 {
-  font-size: 20px;
+  font-size: 22px;
   font-family: $font-family-heading;
   line-height: 1.4;
-  font-weight: 400;
-  color: $black;
   margin-bottom: 10px;
   @include media-breakpoint-up(md) {
-    font-size: 24px;
+    font-size: 26px;
     line-height: 1.4;
   }
 }
 h3 {
-  color: $primary;
   font-size: 16px;
   line-height: 1.4;
   @include media-breakpoint-up(md) {
@@ -54,12 +39,12 @@ h3 {
     line-height: 1.4;
   }
 }
-.display-1 {
-  font-size: 50px;
-  letter-spacing: 4.5px;
-  font-weight: $font-weight-light;
-  @include media-breakpoint-down(sm) {
-    font-size: 20px;
-    letter-spacing: 1.7px;
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  li {
+    padding: 0;
+    margin: 0;
   }
 }

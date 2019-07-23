@@ -1,5 +1,5 @@
 {{ define "header_css" }}{{ end }}
-{{ define "body_classes" }}page-services-list{{ end }}
+{{ define "body_classes" }}page-default-list{{ end }}
 {{ define "header_classes" }}{{ end }}
 
 {{ define "main" }}
@@ -11,7 +11,9 @@
       </div>
       {{ if .Params.intro_image }}
       <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
-        <img class="intro-image-flying" src="{{ .Params.intro_image | relURL }}" />
+        <img
+          class="intro-image{{ if .Params.intro_image_absolute }} intro-image-absolute{{ end }}{{ if .Params.intro_image_hide_on_mobile }} intro-image-hide-mobile{{ end }}"
+          src="{{ .Params.intro_image | relURL }}" />
       </div>
       {{ end }}
     </div>

@@ -1,65 +1,128 @@
 # Hugo Serif Theme
 
-Serif is a beautiful small business theme for Hugo (Static Site Generator). It contains content types for the archetypical small business website. The theme is fully responsive, blazing fast and artfully illustrated.
+Serif is a modern business theme for Hugo. It contains content types for the archetypical business website. The theme is fully responsive, blazing fast and artfully illustrated.
 
-[Live Demo](https://hugo-serif.netlify.com/)
+[Live Demo](https://hugo-serif.netlify.com/) |
+[Zerostatic Themes](https://www.zerostatic.io/theme/hugo-serif/)
 
 ![Hugo Serif Theme screenshot](https://github.com/JugglerX/hugo-serif-theme/blob/master/images/screenshot-with-border.png)
 
 ## Theme features
 
-- Services (Content Type)
-- Team (Content Type)
+### Content Types
+
+- Services (Markdown)
+- Team (Markdown)
 - Features (Data)
+
+### CSS
+
 - SCSS (Hugo Pipelines)
 - Responsive design
-- Bootstrap 4 grid and media queries only
-- Responsive menu managed in `config.toml`
+- Bootstrap 4.3 grid and media queries only
+
+### Speed
+
 - 100/100 Google Lighthouse speed score
 - Under 30KB without images or 80KB with images and illustrations ⚡
+- No jQuery, only a tiny bit of vanilla Javascript for the mobile menu.
+
+### SEO
+
+- Google analytics configured in `config.toml`
+- Configure GID using env variable HUGO_GOOGLE_ANALYTICS_ID, compatible with Netlify.
+- Configure meta tags and OG meta tags for the homepage in `config.toml`
+- Override any meta tags on a per page basis
+- Semantic document structure
+- Accessible colors, headings and link text
+
+### Menu
+
+- Responsive menu managed in `config.toml`
+
+### Content
+
 - Robust example content included
 - Royalty free illustrations included
 - Set `body` classes on a per template basis
-- Inject javascript files on a per page basis (see services/single.html)
+
+### Templating
+
 - Plenty of examples of using `range` and `where` to loop over various content types
-- Google analytics configured in `config.toml`
+- Examples of injecting javascript files on a per page basis (see services/single.html)
 
-## Installation
+# Installation
 
-Inside the folder of your Hugo site run:
+To use this theme you will need to have Hugo installed. If you don't already have Hugo installed please follow the official [installation guide](https://gohugo.io/getting-started/installing/)
+
+### Check Hugo version (Hugo 0.51+ Extended is required)
+
+This theme uses [Hugo Pipes](https://gohugo.io/hugo-pipes/scss-sass/) to compile SCSS and minify assets. Please make sure you have the **Hugo Extended** version installed. If you are not using the extended version this theme will not not compile.
+
+To check your version of Hugo, run:
 
 ```
-cd themes
-git clone https://github.com/jugglerx/hugo-serif-theme.git
+hugo version
 ```
 
-For more information read the official [setup guide](//gohugo.io/overview/installing/) of Hugo.
+This will output the currently installed version of Hugo. Make sure you see `/extended` after the version number, for example `Hugo Static Site Generator v0.51/extended darwin/amd64 BuildDate: unknown` You do not need to use version v0.51 specifically, you can use any version of Hugo above 0.51. It just needs to have the `/extended` part
 
-## Getting started
+### Create a new Hugo site
 
-After installing the Serif theme successfully it requires a just a few more steps to get your site finally running.
+```
+hugo new site mynewsite
+```
 
-### Adding example content
+This will create a fresh Hugo site in the folder `mynewsite`.
 
-The fastest way to get started is to copy the example content. Copy the contents of the `exampleSite` folder to the root folder of your Hugo site. This theme comes with content for the following content types: `services`, `team`, `testimonials` and includes JSON data for `features` and `contact`. It also includes the `config.toml` file which has an example menu.
+### Install theme
 
-### Edit config
+Copy or git clone this theme into the sites themes folder `mynewsite/themes`
 
-After you copy the `config.toml` into the root folder of your Hugo site you will need to update the `baseURL`
+#### Install with Git
+
+```
+cd mynewsite
+git clone https://github.com/jugglerx/hugo-serif-theme.git themes/hugo-serif-theme
+```
+
+#### Install from .zip file
+
+You can download the .zip file located here https://github.com/JugglerX/hugo-serif-theme/archive/master.zip.
+
+Extract the downloaded .zip inside the `themes` folder. Rename the extracted folder from `hugo-serif-theme-master` -> `hugo-serif-theme`. You should end up with the following folder structure `mynewsite/themes/hugo-serif-theme`
+
+### Add example content
+
+Copy the entire contents of the `mynewsite/themes/hugo-serif-theme/exampleSite/` folder to root folder of your Hugo site, ie `mynewsite/`
+
+To copy the files using terminal, make sure you are still in the projects root, ie the `mynewsite` folder.
+
+```
+cp -a themes/hugo-whisper-theme/exampleSite/. .
+```
+
+### Update config.toml
+
+After you copy the `config.toml` into the root folder of your Hugo site you will need to update the `baseURL`, `themesDir` and `theme` values in `mynewsite/config.toml`
 
 ```
 baseURL = "/"
+themesDir = "themes"
+theme = "hugo-serif-theme"
 ```
 
-## Running Hugo
+### Run Hugo
 
-After installing the theme, generate the Hugo site.
+After installing the theme for the first time, generate the Hugo site.
+
+You run this command from the root folder of your Hugo site ie `mynewsite/`
 
 ```
 hugo
 ```
 
-Hugo's built-in local server.
+For local development run Hugo's built-in local server.
 
 ```
 hugo server
@@ -108,4 +171,4 @@ You can set meta tags on a per template basis using a block. For example, you mi
 
 ## Credits
 
-- Illustrations by https://absurd.design/
+- Beautiful royalty free Illustrations by https://undraw.co/

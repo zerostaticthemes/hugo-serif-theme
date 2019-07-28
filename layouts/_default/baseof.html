@@ -7,7 +7,7 @@
   <title>{{ block "title" . }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {{ block "meta_tags" . }}{{end}}
-  <link rel="icon" href="{{ .Site.BaseURL }}favicon-32x32.png">
+  <link rel="icon" href="{{ "favicon-32x32.png" | relURL }}">
 
   <!-- CSS-->
   {{ if .Site.IsServer }}

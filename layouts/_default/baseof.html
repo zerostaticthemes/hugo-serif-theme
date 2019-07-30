@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  {{ partial "google-analytics.html" . }}
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>{{ block "title" . }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
@@ -45,8 +46,6 @@
   {{ else }}
   <script type="text/javascript" src="{{ ($scripts | minify | fingerprint).RelPermalink }}"></script>
   {{ end }}
-
-  {{ partial "google-analytics.html" . }}
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap" rel="stylesheet">

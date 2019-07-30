@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  {{ partial "google-tag-manager.html" . }}
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>{{ block "title" . }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
@@ -25,6 +26,7 @@
 </head>
 
 <body class='page {{ block "body_classes" . }}{{ end }}'>
+  {{ partial "google-tag-manager-noscript.html" . }}
   {{ partial "main-menu-mobile.html" . }}
   <div class="wrapper">
     {{ partial "header.html" . }}

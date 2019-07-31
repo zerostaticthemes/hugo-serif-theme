@@ -1,0 +1,12 @@
+{{- if .Site.IsServer -}}
+<!-- Dont add Google Tag Manager to localhost -->
+{{ else }}
+{{ $gid := (getenv "HUGO_GTM_ID") }}
+{{ if $gid }}
+<!-- Google Tag Manager (noscript) --> <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{- $gid -}}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <!-- End Google Tag Manager (noscript) -->
+{{ else }}
+{{ if .Site.Params.google_tag_manager_id }}
+<!-- Google Tag Manager (noscript) --> <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{- .Site.Params.google_tag_manager_id -}}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <!-- End Google Tag Manager (noscript) -->
+{{ end }}
+{{ end }}
+{{ end }}

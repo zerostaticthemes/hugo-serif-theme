@@ -92,10 +92,58 @@ models:
               - type: string
                 name: meta_twitter_creator
                 label: meta_twitter_creator
-          - type: site_menus
-            name: menu
-            label: Main Menu
-            description: Main Menu Items
+      - type: site_menus
+        name: menu
+        label: Menus
+  site_menus:
+    type: object
+    label: Site Menus
+    description: >-
+      Site menus model, defines list of menus that can be specified from within
+      site configuration
+    fields:
+      - type: list
+        name: main
+        label: Main menu
+        description: List of items for Main menu
+        items:
+          type: site_menu_item
+      - type: list
+        name: footer
+        label: Footer menu
+        description: List of items for Footer menu
+        items:
+          type: site_menu_item
+  site_menu_item:
+    type: object
+    label: Site Menu Item
+    labelField: name
+    description: 'Site menu item model, defines fields for a single site menu item'
+    fields:
+      - type: string
+        name: identifier
+        label: Identifier
+        description: >-
+          The identifier of a menu item could be used as a parent menu of
+          another menu item
+      - type: string
+        name: name
+        label: Title
+        description: The title of the menu item
+        required: true
+      - type: string
+        name: url
+        label: URL
+        description: The URL the menu item links to
+        required: true
+      - type: number
+        name: weight
+        label: Weight
+        description: Position for sorting
+      - type: string
+        name: parent
+        label: Parent Menu Identifier
+        description: The parent of an entry should be the identifier of another entry.
   home:
     type: page
     label: Home

@@ -15,12 +15,87 @@ models:
       - type: string
         name: title
         label: Title
+        required: true
       - type: string
-        name: google_analytics_id
-        label: Google Analytics ID
+        name: baseURL
+        label: Base URL
+        description: Hostname (and path) to the root
+        hidden: true
       - type: string
-        name: google_tag_manager_id
-        label: Google Tag Manager ID
+        name: languageCode
+        label: Language Code
+        hidden: true
+      - type: string
+        name: themesDir
+        label: Themes Directory
+        hidden: true
+      - type: string
+        name: theme
+        label: Theme Name
+        hidden: true
+      - type: object
+        name: params
+        label: Params
+        description: Site parameters
+        required: true
+        fields:
+          - type: string
+            name: google_analytics_id
+            label: Google Analytics ID
+          - type: string
+            name: google_tag_manager_id
+            label: Google Tag Manager ID
+          - type: object
+            name: logo
+            label: Params Logo
+            fields:
+              - type: image
+                name: standard
+                label: Logo Desktop
+                description: the path of the desktop logo image
+                required: true
+              - type: image
+                name: mobile
+                label: Logo Mobile
+                description: the path of the mobile logo image
+              - type: string
+                name: alt
+                label: Logo Alt Text
+          - type: object
+            name: homepage_meta_tags
+            label: Homepage Metatags
+            fields: 
+              - type: string
+                name: meta_description
+                label: meta_description
+              - type: string
+                name: meta_og_title
+                label: meta_og_title
+              - type: string
+                name: meta_og_type
+                label: meta_og_type
+              - type: string
+                name: meta_og_url
+                label: meta_og_url
+              - type: string
+                name: meta_og_image
+                label: meta_og_image
+              - type: string
+                name: meta_og_description
+                label: meta_og_description
+              - type: string
+                name: meta_twitter_card
+                label: meta_twitter_card
+              - type: string
+                name: meta_twitter_site
+                label: meta_twitter_site
+              - type: string
+                name: meta_twitter_creator
+                label: meta_twitter_creator
+          - type: site_menus
+            name: menu
+            label: Main Menu
+            description: Main Menu Items
   home:
     type: page
     label: Home

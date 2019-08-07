@@ -1,0 +1,182 @@
+stackbitVersion: ~0.2.39
+ssgName: custom
+publishDir: exampleSite/public
+buildCommand: cd exampleSite && hugo --gc --themesDir ../.. && cd ..
+uploadDir: images
+staticDir: static
+pagesDir: exampleSite/content
+dataDir: exampleSite
+models:
+  config:
+    type: data
+    label: Config
+    file: config.toml
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: google_analytics_id
+        label: Google Analytics ID
+      - type: string
+        name: google_tag_manager_id
+        label: Google Tag Manager ID
+  home:
+    type: page
+    label: Home
+    file: _index.md
+    hideContent: false
+    singleInstance: true
+    fields:
+      - type: string
+        name: title
+        label: Title
+        description: The title of the page.
+        required: true
+      - type: image
+        name: intro_image
+        label: Intro Image
+        description: Image displayed at in the pages intro section
+      - type: boolean
+        name: intro_image_absolute
+        label: Overflow intro image
+        description: Should the image overflow or be contained
+      - type: boolean
+        name: intro_image_hide_on_mobile
+        label: Hide the intro image on mobile
+        description: Hide the intro image on mobile screen sizes
+  pagenotfound:
+    type: page
+    label: '404'
+    file: 404/_index.md
+    hideContent: true
+    singleInstance: true
+    fields:
+      - type: string
+        name: title
+        label: Title
+        description: The title of the page.
+  basicpage:
+    type: page
+    label: Basic Page
+    match: '*.md'
+    exclude: _index.md
+    fields:
+      - type: string
+        name: title
+        label: Title
+        description: The title of the page.
+      - type: date
+        name: date
+        label: Date
+      - type: string
+        name: layout
+        label: layout
+      - type: enum
+        name: menu
+        label: Menu
+        options:
+          - label: Main Menu
+            value: main
+          - label: Footer Menu
+            value: footer
+  service:
+    type: page
+    label: Service
+    folder: services
+    exclude: _index.md
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: date
+        name: date
+        label: Date
+      - type: image
+        name: image
+        label: Image
+      - type: boolean
+        name: draft
+        label: Draft
+      - type: boolean
+        name: featured
+        label: Featured
+      - type: number
+        name: weight
+        label: Weight
+  services:
+    type: page
+    label: Services Overview
+    file: services/_index.md
+    singleInstance: true
+    fields:
+      - type: string
+        name: title
+        label: Title
+        description: The title of the page.
+        required: true
+      - type: image
+        name: intro_image
+        label: Intro Image
+        description: Image displayed at in the pages intro section
+      - type: boolean
+        name: intro_image_absolute
+        label: Intro Image Position
+        description: Should the image overflow or be contained
+      - type: boolean
+        name: intro_image_hide_on_mobile
+        label: Intro Image Hide On Mobile
+        description: Hide the intro image on mobile screen sizes
+  team:
+    type: page
+    label: Team
+    folder: team
+    exclude: _index.md
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: date
+        name: date
+        label: Date
+      - type: image
+        name: image
+        label: Image
+      - type: string
+        name: jobtitle
+        label: Job Title
+      - type: string
+        name: linkedinurl
+        label: Linkedin URL
+      - type: boolean
+        name: draft
+        label: Draft
+      - type: boolean
+        name: featured
+        label: Featured
+      - type: number
+        name: weight
+        label: Weight
+  teams:
+    type: page
+    label: Team Overview
+    file: team/_index.md
+    singleInstance: true
+    fields:
+      - type: string
+        name: title
+        label: Title
+        description: The title of the page.
+        required: true
+      - type: image
+        name: intro_image
+        label: Intro Image
+        description: Image displayed at in the pages intro section
+      - type: boolean
+        name: intro_image_absolute
+        label: Intro Image Position
+        description: Should the image overflow or be contained
+      - type: boolean
+        name: intro_image_hide_on_mobile
+        label: Intro Image Hide On Mobile
+        description: Hide the intro image on mobile screen sizes

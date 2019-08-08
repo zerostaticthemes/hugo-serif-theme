@@ -53,7 +53,7 @@ Serif is a modern business theme for Hugo. It contains content types for the arc
 
 # Stackbit Deploy
 
-Deploy to Netlify and connect a Headless CMS in 1 click.
+This theme is is ready to import into Stackbit. This will deploy the site to Netlify and optionally you can select a headless CMS so you can edit the content without ever touching the code. 
 
 [![Create with Stackbit](https://assets.stackbit.com/badge/create-with-stackbit.svg)](https://app.stackbit.com/create?theme=https://github.com/JugglerX/hugo-serif-theme)
 

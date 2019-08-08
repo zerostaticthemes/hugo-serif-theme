@@ -51,6 +51,13 @@ Serif is a modern business theme for Hugo. It contains content types for the arc
 - Plenty of examples of using `range` and `where` to loop over various content types
 - Examples of injecting javascript files on a per page basis (see services/single.html)
 
+# Stackbit Deploy
+
+Deploy to Netlify and connect a Headless CMS in 1 click.
+
+[![Create with Stackbit](https://assets.stackbit.com/badge/create-with-stackbit.svg)](https://app.stackbit.com/create?theme=https://github.com/JugglerX/hugo-serif-theme)
+
+
 # Installation
 
 To use this theme you will need to have Hugo installed. If you don't already have Hugo installed please follow the official [installation guide](https://gohugo.io/getting-started/installing/)

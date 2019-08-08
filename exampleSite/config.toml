@@ -10,8 +10,8 @@ theme = "hugo-serif-theme"
   google_tag_manager_id = ""
 
   [params.logo]
-    mobile = "/images/logo-mobile.svg"
-    standard  = "/images/logo.svg"
+    mobile = "images/logo-mobile.svg"
+    standard  = "images/logo.svg"
     alt = "Serif - A Hugo Business Theme"
 
   [params.homepage_meta_tags]
@@ -25,24 +25,25 @@ theme = "hugo-serif-theme"
     meta_twitter_site = "@zerostaticio"
     meta_twitter_creator = "@zerostaticio"
 
-# Main Menu
-[[menu.main]]
-	name = "Services"
-	url = "/services/"
-    weight = 1
+[menu]
+  # Main Menu
+  [[menu.main]]
+    name = "Services"
+    url = "/services/"
+      weight = 1
 
-[[menu.main]]
-    name = "Team"
-    url = "/team/"
-    weight = 2
+  [[menu.main]]
+      name = "Team"
+      url = "/team/"
+      weight = 2
 
-# Footer Menu
-[[menu.footer]]
-	name = "Home"
-	url = "/"
-    weight = 1
+  # Footer Menu
+  [[menu.footer]]
+    name = "Home"
+    url = "/"
+      weight = 1
 
-[[menu.footer]]
-	name = "Contact"
-	url = "/contact/"
-    weight = 2
+  [[menu.footer]]
+    name = "Contact"
+    url = "/contact/"
+      weight = 2

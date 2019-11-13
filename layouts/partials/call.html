@@ -1,6 +1,8 @@
 <div class="call">
   <div class="call-box-top">
+{{ if .Site.Data.contact.phone }}
     <div class="call-phone"><strong>Phone: </strong> {{ .Site.Data.contact.phone }} </div>
+{{ end }}
     <div class="call-email"><strong>Email: </strong>
       <a href="mailto:{{ .Site.Data.contact.email }}">
         {{ .Site.Data.contact.email }}

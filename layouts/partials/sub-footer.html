@@ -4,7 +4,9 @@
       <div class="col-12">
         <div class="sub-footer-inner">
           <ul>
+{{ if .Site.Data.contact.phone }}
             <li><strong>Phone: </strong><span>{{ .Site.Data.contact.phone }}</span></li>
+{{ end }}
             <li><strong>Email: </strong><a href="mailto:{{ .Site.Data.contact.email }}">
                 {{ .Site.Data.contact.email }}</a></li>
           </ul>

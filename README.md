@@ -179,3 +179,7 @@ You can set meta tags on a per template basis using a block. For example, you mi
 ## Credits
 
 - Beautiful royalty free Illustrations by https://undraw.co/
+
+## License
+
+If you are going to fork this theme and re-release it as your own theme please provide attribution to this original theme in your README.md. The copyright notice in the LICENSE file must remain (you don't replace this with your own name)

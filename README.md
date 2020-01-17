@@ -182,4 +182,5 @@ You can set meta tags on a per template basis using a block. For example, you mi
 
 ## License
 
-If you are going to fork this theme and re-release it as your own theme please provide attribution to this original theme in your README.md. The copyright notice in the LICENSE file must remain (you don't replace this with your own name)
+If you fork or copy this theme the LICENSE file and the copyright notice on line 3 (where I am listed as the author) must not be changed. You cannot just replace the copyright line with your own name. Attribution in your README.md or on your site is also welcome but not required.
+

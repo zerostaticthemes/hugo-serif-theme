@@ -1,5 +1,5 @@
 stackbitVersion: ~0.2.39
-ssgName: custom
+ssgName: hugo
 publishDir: exampleSite/public
 buildCommand: cd exampleSite && hugo --gc --baseURL "/" --themesDir ../.. && cd ..
 uploadDir: images

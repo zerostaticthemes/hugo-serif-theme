@@ -25,9 +25,7 @@
       </div>
       {{ if .Params.intro_image }}
       <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
-        <img
-          class="intro-image{{ if .Params.intro_image_absolute }} intro-image-absolute{{ end }}{{ if .Params.intro_image_hide_on_mobile }} intro-image-hide-mobile{{ end }}"
-          src="{{ .Params.intro_image | relURL }}" />
+        <img alt={{ .Title }} class="intro-image{{ if .Params.intro_image_absolute }} intro-image-absolute{{ end }}{{ if .Params.intro_image_hide_on_mobile }} intro-image-hide-mobile{{ end }}" src="{{ .Params.intro_image | relURL }}" />
       </div>
       {{ end }}
     </div>
@@ -63,7 +61,7 @@
       <div class="col-12 col-md-6 col-lg-4 mb-2">
         <div class="feature">
           {{ if .image }}
-          <div class="feature-image"><img alt="{{ .title }} logo" src="{{ .image | relURL }}" /></div>
+          <div class="feature-image"><img alt="{{ .Title }} logo" src="{{ .image | relURL }}" /></div>
           {{ end }}
           <h2 class="feature-title">{{ .title }}</h2>
           <div class="feature-content">

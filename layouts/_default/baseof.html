@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {{ block "meta_tags" . }}{{end}}
   <link rel="icon" type="image/png" href="{{ "favicon-32x32.png" | relURL }}">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
   <!-- CSS-->
   {{ if .Site.IsServer }}
@@ -19,8 +20,6 @@
   {{ end }}
 
   {{ block "header_css" . }}{{ end }}
-
-
 
 </head>
 

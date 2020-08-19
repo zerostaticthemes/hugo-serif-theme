@@ -8,7 +8,7 @@ weight: 1
 
 Financial accounting (or financial accountancy) is the field of accounting concerned with the **summary, analysis and reporting** of financial transactions related to a business.
 
-![](/services/austin-distel-nGc5RT2HmF0-unsplash.jpg)
+![Accounting Services](/services/austin-distel-nGc5RT2HmF0-unsplash.jpg)
 
 # Objectives 
 

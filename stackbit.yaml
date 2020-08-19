@@ -95,6 +95,13 @@ models:
               - type: string
                 name: meta_twitter_creator
                 label: meta_twitter_creator
+          - type: object
+            name: header
+            label: Header
+            fields:
+              - type: string
+                name: github_link
+                label: Github Link
       - type: site_menus
         name: menu
         label: Menus

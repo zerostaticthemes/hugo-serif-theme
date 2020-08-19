@@ -2,7 +2,7 @@
 
 Serif is a modern business theme for Hugo. It contains content types for the archetypical business website. The theme is fully responsive, blazing fast and artfully illustrated.
 
-[Live Demo](https://hugo-serif.netlify.com/) |
+[Live Demo](https://hugo-serif.netlify.app/) |
 [Zerostatic Themes](https://www.zerostatic.io/theme/hugo-serif/)
 
 ![Hugo Serif Theme screenshot](https://github.com/JugglerX/hugo-serif-theme/blob/master/images/screenshot.png)
@@ -19,41 +19,55 @@ Serif is a modern business theme for Hugo. It contains content types for the arc
 
 - SCSS (Hugo Pipelines)
 - Responsive design
-- Bootstrap 4.3 grid and media queries only
+- Bootstrap 4.4 grid and media queries only
+- Uncomment `@import 'bootstrap/bootstrap';` in `style.scss` to use the entire Bootstrap framework
 
 ### Speed
 
 - 100/100 Google Lighthouse speed score
-- Under 30KB without images or 80KB with images and illustrations ⚡
+- Under 50KB without images or 80KB with images and illustrations ⚡
 - No jQuery, only a tiny bit of vanilla Javascript for the mobile menu.
 
 ### SEO
 
+- 100/100 Google Lighthouse SEO score
 - Google analytics configured in `config.toml`
 - Configure GID using env variable HUGO_GOOGLE_ANALYTICS_ID, compatible with Netlify.
 - Configure meta tags and OG meta tags for the homepage in `config.toml`
 - Override any meta tags on a per page basis
-- Semantic document structure
-- Accessible colors, headings and link text
+- Semantic HTML document structure
+
+### Accessibility 
+
+- 100/100 Google Lighthouse accessibility score
+- Accessible colors, headings and link text (by design)
+- Attention has been paid to using correct contrast, font sizes etc
+- Attention has been paid to ensuring comfortable hit zones and link sizing on mobile
 
 ### Menu
 
 - Responsive menu managed in `config.toml`
+- Animated hamburger menu on mobile
 
 ### Content
 
 - Robust example content included
 - Royalty free illustrations included
-- Set `body` classes on a per template basis
 
 ### Templating
 
-- Plenty of examples of using `range` and `where` to loop over various content types
+- No hardcoded content in the layouts
+- Plenty of examples of using `range` and `where` to loop over various sections/content types
+- Examples of `range` by Param
+- Examples of using data content _(data/contact.yaml and data/features.json)_
+- Example of passing .Site . (context) and custom variables to partials - see `layouts/page/contact.html` - `{{ partial "call.html" (dict "site" .Site "context" . "show_button" "false") }}`
 - Examples of injecting javascript files on a per page basis (see services/single.html)
+- Set `body` classes from individual layouts - useful for CSS styling.
+- Example of using Hugo custom `layout` for the contact page
 
 # Stackbit Deploy
 
-This theme is is ready to import into Stackbit. This will deploy the site to Netlify and optionally you can select a headless CMS so you can edit the content without ever touching the code. 
+Use Stackbit to deploy this theme to Netlify and connect any headless CMS _(Forestry, NetlifyCMS, Sanity, Contentful, DatoCMS)_ - Actually really amazing. 
 
 [![Create with Stackbit](https://assets.stackbit.com/badge/create-with-stackbit.svg)](https://app.stackbit.com/create?theme=https://github.com/JugglerX/hugo-serif-theme)
 
@@ -139,15 +153,22 @@ Now enter [`localhost:1313`](http://localhost:1313) in the address bar of your b
 
 # Configuring theme features
 
+Copy your Google Analytics id into the `config.toml` - Also supports Google Tag Manager.
+
+### Google Analytics
+```
+// config.toml
+[params]
+  google_analytics_id = ""
+  google_tag_manager_id = ""
+```
+ 
 ### Homepage meta tags
 
 Often a homepage requires special meta tags such as a meta description or og meta data for twitter, facebook etc. You can configure these values in the `config.toml`
 
 ```
 // config.toml
-[params]
-  google_analytics_id=""
-
   [params.homepage_meta_tags]
     meta_description = "a description of your website."
     meta_og_title = "My Theme"
@@ -160,7 +181,7 @@ Often a homepage requires special meta tags such as a meta description or og met
     meta_twitter_creator = "@mytwitterhandle"
 ```
 
-### Set meta tags on a per template/page basis
+### Override meta tags on a per layout basis
 
 You can set meta tags on a per template basis using a block. For example, you might want to write a custom meta description for the `/services` page. You can insert any valid HTML meta data inside the `{{ define "meta_tags }}` block at the top of a template.
 

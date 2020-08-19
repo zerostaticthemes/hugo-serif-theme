@@ -11,9 +11,9 @@
       list-style: none;
       font-size: 1rem;
       > a {
-        padding: 10px 14px 10px 14px;
+        padding: 10px 12px 10px 12px;
         display: inline-block;
-        font-weight: regular;
+        font-weight: normal;
         text-decoration: none;
         color: $primary;
         &:hover {
@@ -22,15 +22,11 @@
       }
       &.active {
         > a {
-          background: $primary;
-          border-radius: 3px;
+          font-weight: bold;
           text-decoration: none;
-          color: #ffffff;
           &:hover {
             text-decoration: none;
-            background: $primary;
             transition: all 225ms ease-in 0s;
-            color: #ffffff;
           }
         }
       }

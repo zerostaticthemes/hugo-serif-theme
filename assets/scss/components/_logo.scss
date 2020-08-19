@@ -2,11 +2,9 @@
   display: none;
   @include media-breakpoint-up(sm) {
     display: block;
-    width: 120px;
   }
   img {
-    width: 100%;
-    height: auto;
+    max-width: unset;
   }
   a {
     display: block;
@@ -29,16 +27,5 @@
     display: block;
     width: 100%;
     height: 100%;
-  }
-}
-
-.logo {
-  path {
-    #Hugo {
-      fill: '#141414';
-    }
-    #Serif {
-      fill: red;
-    }
   }
 }

@@ -1,6 +1,9 @@
 ---
 title: 'About'
 menu: 'main'
+intro_image: "images/pixeltrue-plan-1.svg"
+intro_image_absolute: true # edit /assets/scss/components/_intro-image.scss for full control
+intro_image_hide_on_mobile: true
 ---
 
 Lorem markdownum aequalis strigis. _Saetigeri iubeas_, vultu huic alvum nondum

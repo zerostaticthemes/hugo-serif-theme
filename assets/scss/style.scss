@@ -1,15 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,700&display=swap');
+
+// Colors
+$primary: #5122d0; // #106be0;
+$secondary: #f88379;
+$black: #2f2f41;
+$white: #ffffff;
+$white-offset: #f6f7ff;
+$steel: rgb(92, 90, 90);
+
+// Links
+$link-color: $primary;
+$link-decoration: none;
+$link-hover-color: lighten($primary, 20%);
+$link-hover-decoration: underline;
+
+// Fonts
+$font-family-base: Helvetica, Arial, sans-serif, -apple-system;
+$font-family-heading: 'Playfair Display', serif, -apple-system;
+
+// Footer
+$footer-background-color: $primary;
+$footer-text-color: $white;
+$sub-footer-background-color: darken($primary, 10%);
+$sub-footer-text-color: $white;
+
 // Bootstrap
 @import 'bootstrap-variables';
+@import 'bootstrap/bootstrap-reboot';
 @import 'bootstrap/bootstrap-grid';
-@import 'variables';
-@import 'bootstrap/mixins';
-@import "bootstrap/utilities/text";
+// @import 'bootstrap/bootstrap'; // Uncomment this line to import the entire Bootstrap library
+
 
 // Libraries
 @import 'libraries/hamburgers/hamburgers';
 
 // Components
-@import 'components/reset';
+//@import 'components/reset';
 @import 'components/type';
 @import 'components/page';
 @import 'components/header';
@@ -36,11 +62,11 @@
 
 body {
   font-size: 16px;
-  line-height: 1.1;
+  line-height: 1.2;
   font-family: $font-family-base;
   @include media-breakpoint-up(md) {
-    font-size: 17px;
-    line-height: 1.2;
+    font-size: 16px;
+    line-height: 1.3;
   }
 }
 

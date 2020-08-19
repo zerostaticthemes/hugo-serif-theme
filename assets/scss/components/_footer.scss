@@ -1,5 +1,5 @@
 .footer {
-  background: $black;
+  background: $footer-background-color;
   padding-top: 20px;
   padding-bottom: 20px;
   .footer-inner {
@@ -17,7 +17,7 @@
     color: #ffffff;
     font-size: 1.3rem;
     font-family: $font-family-heading;
-    font-weight: normal;
+    font-weight: bold;
     margin-bottom: 10px;
     @include media-breakpoint-up(sm) {
       margin: 0;
@@ -28,10 +28,10 @@
     margin: 0;
     padding: 0;
     li {
-      color: lighten($black, 50%);
+      color: $footer-text-color;
       font-size: 1rem;
       a {
-        color: lighten($black, 50%);
+        color: $footer-text-color;
         text-decoration: none;
         padding: 12px 14px 12px 0;
         display: block;

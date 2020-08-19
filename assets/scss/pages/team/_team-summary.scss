@@ -3,17 +3,21 @@
   flex-wrap: wrap;
   flex-direction: row;
   .team-image {
+    height: 60px;
+    width: 60px;
     margin-right: 10px;
+    border-radius: 50%;
+    overflow: hidden;
     img {
-      border-radius: 50%;
-      height: 100px;
-      width: 100px;
+      width: 60px;
     }
   }
   .team-meta {
     flex: 1;
     h2 {
       margin: 0;
+      font-size: 22px;
+      font-weight: normal;
     }
     p {
       margin: 0;
@@ -21,5 +25,21 @@
   }
   .team-content {
     flex: 1 0 100%;
+  }
+}
+
+.team-summary-large {
+  background-color: $white-offset;
+  padding: 30px;
+  border-radius: 3px;
+  .team-image {
+    height: 90px;
+    width: 90px;
+    margin-right: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    img {
+      width: 90px;
+    }
   }
 }

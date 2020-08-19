@@ -11,7 +11,8 @@ theme = "hugo-serif-theme"
 
   [params.logo]
     mobile = "images/logo-mobile.svg"
-    standard  = "images/logo.svg"
+    desktop = "images/logo.svg"
+    desktop_height = "36px"
     alt = "Serif - A Hugo Business Theme"
 
   [params.homepage_meta_tags]

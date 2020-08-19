@@ -4054,7 +4054,7 @@ a {
 
 p {
   line-height: 26px;
-  color: #5c5a5a;
+  color: #5C5A5A;
   font-family: Helvetica, Arial, sans-serif, -apple-system;
   margin-bottom: 20px; }
 
@@ -4068,7 +4068,7 @@ h1 {
       font-size: 32px;
       line-height: 1.2; } }
 h2 {
-  font-size: 22px;
+  font-size: 24px;
   font-family: "Playfair Display", serif, -apple-system;
   line-height: 1.4;
   margin-bottom: 10px; }
@@ -4422,8 +4422,13 @@ ol {
     flex: 1 0 auto;
     padding: 20px; }
   .call .call-box-bottom {
-    flex: 0 0 auto;
-    padding: 20px; }
+    flex: auto;
+    padding: 20px;
+    border-top: 1px solid #dde0ff; }
+    @media (min-width: 576px) {
+      .call .call-box-bottom {
+        flex: 0 0 auto;
+        border: none; } }
   .call .call-name {
     font-size: 1.1rem;
     font-weight: bold; }
@@ -4467,7 +4472,7 @@ ol {
 .content p {
   font-family: Helvetica, Arial, sans-serif, -apple-system;
   line-height: 1.56;
-  color: #5c5a5a; }
+  color: #5C5A5A; }
 
 .content h1 {
   font-family: Helvetica, Arial, sans-serif, -apple-system;
@@ -4510,7 +4515,7 @@ ol {
   margin-bottom: 5px;
   line-height: 1.56;
   margin-left: 20px;
-  color: #5c5a5a; }
+  color: #5C5A5A; }
 
 .content hr {
   border: none;
@@ -4535,7 +4540,7 @@ ol {
 
 .content blockquote {
   padding: 0 1em;
-  color: #5c5a5a;
+  color: #5C5A5A;
   border-left: 0.25em solid #f88379; }
 
 .intro {
@@ -4569,12 +4574,13 @@ ol {
     color: #2f2f41;
     font-family: Helvetica, Arial, sans-serif, -apple-system; }
   .intro p {
-    width: 80%;
     font-size: 1.2rem;
     font-weight: light;
     line-height: 1.5;
-    color: #5c5a5a; }
-
+    color: #5C5A5A; }
+    @media (min-width: 768px) {
+      .intro p {
+        width: 80%; } }
 .intro-small {
   padding-top: 100px;
   padding-bottom: 30px; }
@@ -4586,7 +4592,6 @@ ol {
 
 .intro-image-absolute {
   max-width: none;
-  width: 60%;
   padding: 0;
   margin-bottom: 30px; }
   @media (min-width: 768px) {
@@ -4709,8 +4714,13 @@ ol {
       font-size: 22px;
       font-weight: normal; }
     .team-summary .team-meta p {
-      margin: 0; }
+      color: #2f2f41;
+      text-transform: uppercase;
+      margin: 0;
+      font-size: 12px;
+      font-weight: 500; }
   .team-summary .team-content {
+    margin-top: 20px;
     flex: 1 0 100%; }
 
 .team-summary-large {

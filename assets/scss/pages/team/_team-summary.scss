@@ -20,10 +20,15 @@
       font-weight: normal;
     }
     p {
+      color: $black;
+      text-transform: uppercase;
       margin: 0;
+      font-size: 12px;
+      font-weight: 500;
     }
   }
   .team-content {
+    margin-top: 20px;
     flex: 1 0 100%;
   }
 }

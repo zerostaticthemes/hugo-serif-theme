@@ -61,6 +61,9 @@ models:
               - type: string
                 name: alt
                 label: Logo Alt Text
+              - type: string
+                name: desktop_height
+                label: Desktop Logo height in pixels
           - type: object
             name: homepage_meta_tags
             label: Homepage Metatags
@@ -215,9 +218,6 @@ models:
       - type: date
         name: date
         label: Date
-      - type: image
-        name: image
-        label: Image
       - type: boolean
         name: draft
         label: Draft
@@ -280,6 +280,9 @@ models:
       - type: number
         name: weight
         label: Weight
+      - type: boolean
+        name: promoted
+        label: Promoted
   teams:
     type: page
     label: Team Overview

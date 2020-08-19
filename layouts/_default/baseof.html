@@ -2,13 +2,12 @@
 <html lang="en">
 
 <head>
-  {{ partial "google-tag-manager.html" . }}
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>{{ block "title" . }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {{ block "meta_tags" . }}{{end}}
-  <link rel="icon" href="{{ "favicon-32x32.png" | relURL }}">
+  <link rel="icon" type="image/png" href="{{ "favicon-32x32.png" | relURL }}">
 
   <!-- CSS-->
   {{ if .Site.IsServer }}
@@ -26,7 +25,6 @@
 </head>
 
 <body class='page {{ block "body_classes" . }}{{ end }}'>
-  {{ partial "google-tag-manager-noscript.html" . }}
   {{ partial "main-menu-mobile.html" . }}
   <div class="wrapper">
     {{ partial "header.html" . }}
@@ -48,10 +46,8 @@
   <script type="text/javascript" src="{{ ($scripts | minify | fingerprint).RelPermalink }}"></script>
   {{ end }}
 
+  {{ partial "google-tag-manager.html" . }}
   {{ partial "google-analytics.html" . }}
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap" rel="stylesheet">
 </body>
 
 </html>

@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,700&display=swap');
 
 // Colors
-$primary: #5122d0; // #106be0;
+$primary: #5122d0;
 $secondary: #f88379;
 $black: #2f2f41;
 $white: #ffffff;
 $white-offset: #f6f7ff;
-$steel: rgb(92, 90, 90);
+$steel: #5C5A5A;
 
 // Links
 $link-color: $primary;
@@ -35,7 +35,6 @@ $sub-footer-text-color: $white;
 @import 'libraries/hamburgers/hamburgers';
 
 // Components
-//@import 'components/reset';
 @import 'components/type';
 @import 'components/page';
 @import 'components/header';

@@ -4,13 +4,12 @@
       <div class="col-12">
         <div class="sub-footer-inner">
           <ul>
-{{ if .Site.Data.contact.phone }}
-            <li><strong>Phone: </strong><span>{{ .Site.Data.contact.phone }}</span></li>
-{{ end }}
-{{ if .Site.Data.contact.email }}
-            <li><strong>Email: </strong><a href="mailto:{{ .Site.Data.contact.email }}">
-                {{ .Site.Data.contact.email }}</a></li>
-{{ end }}
+            {{ if .Site.Data.contact.phone }}
+                <li><strong>Phone: </strong><span>{{ .Site.Data.contact.phone }}</span></li>
+            {{ end }}
+            {{ if .Site.Data.contact.email }}
+                <li><strong>Email: </strong><a href="mailto:{{ .Site.Data.contact.email }}">{{ .Site.Data.contact.email }}</a></li>
+            {{ end }}
           </ul>
           <a class="zerostatic" href="https://www.zerostatic.io">www.zerostatic.io</a>
         </div>

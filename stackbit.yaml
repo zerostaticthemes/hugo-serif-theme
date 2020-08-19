@@ -50,7 +50,7 @@ models:
             label: Params Logo
             fields:
               - type: image
-                name: standard
+                name: desktop
                 label: Logo Desktop
                 description: the path of the desktop logo image
                 required: true

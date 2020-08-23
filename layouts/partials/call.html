@@ -13,7 +13,7 @@
   </div>
     {{ if eq .show_button "true" }}
       <div class="call-box-bottom">
-        <a href="{{ "contact/" | relURL }}" class="button">Contact</a>
+        <a href="{{ .site.Data.contact.contact_button_link | relURL }}" class="button">Contact</a>
       </div>
     {{ end }}
 </div>

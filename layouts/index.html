@@ -19,7 +19,9 @@
     <div class="row justify-content-start">
       <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
         {{ .Content }}
+        {{ if .Site.Params.homepage.show_call_box }}
         {{ partial "call.html" (dict "site" .Site "context" . "show_button" "true") }}
+        {{ end }}
       </div>
       {{ if .Params.intro_image }}
       <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">

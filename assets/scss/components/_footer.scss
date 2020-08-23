@@ -1,7 +1,7 @@
 .footer {
   background: $footer-background-color;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   .footer-inner {
     display: flex;
     justify-content: space-between;
@@ -37,14 +37,6 @@
         display: block;
         &:hover {
           text-decoration: underline;
-        }
-      }
-      &.copyright {
-        font-weight: bold;
-        color: lighten($black, 50%);
-        display: none;
-        @include media-breakpoint-up(md) {
-          display: inline-block;
         }
       }
     }

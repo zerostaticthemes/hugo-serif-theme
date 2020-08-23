@@ -9,6 +9,9 @@ theme = "hugo-serif-theme"
   google_analytics_id = ""
   google_tag_manager_id = ""
 
+  [params.homepage]
+    show_call_box = true
+
   [params.logo]
     mobile = "images/logo-mobile.svg"
     desktop = "images/logo.svg"
@@ -26,8 +29,8 @@ theme = "hugo-serif-theme"
     meta_twitter_site = "@zerostaticio"
     meta_twitter_creator = "@zerostaticio"
 
-  [params.header]
-    github_link = "https://github.com/JugglerX/hugo-serif-theme"
+  [params.footer]
+    copyright_text = 'Free Hugo theme by <a class="zerostatic" href="https://www.zerostatic.io">www.zerostatic.io</a>'
 
 [menu]
   # Main Menu

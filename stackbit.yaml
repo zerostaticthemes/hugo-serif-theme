@@ -1,16 +1,18 @@
-stackbitVersion: ~0.2.39
-ssgName: custom
-publishDir: exampleSite/public
+stackbitVersion: ~0.3.0
+ssgName: hugo
+ssgVersion: '0.74.3'
 buildCommand: cd exampleSite && hugo --gc --baseURL "/" --themesDir ../.. && cd ..
+publishDir: exampleSite/public
 uploadDir: images
 staticDir: exampleSite/static
 pagesDir: exampleSite/content
-dataDir: exampleSite
+dataDir: exampleSite/data
+pageLayoutKey: layout
 models:
   config:
     type: data
     label: Config
-    file: config.toml
+    file: exampleSite/config.toml
     fields:
       - type: string
         name: title
@@ -45,6 +47,13 @@ models:
           - type: string
             name: google_tag_manager_id
             label: Google Tag Manager ID
+          - type: object
+            name: header
+            label: Header
+            fields:
+            - type: boolean
+              name: show_call_box
+              label: Show Callbox on Homepage?
           - type: object
             name: logo
             label: Params Logo
@@ -96,15 +105,17 @@ models:
                 name: meta_twitter_creator
                 label: meta_twitter_creator
           - type: object
-            name: header
-            label: Header
+            name: footer
+            label: Footer
             fields:
               - type: string
-                name: github_link
-                label: Github Link
-      - type: site_menus
+                name: copyright_text
+                label: Copyright Text
+      - type: model
         name: menu
         label: Menus
+        models:
+          - site_menu_item
   site_menus:
     type: object
     label: Site Menus
@@ -117,13 +128,17 @@ models:
         label: Main menu
         description: List of items for Main menu
         items:
-          type: site_menu_item
+          type: model
+          models:
+            - site_menu_item
       - type: list
         name: footer
         label: Footer menu
         description: List of items for Footer menu
         items:
-          type: site_menu_item
+          type: model
+          models:
+            - site_menu_item
   site_menu_item:
     type: object
     label: Site Menu Item
@@ -160,6 +175,7 @@ models:
     file: _index.md
     hideContent: false
     singleInstance: true
+    layout: index
     fields:
       - type: string
         name: title
@@ -184,6 +200,7 @@ models:
     file: 404/_index.md
     hideContent: true
     singleInstance: true
+    layout: '404'
     fields:
       - type: string
         name: title
@@ -194,6 +211,32 @@ models:
     label: Basic Page
     match: '*.md'
     exclude: _index.md
+    layout: 'single'
+    fields:
+      - type: string
+        name: title
+        label: Title
+        description: The title of the page.
+      - type: date
+        name: date
+        label: Date
+      - type: string
+        name: layout
+        label: layout
+      - type: enum
+        name: menu
+        label: Menu
+        options:
+          - label: Main Menu
+            value: main
+          - label: Footer Menu
+            value: footer
+  contact:
+    type: page
+    label: Contact Page
+    file: 'contact.md'
+    singleInstance: true
+    layout: 'contact'
     fields:
       - type: string
         name: title
@@ -218,6 +261,7 @@ models:
     label: Service
     folder: services
     exclude: _index.md
+    layout: 'services/single'
     fields:
       - type: string
         name: title
@@ -239,6 +283,7 @@ models:
     label: Services Overview
     file: services/_index.md
     singleInstance: true
+    layout: 'services/list'
     fields:
       - type: string
         name: title
@@ -262,6 +307,7 @@ models:
     label: Team
     folder: team
     exclude: _index.md
+    layout: 'team/single'
     fields:
       - type: string
         name: title
@@ -295,6 +341,7 @@ models:
     label: Team Overview
     file: team/_index.md
     singleInstance: true
+    layout: 'teams/list'
     fields:
       - type: string
         name: title

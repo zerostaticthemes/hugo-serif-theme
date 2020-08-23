@@ -8,6 +8,7 @@
 ### Design
 * Added new illustrations
 * Sharpened up design; better padding, font sizing, whitespace etc
+* Improved default document styling for markdown and single pages 
 
 ### SCSS
 * Improved SCSS variables in `style.scss` - Made it easier to edit global theme colors
@@ -36,6 +37,7 @@
 * Various bug fixes and extra testing
 * Use title from config file as homepage meta title
 * Hide empty space if there are no features
+
 
 ## Version 1.0 (Released Jul 8, 2019)
 

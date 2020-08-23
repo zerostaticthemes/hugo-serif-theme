@@ -48,12 +48,12 @@ models:
             name: google_tag_manager_id
             label: Google Tag Manager ID
           - type: object
-            name: header
-            label: Header
+            name: homepage
+            label: Homepage
             fields:
-            - type: boolean
-              name: show_call_box
-              label: Show Callbox on Homepage?
+              - type: boolean
+                name: show_call_box
+                label: Show Callbox on Homepage?
           - type: object
             name: logo
             label: Params Logo

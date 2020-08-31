@@ -7,7 +7,9 @@ uploadDir: images
 staticDir: exampleSite/static
 pagesDir: exampleSite/content
 dataDir: exampleSite/data
-pageLayoutKey: layout
+pageLayoutKey: model
+configFilePaths:
+  - exampleSite/config.toml
 models:
   config:
     type: data
@@ -175,7 +177,7 @@ models:
     file: _index.md
     hideContent: false
     singleInstance: true
-    layout: index
+    layout: home
     fields:
       - type: string
         name: title
@@ -200,7 +202,7 @@ models:
     file: 404/_index.md
     hideContent: true
     singleInstance: true
-    layout: '404'
+    layout: pagenotfound
     fields:
       - type: string
         name: title
@@ -211,7 +213,7 @@ models:
     label: Basic Page
     match: '*.md'
     exclude: _index.md
-    layout: 'single'
+    layout: basicpage
     fields:
       - type: string
         name: title
@@ -236,7 +238,7 @@ models:
     label: Contact Page
     file: 'contact.md'
     singleInstance: true
-    layout: 'contact'
+    layout: contact
     fields:
       - type: string
         name: title
@@ -261,7 +263,7 @@ models:
     label: Service
     folder: services
     exclude: _index.md
-    layout: 'services/single'
+    layout: service
     fields:
       - type: string
         name: title
@@ -283,7 +285,7 @@ models:
     label: Services Overview
     file: services/_index.md
     singleInstance: true
-    layout: 'services/list'
+    layout: services
     fields:
       - type: string
         name: title
@@ -307,7 +309,7 @@ models:
     label: Team
     folder: team
     exclude: _index.md
-    layout: 'team/single'
+    layout: team
     fields:
       - type: string
         name: title
@@ -341,7 +343,7 @@ models:
     label: Team Overview
     file: team/_index.md
     singleInstance: true
-    layout: 'teams/list'
+    layout: teams
     fields:
       - type: string
         name: title

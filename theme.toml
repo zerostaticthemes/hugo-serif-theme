@@ -1,9 +1,9 @@
 name = "Hugo Serif"
 license = "MIT"
-licenselink = "https://github.com/JugglerX/hugo-serif-theme/blob/master/LICENSE"
-description = "Serif is a modern business theme for Hugo. It contains content types for the archetypical business website. The theme is fully responsive, blazing fast and artfully illustrated."
-homepage = "https://github.com/jugglerx/hugo-serif-theme"
-tags = ["responsive","minimal","clean","business","company","bootstrap","zerostatic","personal","google analytics"]
+licenselink = "https://github.com/zerostaticthemes/hugo-serif-theme/blob/master/LICENSE"
+description = "Serif is an advanced multi page theme for Hugo. It contains multiple content types for a typical business website. The theme is fully responsive, blazing fast and artfully illustrated."
+homepage = "https://github.com/zerostaticthemes/hugo-serif-theme"
+tags = ["responsive","minimal","clean","business","multi page", "marketing", "company","bootstrap","zerostatic","personal","google analytics"]
 features = ["services","team","about","contact"]
 min_version = "0.74.3"
 

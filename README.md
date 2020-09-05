@@ -3,9 +3,9 @@
 Serif is a modern business theme for Hugo. It contains content types for the archetypical business website. The theme is fully responsive, blazing fast and artfully illustrated.
 
 [Live Demo](https://hugo-serif.netlify.app/) |
-[Zerostatic Themes](https://www.zerostatic.io/theme/hugo-serif/)
+[Zerostatic Themes](https://www.zerostatic.io/)
 
-![Hugo Serif Theme screenshot](https://github.com/JugglerX/hugo-serif-theme/blob/master/images/screenshot.png)
+![Hugo Serif Theme screenshot](https://www.zerostatic.io/theme/hugo-serif/hugo-serif-screenshot.png)
 
 ## Theme features
 
@@ -69,7 +69,7 @@ Serif is a modern business theme for Hugo. It contains content types for the arc
 
 Use Stackbit to deploy this theme to Netlify and connect any headless CMS _(Forestry, NetlifyCMS, Sanity, Contentful, DatoCMS)_ - Actually really amazing. 
 
-[![Create with Stackbit](https://assets.stackbit.com/badge/create-with-stackbit.svg)](https://app.stackbit.com/create?theme=https://github.com/JugglerX/hugo-serif-theme)
+[![Create with Stackbit](https://assets.stackbit.com/badge/create-with-stackbit.svg)](https://app.stackbit.com/create?theme=https://github.com/zerostaticthemes/hugo-serif-theme)
 
 
 # Installation
@@ -109,7 +109,7 @@ git clone https://github.com/jugglerx/hugo-serif-theme.git themes/hugo-serif-the
 
 #### Install from .zip file
 
-You can download the .zip file located here https://github.com/JugglerX/hugo-serif-theme/archive/master.zip.
+You can download the .zip file located here https://github.com/zerostaticthemes/hugo-serif-theme/archive/master.zip.
 
 Extract the downloaded .zip inside the `themes` folder. Rename the extracted folder from `hugo-serif-theme-master` -> `hugo-serif-theme`. You should end up with the following folder structure `mynewsite/themes/hugo-serif-theme`
 

@@ -1,20 +1,19 @@
 stackbitVersion: ~0.3.0
 ssgName: hugo
 ssgVersion: '0.74.3'
-buildCommand: cd exampleSite && hugo --gc --baseURL "/" --themesDir ../.. && cd ..
-publishDir: exampleSite/public
+buildCommand: hugo
+publishDir: public
 uploadDir: images
-staticDir: exampleSite/static
-pagesDir: exampleSite/content
-dataDir: exampleSite/data
+staticDir: static
+pagesDir: content
+dataDir: data
 pageLayoutKey: model
-configFilePaths:
-  - exampleSite/config.toml
+
 models:
   config:
     type: data
     label: Config
-    file: exampleSite/config.toml
+    file: config.toml
     fields:
       - type: string
         name: title
@@ -78,7 +77,7 @@ models:
           - type: object
             name: homepage_meta_tags
             label: Homepage Metatags
-            fields: 
+            fields:
               - type: string
                 name: meta_description
                 label: meta_description

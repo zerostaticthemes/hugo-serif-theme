@@ -65,20 +65,15 @@ Serif is a modern business theme for Hugo. It contains content types for the arc
 - Set `body` classes from individual layouts - useful for CSS styling.
 - Example of using Hugo custom `layout` for the contact page
 
-# Stackbit Deploy
-
-Use Stackbit to deploy this theme to Netlify and connect any headless CMS _(Forestry, NetlifyCMS, Sanity, Contentful, DatoCMS)_ - Actually really amazing. 
-
-[![Create with Stackbit](https://assets.stackbit.com/badge/create-with-stackbit.svg)](https://app.stackbit.com/create?theme=https://github.com/zerostaticthemes/hugo-serif-theme)
 
 
-# Installation
+# Hugo Installation
 
 To use this theme you will need to have Hugo installed. If you don't already have Hugo installed please follow the official [installation guide](https://gohugo.io/getting-started/installing/)
 
-### Check Hugo version (Hugo 0.51+ Extended is required)
+### Check Hugo version (Hugo Extended is required!)
 
-This theme uses [Hugo Pipes](https://gohugo.io/hugo-pipes/scss-sass/) to compile SCSS and minify assets. Please make sure you have the **Hugo Extended** version installed. If you are not using the extended version this theme will not not compile.
+This theme uses [Hugo Pipes](https://gohugo.io/hugo-pipes/scss-sass/) to compile SCSS and minify assets. Please make sure you have the **Hugo Extended** version installed. If you are not using the extended version this theme will not work.
 
 To check your version of Hugo, run:
 
@@ -86,72 +81,36 @@ To check your version of Hugo, run:
 hugo version
 ```
 
-This will output the currently installed version of Hugo. Make sure you see `/extended` after the version number, for example `Hugo Static Site Generator v0.51/extended darwin/amd64 BuildDate: unknown` You do not need to use version v0.51 specifically, you can use any version of Hugo above 0.51. It just needs to have the `/extended` part
+This will output the currently installed version of Hugo. Make sure you see `/extended` after the version number, for example `Hugo Static Site Generator v0.51/extended darwin/amd64 BuildDate: unknown` You do not need to use version v0.51 specifically, it just needs to have the `/extended` part
 
-### Create a new Hugo site
 
-```
-hugo new site mynewsite
-```
+# Theme Installation
 
-This will create a fresh Hugo site in the folder `mynewsite`.
-
-### Install theme
-
-Copy or git clone this theme into the sites themes folder `mynewsite/themes`
-
-#### Install with Git
-
-```
-cd mynewsite
-git clone https://github.com/jugglerx/hugo-serif-theme.git themes/hugo-serif-theme
-```
-
-#### Install from .zip file
-
-You can download the .zip file located here https://github.com/zerostaticthemes/hugo-serif-theme/archive/master.zip.
-
-Extract the downloaded .zip inside the `themes` folder. Rename the extracted folder from `hugo-serif-theme-master` -> `hugo-serif-theme`. You should end up with the following folder structure `mynewsite/themes/hugo-serif-theme`
-
-### Add example content
-
-Copy the entire contents of the `mynewsite/themes/hugo-serif-theme/exampleSite/` folder to root folder of your Hugo site, ie `mynewsite/`
-
-To copy the files using terminal, make sure you are still in the projects root, ie the `mynewsite` folder.
-
-```
-cp -a themes/hugo-serif-theme/exampleSite/. .
-```
-
-### Update config.toml
-
-After you copy the `config.toml` into the root folder of your Hugo site you will need to update the `baseURL`, `themesDir` and `theme` values in `mynewsite/config.toml`
-
-```
-baseURL = "/"
-themesDir = "themes"
-theme = "hugo-serif-theme"
-```
-
-### Run Hugo
-
-After installing the theme for the first time, generate the Hugo site.
-
-You run this command from the root folder of your Hugo site ie `mynewsite/`
+Download, fork or  clone this repo, it's ready to go. 
 
 ```
 hugo
 ```
 
-For local development run Hugo's built-in local server.
-
 ```
 hugo server
 ```
 
-Now enter [`localhost:1313`](http://localhost:1313) in the address bar of your browser.
+# Deployment
 
-# Configuring theme features
+## Stackbit
+
+Use Stackbit to deploy this theme and connect any headless CMS _(Forestry, NetlifyCMS, Sanity, Contentful, DatoCMS)_ - It's actually really amazing. This theme contains a valid and tested `stackbit.yaml`
+
+[![Create with Stackbit](https://assets.stackbit.com/badge/create-with-stackbit.svg)](https://app.stackbit.com/create?theme=https://github.com/zerostaticthemes/hugo-serif-theme)
+
+## Netlify
+
+Use Netlify to deploy this theme. This theme contains a valid and tested `netlify.toml` - Feel free to use the 1-click deploy below.
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/zerostaticthemes/hugo-serif-theme)
+
+# Configuring Theme
 
 Copy your Google Analytics id into the `config.toml` - Also supports Google Tag Manager.
 
@@ -200,6 +159,7 @@ You can set meta tags on a per template basis using a block. For example, you mi
 ## Credits
 
 - Beautiful royalty free Illustrations by Icons8 - https://icons8.com/illustrations/style--pixeltrue
+
 
 ## License
 

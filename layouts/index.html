@@ -44,11 +44,13 @@
       </div>
       {{ end }}
     </div>
+    {{ if not .Site.Params.homepage.hide_view_all_services }}
     <div class="row justify-content-center">
       <div class="col-auto">
         <a class="button button-primary" href="{{ "services/" | relURL }}">View All Services</a>
       </div>
     </div>
+    {{ end }}
   </div>
 </div>
 {{end}}

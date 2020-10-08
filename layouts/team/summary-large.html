@@ -9,6 +9,9 @@
     <p class="team-description">{{ .Params.Jobtitle }}</p>
     {{ if .Params.Linkedinurl }}
     <a target="_blank" href="{{ .Params.Linkedinurl }}">LinkedIn</a> {{ end }}
+    {{ if .Params.Twitterhandle }}
+    <a target="_blank" href="https://twitter.com/{{ .Params.Twitterhandle }}">Twitter</a> {{ end }}
+
   </div>
-  <div class="team-content">    {{ .Content | truncate 120 "…" }}</div>
+  <div class="team-content">    {{ .Content | truncate (.Site.Params.team.summary_large_truncate | default 120 ) "…" }}</div>
 </div>

@@ -325,6 +325,9 @@ models:
       - type: string
         name: linkedinurl
         label: Linkedin URL
+      - type: string
+        name: Twitterhandle
+        label: Twitter handle
       - type: boolean
         name: draft
         label: Draft

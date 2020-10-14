@@ -11,9 +11,8 @@ pageLayoutKey: model
 
 models:
   config:
-    type: data
+    type: config
     label: Config
-    file: config.toml
     fields:
       - type: string
         name: title
@@ -116,7 +115,7 @@ models:
         name: menu
         label: Menus
         models:
-          - site_menu_item
+          - site_menus
   site_menus:
     type: object
     label: Site Menus

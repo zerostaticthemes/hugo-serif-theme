@@ -9,6 +9,7 @@ title = "Hugo Serif Theme"
 
   [params.homepage]
     show_call_box = true
+    hide_view_all_services = false  # set to true to hide the View All Services button
 
   [params.logo]
     mobile = "images/logo/logo-mobile.svg"
@@ -26,6 +27,9 @@ title = "Hugo Serif Theme"
     meta_twitter_card = "summary"
     meta_twitter_site = "@zerostaticio"
     meta_twitter_creator = "@zerostaticio"
+
+  [params.team]
+    summary_large_truncate = 120  # How many characters to include in the summary of the team bios (large layout) before truncating
 
   [params.footer]
     copyright_text = 'Free Hugo theme by <a class="zerostatic" href="https://www.zerostatic.io">www.zerostatic.io</a>'

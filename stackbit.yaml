@@ -55,6 +55,9 @@ models:
               - type: boolean
                 name: show_call_box
                 label: Show Callbox on Homepage?
+              - type: boolean
+                name: hide_view_all_services
+                label: Show View All Services button on Homepage?
           - type: object
             name: logo
             label: Params Logo
@@ -105,6 +108,13 @@ models:
               - type: string
                 name: meta_twitter_creator
                 label: meta_twitter_creator
+          - type: object
+            name: team
+            label: Team Page Params
+            fields:
+              - type: number
+                name: summary_large_truncate
+                label: Length (chars) of bio text
           - type: object
             name: footer
             label: Footer

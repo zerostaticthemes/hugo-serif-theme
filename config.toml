@@ -13,6 +13,7 @@ title = "Hugo Serif Theme"
 
   [params.logo]
     mobile = "images/logo/logo-mobile.svg"
+    mobile_height = "36px"
     desktop = "images/logo/logo.svg"
     desktop_height = "36px"
     alt = "Serif - A Hugo Business Theme"
@@ -45,6 +46,16 @@ title = "Hugo Serif Theme"
       name = "Team"
       url = "/team/"
       weight = 2
+
+  [[menu.main]]
+      name = "About"
+      url = "/about/"
+      weight = 3
+
+  [[menu.main]]
+      name = "Contact"
+      url = "/contact/"
+      weight = 4
 
   # Footer Menu
   [[menu.footer]]

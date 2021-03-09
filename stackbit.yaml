@@ -79,6 +79,9 @@ models:
               - type: string
                 name: desktop_height
                 label: Desktop Logo height in pixels
+              - type: string
+                name: mobile_height
+                label: Mobile Logo height in pixels
           - type: object
             name: homepage_meta_tags
             label: Homepage Metatags

@@ -100,7 +100,7 @@ hugo server
 
 ## Stackbit
 
-Use Stackbit to deploy this theme and connect any headless CMS _(Forestry, NetlifyCMS, Sanity, Contentful, DatoCMS)_ - It's actually really amazing. This theme contains a valid and tested `stackbit.yaml`
+Use Stackbit to deploy this theme. This theme contains a valid and tested `stackbit.yaml`
 
 [![Create with Stackbit](https://assets.stackbit.com/badge/create-with-stackbit.svg)](https://app.stackbit.com/create?theme=https://github.com/zerostaticthemes/hugo-serif-theme)
 
@@ -112,15 +112,18 @@ Use Netlify to deploy this theme. This theme contains a valid and tested `netlif
 
 # Configuring Theme
 
-Copy your Google Analytics id into the `config.toml` - Also supports Google Tag Manager.
-
 ### Google Analytics
-```
-// config.toml
+
+Copy your Google Analytics ID into the `config.toml` in the `google_analytics_id` field - Also supports Google Tag Manager.
+
+```toml
+# config.toml
 [params]
   google_analytics_id = ""
   google_tag_manager_id = ""
 ```
+
+When your site is running locally using `hugo server` the GA tag is not injected. This prevents polluting your real data.
  
 ### Homepage meta tags
 

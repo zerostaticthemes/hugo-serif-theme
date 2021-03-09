@@ -5,3 +5,7 @@
 [build.environment]
   HUGO_VERSION = "0.74.3"
   HUGO_BASEURL = "/"
+
+[context.production.environment]
+  HUGO_VERSION = "0.74.3"
+  RUBY_VERSION = "2.7.1"

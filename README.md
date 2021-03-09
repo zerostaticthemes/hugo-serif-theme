@@ -129,8 +129,8 @@ When your site is running locally using `hugo server` the GA tag is not injected
 
 Often a homepage requires special meta tags such as a meta description or og meta data for twitter, facebook etc. You can configure these values in the `config.toml`
 
-```
-// config.toml
+```toml
+# config.toml
   [params.homepage_meta_tags]
     meta_description = "a description of your website."
     meta_og_title = "My Theme"
@@ -147,16 +147,12 @@ Often a homepage requires special meta tags such as a meta description or og met
 
 You can set meta tags on a per template basis using a block. For example, you might want to write a custom meta description for the `/services` page. You can insert any valid HTML meta data inside the `{{ define "meta_tags }}` block at the top of a template.
 
-```
+```html
 // layouts/services/list.html
-...
 
 {{ define "meta_tags" }}
     <meta name="description" content="We offer a variety of services in the finance industry" />
 {{ end }}
-
-{{ define main }}
-...
 ```
 
 ## Credits
@@ -166,5 +162,7 @@ You can set meta tags on a per template basis using a block. For example, you mi
 
 ## License
 
-This theme is open source under the MIT license. If you fork or copy this theme you must leave me as the original author in the LICENSE file (on line 3 where I am listed as the author). Really, I just don't want people copying this theme and then saying it's their theme, because I put a lot of work into my themes, thanks!
+This theme is open source under the MIT license. Please be respectful 🙏🏽
 
+* If you fork or copy this theme please leave me as an original author in the LICENSE file on line 3 where I am listed as the author.
+* Please don't create ports of this theme without at least asking me. Yes this theme is open-source but I've had several people "port" this theme (with only minor changes) and then advertise the theme as their own. Then they don't update it and it starts to get old and break etc. Now lots of people are finding these old crappy versions of the theme.

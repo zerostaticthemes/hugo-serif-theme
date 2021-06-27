@@ -1,7 +1,7 @@
 <div class="team team-summary team-summary-large">
   {{ if .Params.image }}
   <div class="team-image">
-    <img alt="Photo of {{ .Title }}" class="img-fluid mb-2" src="{{ .Params.image | relURL }}" />
+    <img width="360" height="360" alt="Photo of {{ .Title }}" class="img-fluid mb-2" src="{{ .Params.image | relURL }}" />
   </div>
   {{ end }}
   <div class="team-meta">

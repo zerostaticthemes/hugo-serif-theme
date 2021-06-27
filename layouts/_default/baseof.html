@@ -4,11 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>{{ block "title" . }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+  <title>{{ block "title" . }}{{ if .Params.meta_title }}{{ .Params.meta_title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}{{ end }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {{ block "meta_tags" . }}{{end}}
   <link rel="icon" type="image/png" href="{{ "favicon-32x32.svg" | relURL }}">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  {{ partial "google-fonts.html" . }}
 
   <!-- CSS-->
   {{ if .Site.IsServer }}
@@ -20,6 +19,18 @@
   {{ end }}
 
   {{ block "header_css" . }}{{ end }}
+
+  {{ block "meta_tags" . }}
+    {{ if .Params.description }}<meta name="description" content="{{ .Params.description }}"/>{{ end }}
+    {{ if .Params.meta_title }}<meta property="og:title" content="{{ .Params.meta_title }}"/>{{ else }}<meta property="og:title" content="{{ .Title }}"/>{{ end }}
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="{{ .Permalink }}"/>
+    {{ if .Params.image }}<meta property="og:image" content="{{ .Params.image | absURL }}"/>{{ end }}
+    {{ if .Params.description }}<meta property="og:description" content="{{ .Params.description }}"/>{{ end }}
+    <meta name="twitter:card" content="summary"/>
+    {{ if .Site.Params.seo.meta_twitter_site }}<meta name="twitter:site" content="{{ .Site.Params.seo.meta_twitter_site }}"/>{{ end }}
+    {{ if .Site.Params.seo.meta_twitter_creator }}<meta name="twitter:creator" content="{{ .Site.Params.seo.meta_twitter_creator }}"/>{{ end }}
+  {{ end }}
 
 </head>
 

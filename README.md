@@ -133,48 +133,103 @@ Use Netlify to deploy this theme. This theme contains a valid and tested `netlif
 
 ## Configuring Theme
 
+**Logo**
+
+You can edit the logo from the `config.toml`
+
+```toml
+  # config.toml
+
+  [params.logo]
+    mobile = "images/logo/logo-mobile.svg"
+    mobile_height = "36px"
+    desktop = "images/logo/logo.svg"
+    desktop_height = "36px"
+    alt = "Serif - A Hugo Business Theme"
+```
+
+**Fonts**
+
+This theme uses Google fonts. You can change the font snippet in `layouts/partials/google-fonts.html` and then update font variable in `scss/style.scss`
+
+```scss
+  // scss/style.scss
+
+  // Fonts
+  $font-family-base: Helvetica, Arial, sans-serif, -apple-system;
+  $font-family-heading: 'Playfair Display', serif, -apple-system; 
+```
+
+**Colors**
+
+You can edit the themes primary, secondary and neutral colors in `scss/style.scss`. To override the bootstrap colors simply edit `scss/_bootstrap-variables.scss`
+
+```scss
+  // scss/style.scss
+
+  // Colors
+  $primary: #f24088;
+  $secondary: #f88379;
+  $black: #2f2f41;
+  $white: #ffffff;
+  $white-offset: #f6f7ff;
+  $steel: #5C5A5A;
+```
+
+**Hero Image**
+
+List pages such as the homepage, services and team can have a Hero image. 
+
+```yml
+# content/_index.md 
+---
+intro_image: "https://source.unsplash.com/wOGhHamMqLc"
+intro_image_absolute: false
+intro_image_hide_on_mobile: true
+---
+```
+
+While this themes default content uses illustrations, its easy to change the image to a photo and it will still look great. 
+
+the front-matter field `intro_image_absolute: true` let's illustrations "break out" (in CSS terms, it uses `position: absolute`) of the grid and is an intended stylistic effect. When using photos or normal images it's recommended to set this to false and the photo will align with the grid. See `content/team/_index.md` for an example.
+
+
 ### Google Analytics
 
-Copy your Google Analytics ID into the `config.toml` in the `google_analytics_id` field - Also supports Google Tag Manager.
+Put your Google Analytics ID in the `google_analytics_id` field in the `config.toml` - Also supports Google Tag Manager. When your site is running locally using `hugo server` the GA tag is not injected. This prevents polluting your real data.
 
 ```toml
 # config.toml
+
 [params]
-  google_analytics_id = ""
+  google_analytics_id = "UA-XXX-1"
   google_tag_manager_id = ""
 ```
 
-When your site is running locally using `hugo server` the GA tag is not injected. This prevents polluting your real data.
+ You can also set the Google Analytics ID using a [Netlify environment variable](https://docs.netlify.com/configure-builds/environment-variables/) `HUGO_GOOGLE_ANALYTICS_ID`
  
-### Homepage meta tags
+### Title, meta tags & OG meta data
 
-Often a homepage requires special meta tags such as a meta description or og meta data for twitter, facebook etc. You can configure these values in the `config.toml`
+A pages `title`, `description` and `image` front-matter fields are used to generate the pages title and meta tags.
+
+By default a pages `<title>` is generated from the front-matter `title` and site title set in `config.toml` 
+
+```
+ <title>{{ block "title" . }}{{ if .Params.meta_title }}{{ .Params.meta_title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}{{ end }}</title>
+```
+
+You can override the `<title>` on any page by using the `meta_title` field in the front-matter. See `content/_index.md` for an example.
+
+Set your twitter info to ensure twitter social previews work correctly.
 
 ```toml
-# config.toml
-  [params.homepage_meta_tags]
-    meta_description = "a description of your website."
-    meta_og_title = "My Theme"
-    meta_og_type = "website"
-    meta_og_url = "https://www.mywebsite.com"
-    meta_og_image = "https://www.mywebsite.com/images/tn.png"
-    meta_og_description = "a description of your website."
-    meta_twitter_card = "summary"
-    meta_twitter_site = "@mytwitterhandle"
-    meta_twitter_creator = "@mytwitterhandle"
+  # config.toml
+
+  [params.seo]
+    meta_twitter_site = "@zerostaticio"
+    meta_twitter_creator = "@zerostaticio"
 ```
 
-### Override meta tags on a per layout basis
-
-You can set meta tags on a per template basis using a block. For example, you might want to write a custom meta description for the `/services` page. You can insert any valid HTML meta data inside the `{{ define "meta_tags }}` block at the top of a template.
-
-```html
-// layouts/services/list.html
-
-{{ define "meta_tags" }}
-    <meta name="description" content="We offer a variety of services in the finance industry" />
-{{ end }}
-```
 
 ## License & Credits
 

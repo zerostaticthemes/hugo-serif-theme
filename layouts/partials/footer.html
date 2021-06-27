@@ -4,16 +4,8 @@
       <div class="col-12">
         <div class="footer-inner">
           <h3 class="footer-title">{{.Site.Title}}</h3>
-          <ul>
-            {{ $currentPage := . }}
-            {{ range .Site.Menus.footer }}
-            <li class="menu-item-{{ .Name | lower }}{{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}">
-              <a href="{{.URL}}">
-                {{ .Name }}
-              </a>
-            </li>
-            {{end}}
-          </ul>
+          {{ partial "footer-menu" . }}
+          
         </div>
       </div>
     </div>

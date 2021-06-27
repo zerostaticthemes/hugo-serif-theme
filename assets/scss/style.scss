@@ -7,14 +7,13 @@ $white-offset: #f6f7ff;
 $steel: #5C5A5A;
 
 // Fonts
-// Google fonts are imported in `layouts/partials/google-fonts.html`
+// Google fonts are added in `layouts/partials/google-fonts.html`
 $font-family-base: Helvetica, Arial, sans-serif, -apple-system;
-$font-family-heading: 'Playfair Display', serif, -apple-system; // uses a Google font
+$font-family-heading: 'Playfair Display', serif, -apple-system;
 
 // Links
 $link-color: $primary;
 $link-decoration: none;
-$link-hover-color: lighten($primary, 20%);
 $link-hover-decoration: underline;
 
 // Footer

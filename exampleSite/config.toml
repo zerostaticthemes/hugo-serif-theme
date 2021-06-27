@@ -10,8 +10,8 @@ theme = "hugo-serif-theme"
   google_tag_manager_id = ""
 
   [params.homepage]
-    show_call_box = true
-    hide_view_all_services = false  # set to true to hide the View All Services button
+    show_contact_box = true # show / hide the contaxt box on the homepage
+    show_services_button = true  # show / hide the "view all services" button
 
   [params.logo]
     mobile = "images/logo/logo-mobile.svg"

@@ -39,6 +39,11 @@
           text-decoration: underline;
         }
       }
+      &.active {
+        a {
+          font-weight: bold;
+        }
+      }
     }
     @include media-breakpoint-up(sm) {
       height: inherit;

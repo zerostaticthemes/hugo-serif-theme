@@ -105,7 +105,7 @@ a {
   text-decoration: none;
   background-color: transparent; }
   a:hover {
-    color: #f9a0c4;
+    color: #d70f60;
     text-decoration: underline; }
 
 a:not([href]) {
@@ -4155,6 +4155,8 @@ ol {
         display: block; }
         .footer ul li a:hover {
           text-decoration: underline; }
+      .footer ul li.active a {
+        font-weight: bold; }
     @media (min-width: 576px) {
       .footer ul {
         height: inherit;

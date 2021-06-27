@@ -7,119 +7,87 @@ Serif is a modern business theme for Hugo. It contains content types for the arc
 
 ![Hugo Serif Theme screenshot](https://www.zerostatic.io/theme/hugo-serif/hugo-serif-screenshot.png)
 
-## Theme features
+## Features
 
-### Content Types
-
+**Content Types**
 - Services (Markdown)
 - Team (Markdown)
 - Features (Data)
 
-### CSS
-
+**CSS**
 - SCSS (Hugo Pipelines)
-- Responsive design
+- Full Responsive design
 - Bootstrap 4.4 grid and media queries only
 - Uncomment `@import 'bootstrap/bootstrap';` in `style.scss` to use the entire Bootstrap framework
 
-### Speed
-
+**Speed**
 - 100/100 Google Lighthouse speed score
 - Under 50KB without images or 80KB with images and illustrations ⚡
 - No jQuery, only a tiny bit of vanilla Javascript for the mobile menu.
 
-### SEO
-
+**SEO**
 - 100/100 Google Lighthouse SEO score
-- Google analytics configured in `config.toml`
-- Configure GID using env variable HUGO_GOOGLE_ANALYTICS_ID, compatible with Netlify.
+- 100/100 Google Lighthouse accessibility score
+- Configure Google Analytics in `config.toml`
+- Configure Google Analytics using env variable `HUGO_GOOGLE_ANALYTICS_ID` compatible with Netlify.
 - Configure meta tags and OG meta tags for the homepage in `config.toml`
 - Override any meta tags on a per page basis
 - Semantic HTML document structure
 
-### Accessibility 
-
-- 100/100 Google Lighthouse accessibility score
-- Accessible colors, headings and link text (by design)
-- Attention has been paid to using correct contrast, font sizes etc
-- Attention has been paid to ensuring comfortable hit zones and link sizing on mobile
-
-### Menu
-
+**Menu**
 - Responsive menu managed in `config.toml`
 - Animated hamburger menu on mobile
 
-### Content
-
+**Content**
 - Robust example content included
 - Royalty free illustrations included
 
-### Templating
-
+**Code**
 - No hardcoded content in the layouts
 - Plenty of examples of using `range` and `where` to loop over various sections/content types
 - Examples of `range` by Param
-- Examples of using data content _(data/contact.yaml and data/features.json)_
+- Examples of using data content _(`data/contact.yaml` and `data/features.json`)_
 - Example of passing .Site . (context) and custom variables to partials - see `layouts/page/contact.html` - `{{ partial "call.html" (dict "site" .Site "context" . "show_button" "false") }}`
-- Examples of injecting javascript files on a per page basis (see services/single.html)
+- Examples of injecting javascript files on a per page basis (see `services/single.html`)
 - Set `body` classes from individual layouts - useful for CSS styling.
 - Example of using Hugo custom `layout` for the contact page
 
-# Hugo Installation
+## Installation
 
-To use this theme you will need to have Hugo installed. If you don't already have Hugo installed please follow the official [installation guide](https://gohugo.io/getting-started/installing/)
+**1. Install Hugo**
 
-### Check Hugo version (Hugo Extended is required!)
+To use this theme you will first need to have Hugo installed. Please follow the official [installation guide](https://gohugo.io/getting-started/installing/)
 
-This theme uses [Hugo Pipes](https://gohugo.io/hugo-pipes/scss-sass/) to compile SCSS and minify assets. Please make sure you have the **Hugo Extended** version installed. If you are not using the extended version this theme will not work.
+⚠️ **Note:** Check your Hugo version - **Hugo Extended** is required!
 
-To check your version of Hugo, run:
+This theme uses [Hugo Pipes](https://gohugo.io/hugo-pipes/scss-sass/) to compile SCSS and minify assets which means if you not using the Hugo extended version this theme will not work. To check your version of Hugo, run  `hugo version`. Make sure you see __/extended__ after the version number, for example _Hugo Static Site Generator v0.51/extended darwin/amd64 BuildDate: unknown_ You do not need to use version v0.51 specifically, it just needs to have the _/extended_ part.
 
-```
-hugo version
-```
+**2. Create a new Hugo site**
 
-This will output the currently installed version of Hugo. Make sure you see `/extended` after the version number, for example `Hugo Static Site Generator v0.51/extended darwin/amd64 BuildDate: unknown` You do not need to use version v0.51 specifically, it just needs to have the `/extended` part
-
-
-# Theme Installation
-
-### Create a new Hugo site
+This will create a fresh Hugo site in the folder `mynewsite`.
 
 ```
 hugo new site mynewsite
 ```
 
-This will create a fresh Hugo site in the folder `mynewsite`.
+**3. Install the theme**
 
-### Install theme
-
-Copy or git clone this theme into the sites themes folder `mynewsite/themes`
-
-#### Install with Git
+Download or git clone this theme into the sites themes folder `mynewsite/themes`. You should end up with the following folder structure `mynewsite/themes/hugo-serif-theme`
 
 ```
 cd mynewsite
-git clone https://github.com/jugglerx/hugo-serif-theme.git themes/hugo-serif-theme
+git clone https://github.com/zerostaticthemes/hugo-serif-theme.git themes/hugo-serif-theme
 ```
 
-#### Install from .zip file
+**4. Copy the example content**
 
-You can download the .zip file located here https://github.com/zerostaticthemes/hugo-serif-theme/archive/master.zip.
-
-Extract the downloaded .zip inside the `themes` folder. Rename the extracted folder from `hugo-serif-theme-master` -> `hugo-serif-theme`. You should end up with the following folder structure `mynewsite/themes/hugo-serif-theme`
-
-### Add example content
-
-Copy the entire contents of the `mynewsite/themes/hugo-serif-theme/exampleSite/` folder to root folder of your Hugo site, ie `mynewsite/`
-
-To copy the files using terminal, make sure you are still in the projects root, ie the `mynewsite` folder.
+Copy the entire contents of the `mynewsite/themes/hugo-serif-theme/exampleSite/` folder to root folder of your Hugo site, ie `mynewsite/`. To copy the files using terminal, make sure you are still in the projects root, ie the `mynewsite` folder.
 
 ```
 cp -a themes/hugo-serif-theme/exampleSite/. .
 ```
 
-### Update config.toml
+**5. Update config.toml**
 
 After you copy the `config.toml` into the root folder of your Hugo site you will need to update the `baseURL`, `themesDir` and `theme` values in `mynewsite/config.toml`
 
@@ -129,7 +97,7 @@ themesDir = "themes"
 theme = "hugo-serif-theme"
 ```
 
-### Run Hugo
+**6. Run Hugo**
 
 After installing the theme for the first time, generate the Hugo site.
 
@@ -147,21 +115,23 @@ hugo server
 
 Now enter [`localhost:1313`](http://localhost:1313) in the address bar of your browser.
 
-# Deployment
 
-## Stackbit
+## Deployment
+
+### Stackbit
 
 Use Stackbit to deploy this theme. This theme contains a valid and tested `stackbit.yaml`
 
 [![Create with Stackbit](https://assets.stackbit.com/badge/create-with-stackbit.svg)](https://app.stackbit.com/create?theme=https://github.com/zerostaticthemes/hugo-serif-theme)
 
-## Netlify
+### Netlify
 
 Use Netlify to deploy this theme. This theme contains a valid and tested `netlify.toml` - Feel free to use the 1-click deploy below.
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/zerostaticthemes/hugo-serif-theme)
 
-# Configuring Theme
+
+## Configuring Theme
 
 ### Google Analytics
 
@@ -206,14 +176,10 @@ You can set meta tags on a per template basis using a block. For example, you mi
 {{ end }}
 ```
 
-## Credits
+## License & Credits
+
+This theme is open source under the MIT license. 
+
+Please don't create ports of this theme without asking me. Yes this theme is open-source but I've had several people "port" this theme (with only minor changes) and then advertise the theme as their own. Then they don't update it and it starts to get old and break etc. Now lots of people are finding these old crappy versions of the theme.
 
 - Beautiful royalty free Illustrations by Icons8 - https://icons8.com/illustrations/style--pixeltrue
-
-
-## License
-
-This theme is open source under the MIT license. Please be respectful 🙏🏽
-
-* If you fork or copy this theme please leave me as an original author in the LICENSE file on line 3 where I am listed as the author.
-* Please don't create ports of this theme without at least asking me. Yes this theme is open-source but I've had several people "port" this theme (with only minor changes) and then advertise the theme as their own. Then they don't update it and it starts to get old and break etc. Now lots of people are finding these old crappy versions of the theme.

@@ -241,3 +241,8 @@ Please don't create ports of this theme without asking me. Yes this theme is ope
 - Beautiful royalty free Illustrations by Icons8 - https://icons8.com/illustrations/style--pixeltrue
 - Stock images by Unsplash - https://unsplash.com/
 - Feature icons by Noun Project - https://thenounproject.com/
+
+## Other Versions
+
+- [Jekyll Serif Theme](https://github.com/zerostaticthemes/jekyll-serif-theme) (official)
+- [Gatsby Serif Theme](https://github.com/zerostaticthemes/gatsby-serif-theme) (official)

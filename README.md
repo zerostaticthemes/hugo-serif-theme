@@ -7,65 +7,60 @@ Serif is a modern business theme for Hugo. It contains content types for the arc
 
 ![Hugo Serif Theme screenshot](https://www.zerostatic.io/theme/hugo-serif/hugo-serif-screenshot.png)
 
-## Theme features
+## Features
 
-### Content Types
-
+**Content Types**
 - Services (Markdown)
 - Team (Markdown)
 - Features (Data)
 
-### CSS
-
+**CSS**
 - SCSS (Hugo Pipelines)
-- Responsive design
+- Full Responsive design
 - Bootstrap 4.4 grid and media queries only
 - Uncomment `@import 'bootstrap/bootstrap';` in `style.scss` to use the entire Bootstrap framework
 
-### Speed
-
+**Speed**
 - 100/100 Google Lighthouse speed score
 - Under 50KB without images or 80KB with images and illustrations ⚡
 - No jQuery, only a tiny bit of vanilla Javascript for the mobile menu.
 
-### SEO
-
+**SEO**
 - 100/100 Google Lighthouse SEO score
-- Google analytics configured in `config.toml`
-- Configure GID using env variable HUGO_GOOGLE_ANALYTICS_ID, compatible with Netlify.
+- Configure Google Analytics in `config.toml`
+- Configure Google Analytics using env variable `HUGO_GOOGLE_ANALYTICS_ID` compatible with Netlify.
 - Configure meta tags and OG meta tags for the homepage in `config.toml`
 - Override any meta tags on a per page basis
 - Semantic HTML document structure
 
-### Accessibility 
-
+**Accessibility**
 - 100/100 Google Lighthouse accessibility score
 - Accessible colors, headings and link text (by design)
 - Attention has been paid to using correct contrast, font sizes etc
 - Attention has been paid to ensuring comfortable hit zones and link sizing on mobile
 
-### Menu
-
+**Menu**
 - Responsive menu managed in `config.toml`
 - Animated hamburger menu on mobile
 
-### Content
-
+**Content**
 - Robust example content included
 - Royalty free illustrations included
 
-### Templating
-
+**Templating**
 - No hardcoded content in the layouts
 - Plenty of examples of using `range` and `where` to loop over various sections/content types
 - Examples of `range` by Param
-- Examples of using data content _(data/contact.yaml and data/features.json)_
+- Examples of using data content _(`data/contact.yaml` and `data/features.json`)_
 - Example of passing .Site . (context) and custom variables to partials - see `layouts/page/contact.html` - `{{ partial "call.html" (dict "site" .Site "context" . "show_button" "false") }}`
-- Examples of injecting javascript files on a per page basis (see services/single.html)
+- Examples of injecting javascript files on a per page basis (see `services/single.html`)
 - Set `body` classes from individual layouts - useful for CSS styling.
 - Example of using Hugo custom `layout` for the contact page
 
-# Hugo Installation
+
+# Installation
+
+## Hugo Install
 
 To use this theme you will need to have Hugo installed. If you don't already have Hugo installed please follow the official [installation guide](https://gohugo.io/getting-started/installing/)
 
@@ -82,7 +77,7 @@ hugo version
 This will output the currently installed version of Hugo. Make sure you see `/extended` after the version number, for example `Hugo Static Site Generator v0.51/extended darwin/amd64 BuildDate: unknown` You do not need to use version v0.51 specifically, it just needs to have the `/extended` part
 
 
-# Theme Installation
+## Theme Install
 
 ### Create a new Hugo site
 

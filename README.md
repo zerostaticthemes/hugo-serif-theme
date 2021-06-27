@@ -133,12 +133,12 @@ Use Netlify to deploy this theme. This theme contains a valid and tested `netlif
 
 ## Configuring Theme
 
-**Logo**
+### Logo
 
 You can edit the logo from the `config.toml`
 
 ```toml
-  # config.toml
+# config.toml
 
   [params.logo]
     mobile = "images/logo/logo-mobile.svg"
@@ -148,35 +148,35 @@ You can edit the logo from the `config.toml`
     alt = "Serif - A Hugo Business Theme"
 ```
 
-**Fonts**
+### Fonts
 
 This theme uses Google fonts. You can change the font snippet in `layouts/partials/google-fonts.html` and then update font variable in `scss/style.scss`
 
 ```scss
-  // scss/style.scss
+// scss/style.scss
 
-  // Fonts
-  $font-family-base: Helvetica, Arial, sans-serif, -apple-system;
-  $font-family-heading: 'Playfair Display', serif, -apple-system; 
+// Fonts
+$font-family-base: Helvetica, Arial, sans-serif, -apple-system;
+$font-family-heading: 'Playfair Display', serif, -apple-system; 
 ```
 
-**Colors**
+### Colors
 
 You can edit the themes primary, secondary and neutral colors in `scss/style.scss`. To override the bootstrap colors simply edit `scss/_bootstrap-variables.scss`
 
 ```scss
-  // scss/style.scss
+// scss/style.scss
 
-  // Colors
-  $primary: #f24088;
-  $secondary: #f88379;
-  $black: #2f2f41;
-  $white: #ffffff;
-  $white-offset: #f6f7ff;
-  $steel: #5C5A5A;
+// Colors
+$primary: #f24088;
+$secondary: #f88379;
+$black: #2f2f41;
+$white: #ffffff;
+$white-offset: #f6f7ff;
+$steel: #5C5A5A;
 ```
 
-**Hero Image**
+### Hero Image
 
 List pages such as the homepage, services and team can have a Hero image. 
 
@@ -208,7 +208,7 @@ Put your Google Analytics ID in the `google_analytics_id` field in the `config.t
 
  You can also set the Google Analytics ID using a [Netlify environment variable](https://docs.netlify.com/configure-builds/environment-variables/) `HUGO_GOOGLE_ANALYTICS_ID`
  
-### Title, meta tags & OG meta data
+### Meta tags
 
 A pages `title`, `description` and `image` front-matter fields are used to generate the pages title and meta tags.
 
@@ -238,3 +238,5 @@ This theme is open source under the MIT license.
 Please don't create ports of this theme without asking me. Yes this theme is open-source but I've had several people "port" this theme (with only minor changes) and then advertise the theme as their own. Then they don't update it and it starts to get old and break etc. Now lots of people are finding these old crappy versions of the theme.
 
 - Beautiful royalty free Illustrations by Icons8 - https://icons8.com/illustrations/style--pixeltrue
+- Stock images by Unsplash - https://unsplash.com/
+- Feature icons by Noun Project - https://thenounproject.com/

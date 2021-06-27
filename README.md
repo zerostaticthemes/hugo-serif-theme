@@ -1,9 +1,10 @@
 # Hugo Serif Theme
 
-Serif is a modern business theme for Hugo. It contains content types for the archetypical business website. The theme is fully responsive, blazing fast and artfully illustrated.
+Serif is a modern business theme for Hugo. It contains multiple content types and pages. The theme is fully responsive, blazing fast and artfully illustrated.
 
 [Live Demo](https://hugo-serif.netlify.app/) |
-[Zerostatic Themes](https://www.zerostatic.io/)
+[Zerostatic Themes](https://www.zerostatic.io/) |
+Support our work - **Star this repo** ⭐✨💖
 
 ![Hugo Serif Theme screenshot](https://www.zerostatic.io/theme/hugo-serif/hugo-serif-screenshot.png)
 
@@ -240,3 +241,8 @@ Please don't create ports of this theme without asking me. Yes this theme is ope
 - Beautiful royalty free Illustrations by Icons8 - https://icons8.com/illustrations/style--pixeltrue
 - Stock images by Unsplash - https://unsplash.com/
 - Feature icons by Noun Project - https://thenounproject.com/
+
+## Other Versions
+
+- [Jekyll Serif Theme](https://github.com/zerostaticthemes/jekyll-serif-theme) (official)
+- [Gatsby Serif Theme](https://github.com/zerostaticthemes/gatsby-serif-theme) (official)

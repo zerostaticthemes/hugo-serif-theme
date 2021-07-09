@@ -1,12 +1,14 @@
-name = "Hugo Serif"
-license = "MIT"
-licenselink = "https://github.com/zerostaticthemes/hugo-serif-theme/blob/master/LICENSE"
-description = "Serif is an advanced multi page theme for Hugo. It contains multiple content types for a typical business website. The theme is fully responsive, blazing fast and artfully illustrated."
-homepage = "https://github.com/zerostaticthemes/hugo-serif-theme"
-tags = ["responsive","minimal","clean","business","multi page", "marketing", "company","bootstrap","zerostatic","personal","google analytics"]
-features = ["services","team","about","contact"]
-min_version = "0.74.3"
+name = 'Hugo Serif'
+license = 'MIT'
+licenselink = 'https://github.com/zerostaticthemes/hugo-serif-theme/blob/master/LICENSE'
+description = 'Serif is an advanced multi page theme for Hugo. It contains multiple content types for a typical business website. The theme is fully responsive, blazing fast and artfully illustrated.'
+
+homepage = 'https://github.com/zerostaticthemes/hugo-serif-theme'
+demosite = 'https://hugo-serif.netlify.app'
+
+tags = ['responsive','personal','company','multipage','light','bootstrap','zerostatic']
+features = ['bootstrap','responsive','scss','google analytics','netlify']
 
 [author]
-  name = "Robert Austin"
-  homepage = "https://www.zerostatic.io"
+  name = 'Robert Austin'
+  homepage = 'https://www.zerostatic.io'

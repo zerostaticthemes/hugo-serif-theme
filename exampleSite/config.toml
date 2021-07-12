@@ -8,7 +8,6 @@ theme = "hugo-serif-theme"
   [module.hugoVersion]
     extended = true
     min = "0.55.0"
-    max = "0.84.2"
     
 [params]
   # In most cases you will only want to use either one of these. If you have Google Analytics included in your GTM tags don't put your GA ID here. Otherwise your data might be useless.

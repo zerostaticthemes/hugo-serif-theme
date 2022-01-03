@@ -3,8 +3,9 @@
 Serif is a modern business theme for Hugo. It contains multiple content types and pages. The theme is fully responsive, blazing fast and artfully illustrated.
 
 [Live Demo](https://hugo-serif.netlify.app/) |
-[Zerostatic Themes](https://www.zerostatic.io/) |
-Support our work - **Star this repo** ⭐✨💖
+[Zerostatic Themes](https://www.zerostatic.io/)
+
+<a href="https://www.buymeacoffee.com/zerostatic" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 ![Hugo Serif Theme screenshot](https://www.zerostatic.io/theme/hugo-serif/hugo-serif-screenshot.png)
 
@@ -231,18 +232,26 @@ Set your twitter info to ensure twitter social previews work correctly.
     meta_twitter_creator = "@zerostaticio"
 ```
 
+## Extras
 
-## License & Credits
+### License
 
-This theme is open source under the MIT license. 
+- Don't create ports or new versions of this theme without asking me
+- You can't re-distribute or re-sell this theme as your own template
 
-Please don't create ports of this theme without asking me. Yes this theme is open-source but I've had several people "port" this theme (with only minor changes) and then advertise the theme as their own. Then they don't update it and it starts to get old and break etc. Now lots of people are finding these old crappy versions of the theme.
+### Credits 
 
 - Beautiful royalty free Illustrations by Icons8 - https://icons8.com/illustrations/style--pixeltrue
 - Stock images by Unsplash - https://unsplash.com/
 - Feature icons by Noun Project - https://thenounproject.com/
 
-## Other Versions
+### Other Hugo Themes by Zerostatic
 
-- [Jekyll Serif Theme](https://github.com/zerostaticthemes/jekyll-serif-theme) (official)
-- [Gatsby Serif Theme](https://github.com/zerostaticthemes/gatsby-serif-theme) (official)
+- [Hugo Whisper](https://github.com/zerostaticthemes/hugo-whisper-theme)
+- [Hugo Serif](https://github.com/zerostaticthemes/hugo-serif-theme)
+- [Hugo Winston](https://github.com/zerostaticthemes/hugo-winston-theme)
+- [Hugo Advance](https://www.zerostatic.io/theme/hugo-advance/)
+- [Hugo Paradigm](https://www.zerostatic.io/theme/hugo-paradigm/)
+
+
+🇦🇺 **Made in Australia** by Robert Austin - leave a star mate!

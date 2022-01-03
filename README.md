@@ -120,12 +120,6 @@ Now enter [`localhost:1313`](http://localhost:1313) in the address bar of your b
 
 ## Deployment
 
-### Stackbit
-
-Use Stackbit to deploy this theme. This theme contains a valid and tested `stackbit.yaml`
-
-[![Create with Stackbit](https://assets.stackbit.com/badge/create-with-stackbit.svg)](https://app.stackbit.com/create?theme=https://github.com/zerostaticthemes/hugo-serif-theme)
-
 ### Netlify
 
 Use Netlify to deploy this theme. This theme contains a valid and tested `netlify.toml` - Feel free to use the 1-click deploy below.

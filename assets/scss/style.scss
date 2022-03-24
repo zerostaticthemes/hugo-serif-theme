@@ -1,15 +1,13 @@
 // Colors
-$primary: #f24088;
-$secondary: #f88379;
-$black: #2f2f41;
-$white: #ffffff;
-$white-offset: #f6f7ff;
-$steel: #5C5A5A;
+$primary: {{ .Site.Params.colors.primary | default "#f24088" }};
+$black: {{ .Site.Params.colors.black | default "#2f2f41" }};
+$white: {{ .Site.Params.colors.white | default "#ffffff" }};
+$white-offset: {{ .Site.Params.colors.white_offset | default "#f6f7ff" }};
+$grey: {{ .Site.Params.colors.grey | default "#5C5A5A" }};
 
 // Fonts
-// Google fonts are added in `layouts/partials/google-fonts.html`
-$font-family-base: Helvetica, Arial, sans-serif, -apple-system;
-$font-family-heading: 'Playfair Display', serif, -apple-system;
+$font-family-base: {{ .Site.Params.fonts.base }}, Helvetica, Arial, sans-serif, -apple-system;
+$font-family-heading: {{ .Site.Params.fonts.heading }}, serif, -apple-system;
 
 // Links
 $link-color: $primary;

@@ -5,8 +5,6 @@ Serif is a modern business theme for Hugo. It contains multiple content types an
 [Live Demo](https://hugo-serif.netlify.app/) |
 [Zerostatic Themes](https://www.zerostatic.io/)
 
-<a href="https://www.buymeacoffee.com/zerostatic" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
-
 ![Hugo Serif Theme screenshot](https://www.zerostatic.io/theme/hugo-serif/hugo-serif-screenshot.png)
 
 ## Features
@@ -146,35 +144,36 @@ You can edit the logo from the `config.toml`
 
 ### Fonts
 
-This theme uses Google fonts. You can change the font snippet in `layouts/partials/google-fonts.html` and then update font variable in `scss/style.scss`
+This theme uses Google fonts. You can change the google font in the `config.toml` - These fonts are injected into the `style.scss` as SCSS variables.
 
-```scss
-// scss/style.scss
+```toml
+# config.toml 
 
-// Fonts
-$font-family-base: Helvetica, Arial, sans-serif, -apple-system;
-$font-family-heading: 'Playfair Display', serif, -apple-system; 
+  [params.fonts]
+    # sets the google font link in layouts/partials/google-fonts.html
+    google_fonts = 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Source+Sans+Pro:wght@400;700&display=swap'
+    heading = "Playfair Display"
+    base = "Source Sans Pro"
 ```
 
 ### Colors
 
-You can edit the themes primary, secondary and neutral colors in `scss/style.scss`. To override the bootstrap colors simply edit `scss/_bootstrap-variables.scss`
+You can edit the themes main colors in the `config.toml`. These colors are injected into the `style.scss` as SCSS variables.
 
-```scss
-// scss/style.scss
+```toml
+#config.toml
 
-// Colors
-$primary: #f24088;
-$secondary: #f88379;
-$black: #2f2f41;
-$white: #ffffff;
-$white-offset: #f6f7ff;
-$steel: #5C5A5A;
+  [params.colors]
+    primary = "#f24088"
+    black = "#2f2f41"
+    white = "#ffffff"
+    white_offset = "#f6f7ff"
+    grey = "#5C5A5A"
 ```
 
-### Hero Image
+### Intro Image
 
-List pages such as the homepage, services and team can have a Hero image. 
+List pages such as the homepage, services and team can have a Intro image. 
 
 ```yml
 # content/_index.md 
@@ -187,7 +186,7 @@ intro_image_hide_on_mobile: true
 
 While this themes default content uses illustrations, its easy to change the image to a photo and it will still look great. 
 
-the front-matter field `intro_image_absolute: true` let's illustrations "break out" (in CSS terms, it uses `position: absolute`) of the grid and is an intended stylistic effect. When using photos or normal images it's recommended to set this to false and the photo will align with the grid. See `content/team/_index.md` for an example.
+the front-matter field `intro_image_absolute: true` let's illustrations "break out" (in CSS terms, it uses `position: absolute`) of the grid and is an intended stylistic effect. When using photos or normal images it's recommended to set this field to false and the photo will align with the grid. See `content/team/_index.md` for an example.
 
 
 ### Google Analytics
@@ -206,24 +205,19 @@ Put your Google Analytics ID in the `google_analytics_id` field in the `config.t
  
 ### Meta tags
 
-A pages `title`, `description` and `image` front-matter fields are used to generate the pages title and meta tags.
+A pages `<title>` is generated from the front-matter `title` and the site title set in `config.toml`. You can override the `<title>` on any page by using the `meta_title` field in the front-matter. See `content/_index.md` for an example.
 
-By default a pages `<title>` is generated from the front-matter `title` and site title set in `config.toml` 
+The meta description field is generated from the front-matter `description`
 
-```
- <title>{{ block "title" . }}{{ if .Params.meta_title }}{{ .Params.meta_title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}{{ end }}</title>
-```
-
-You can override the `<title>` on any page by using the `meta_title` field in the front-matter. See `content/_index.md` for an example.
-
-Set your twitter info to ensure twitter social previews work correctly.
+OG meta data for Facebook and Twitter is also generated. 
 
 ```toml
-  # config.toml
+# config.toml
 
   [params.seo]
     meta_twitter_site = "@zerostaticio"
     meta_twitter_creator = "@zerostaticio"
+    meta_og_image = "https://www.zerostatic.io/theme/hugo-serif/hugo-serif-screenshot.png"
 ```
 
 ## Extras
@@ -241,11 +235,14 @@ Set your twitter info to ensure twitter social previews work correctly.
 
 ### Other Hugo Themes by Zerostatic
 
-- [Hugo Whisper](https://github.com/zerostaticthemes/hugo-whisper-theme)
-- [Hugo Serif](https://github.com/zerostaticthemes/hugo-serif-theme)
-- [Hugo Winston](https://github.com/zerostaticthemes/hugo-winston-theme)
-- [Hugo Advance](https://www.zerostatic.io/theme/hugo-advance/)
-- [Hugo Paradigm](https://www.zerostatic.io/theme/hugo-paradigm/)
+
+- [Hugo Hero](https://github.com/zerostaticthemes/hugo-serif-theme) - Free: business theme
+- [Hugo Whisper](https://github.com/zerostaticthemes/hugo-whisper-theme) - Free: documentation theme
+- [Hugo Winston](https://github.com/zerostaticthemes/hugo-winston-theme) Free:- blog theme
+- [Hugo Advance](https://www.zerostatic.io/theme/hugo-advance/) Premium: advanced multi page business and marketing theme
+- [Hugo Paradigm](https://www.zerostatic.io/theme/hugo-paradigm/) Premium: landing page / site builder theme
 
 
 🇦🇺 **Made in Australia** by Robert Austin - leave a star mate!
+
+<a href="https://www.buymeacoffee.com/zerostatic" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>

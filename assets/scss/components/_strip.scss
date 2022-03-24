@@ -16,17 +16,8 @@
     transform: skewY(-5deg);
   }
 }
-.strip-primary-gradient {
-  background-image: linear-gradient(to right, $primary, $secondary);
-}
-.strip-primary-gradient-top-bottom {
-  background-image: linear-gradient(to bottom, $primary, $secondary);
-}
 .strip-primary {
   background-color: $primary;
-}
-.strip-secondary {
-  background-color: $secondary;
 }
 
 .strip-diagonal-right {

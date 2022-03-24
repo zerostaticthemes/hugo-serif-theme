@@ -1,4 +1,4 @@
-baseURL = "www.example.com"
+baseURL = "https://example.com"
 languageCode = "en-us"
 title = "Hugo Serif Theme"
 themesDir = "../.."
@@ -10,7 +10,7 @@ theme = "hugo-serif-theme"
     min = "0.55.0"
     
 [params]
-  # In most cases you will only want to use either one of these. If you have Google Analytics included in your GTM tags don't put your GA ID here. Otherwise your data might be useless.
+  # In most cases you will only want to set the google_analytics_id OR the google_tag_manager_id. If you have Google Analytics included in your GTM tags don't put your GA ID here. Otherwise your data might be useless.
   google_analytics_id = ""
   google_tag_manager_id = ""
 
@@ -25,9 +25,23 @@ theme = "hugo-serif-theme"
     desktop_height = "36px"
     alt = "Serif - A Hugo Business Theme"
 
+  [params.fonts]
+    # sets the google font link in layouts/partials/google-fonts.html
+    google_fonts = 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Source+Sans+Pro:wght@400;700&display=swap'
+    heading = "Playfair Display"
+    base = "Source Sans Pro"
+
+  [params.colors]
+    primary = "#f24088"
+    black = "#2f2f41"
+    white = "#ffffff"
+    white_offset = "#f6f7ff"
+    grey = "#5C5A5A"
+
   [params.seo]
     meta_twitter_site = "@zerostaticio"
     meta_twitter_creator = "@zerostaticio"
+    meta_og_image = "https://www.zerostatic.io/theme/hugo-serif/hugo-serif-screenshot.png"
 
   [params.team]
     summary_large_truncate = 120  # How many characters to include in the summary of the team bios (large layout) before truncating

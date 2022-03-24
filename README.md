@@ -6,7 +6,6 @@ Serif is a modern business theme for Hugo. It contains multiple content types an
 [Zerostatic Themes](https://www.zerostatic.io/)
 
 ![Hugo Serif Theme screenshot](https://www.zerostatic.io/theme/hugo-serif/hugo-serif-screenshot.png)
-
 ## Features
 
 **Content Types**
@@ -16,9 +15,12 @@ Serif is a modern business theme for Hugo. It contains multiple content types an
 
 **CSS**
 - SCSS (Hugo Pipelines)
+- Examples of using Params from the `config.toml` as SCSS variables
 - Full Responsive design
 - Bootstrap 4.4 grid and media queries only
 - Uncomment `@import 'bootstrap/bootstrap';` in `style.scss` to use the entire Bootstrap framework
+- Configure Google fonts from `config.toml`
+- Configure primary theme colors from `config.toml`
 
 **Speed**
 - 100/100 Google Lighthouse speed score

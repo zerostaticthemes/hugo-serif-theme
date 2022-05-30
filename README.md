@@ -118,6 +118,17 @@ hugo server
 Now enter [`localhost:1313`](http://localhost:1313) in the address bar of your browser.
 
 
+
+## [Add hugo contact form](https://fabform.io/a/hugo-contact-form)
+
+```
+<form action="https://fabform.io/f/{form-id}" method="post">
+ <label for="email">Your Email</label>
+ <input name="email" type="email">
+ <button type="submit">Submit</button> 
+</form>
+```
+
 ## Deployment
 
 ### Netlify

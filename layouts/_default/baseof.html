@@ -11,13 +11,12 @@
   {{ partial "google-fonts.html" . }}
 
   <!-- CSS-->
-  {{ if .Site.IsServer }}
-  {{ $style := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "style.scss" . | toCSS (dict "targetPath" "css/style.css" "enableSourceMap" true) }}
-  <link rel="stylesheet" href="{{ ($style).RelPermalink }}">
-  {{ else }}
-  {{ $style := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "style.scss" . | toCSS (dict "targetPath" "css/style.css" "enableSourceMap" false) }}
-  <link rel="stylesheet" href="{{ ($style | minify | fingerprint).RelPermalink }}">
+  {{ $css_options := dict "targetPath" "css/style.css" "enableSourceMap" (not hugo.IsProduction) }}
+  {{ $style := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "style.scss" . | toCSS $css_options }}
+  {{ if hugo.IsProduction }}
+    {{ $style = $style | minify | fingerprint }}
   {{ end }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
   {{ block "header_css" . }}{{ end }}
 
@@ -51,11 +50,10 @@
   {{ block "footer_js" . }}
   {{ end }}
 
-  {{ if .Site.IsServer }}
-  <script type="text/javascript" src="{{ $scripts.RelPermalink }}"></script>
-  {{ else }}
-  <script type="text/javascript" src="{{ ($scripts | minify | fingerprint).RelPermalink }}"></script>
+  {{ if hugo.IsProduction }}
+    {{ $scripts = $scripts | minify | fingerprint }}
   {{ end }}
+  <script type="text/javascript" src="{{ $scripts.RelPermalink }}"></script>
 
   {{ partial "google-tag-manager.html" . }}
   {{ partial "google-analytics.html" . }}

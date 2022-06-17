@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>{{ block "title" . }}{{ if .Params.meta_title }}{{ .Params.meta_title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}{{ end }}</title>
+  <title>{{ block "title" . }}{{ .Params.meta_title | default (printf "%s - %s" .Title .Site.Title) }}{{ end }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="{{ "favicon-32x32.svg" | relURL }}">
 
@@ -22,15 +22,15 @@
   {{ block "header_css" . }}{{ end }}
 
   {{ block "meta_tags" . }}
-    {{ if .Params.description }}<meta name="description" content="{{ .Params.description }}"/>{{ end }}
-    {{ if .Params.meta_title }}<meta property="og:title" content="{{ .Params.meta_title }}"/>{{ else }}<meta property="og:title" content="{{ .Title }}"/>{{ end }}
+    {{ with .Params.description }}<meta name="description" content="{{ . }}"/>{{ end }}
+    <meta property="og:title" content="{{ .Params.meta_title | default .Title }}"/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="{{ .Permalink }}"/>
-    {{ if .Params.image }}<meta property="og:image" content="{{ .Params.image | absURL }}"/>{{ else if .Site.Params.seo.meta_og_image }}<meta property="og:image" content="{{ .Site.Params.seo.meta_og_image | absURL }}"/>{{ end }}
-    {{ if .Params.description }}<meta property="og:description" content="{{ .Params.description }}"/>{{ end }}
+    {{ with .Params.image | default .Site.Params.seo.meta_og_image }}<meta property="og:image" content="{{ . | absURL }}"/>{{ end }}
+    {{ with .Params.description }}<meta property="og:description" content="{{ . }}"/>{{ end }}
     <meta name="twitter:card" content="summary"/>
-    {{ if .Site.Params.seo.meta_twitter_site }}<meta name="twitter:site" content="{{ .Site.Params.seo.meta_twitter_site }}"/>{{ end }}
-    {{ if .Site.Params.seo.meta_twitter_creator }}<meta name="twitter:creator" content="{{ .Site.Params.seo.meta_twitter_creator }}"/>{{ end }}
+    {{ with .Site.Params.seo.meta_twitter_site }}<meta name="twitter:site" content="{{ . }}"/>{{ end }}
+    {{ with .Site.Params.seo.meta_twitter_creator }}<meta name="twitter:creator" content="{{ . }}"/>{{ end }}
   {{ end }}
 
 </head>

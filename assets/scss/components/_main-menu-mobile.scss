@@ -37,6 +37,9 @@
         animation-delay: 0.6s;
       }
     }
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
   }
   ul {
     font-size: 30px;

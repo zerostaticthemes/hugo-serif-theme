@@ -6,28 +6,33 @@ Serif is a modern business theme for Hugo. It contains multiple content types an
 [Zerostatic Themes](https://www.zerostatic.io/)
 
 ![Hugo Serif Theme screenshot](https://www.zerostatic.io/theme/hugo-serif/hugo-serif-screenshot.png)
+
 ## Features
 
 **Content Types**
+
 - Services (Markdown)
 - Team (Markdown)
 - Features (Data)
 
 **CSS**
+
 - SCSS (Hugo Pipelines)
-- Examples of using Params from the `config.toml` as SCSS variables
-- Full Responsive design
-- Bootstrap 4.4 grid and media queries only
+- Fully Responsive design
+- Bootstrap 4 grid and media queries only
 - Uncomment `@import 'bootstrap/bootstrap';` in `style.scss` to use the entire Bootstrap framework
 - Configure Google fonts from `config.toml`
 - Configure primary theme colors from `config.toml`
+- Examples of using Params from the `config.toml` as SCSS variables
 
 **Speed**
+
 - 100/100 Google Lighthouse speed score
 - Under 50KB without images or 80KB with images and illustrations ⚡
 - No jQuery, only a tiny bit of vanilla Javascript for the mobile menu.
 
 **SEO**
+
 - 100/100 Google Lighthouse SEO score
 - 100/100 Google Lighthouse accessibility score
 - Configure Google Analytics in `config.toml`
@@ -37,14 +42,17 @@ Serif is a modern business theme for Hugo. It contains multiple content types an
 - Semantic HTML document structure
 
 **Menu**
+
 - Responsive menu managed in `config.toml`
 - Animated hamburger menu on mobile
 
 **Content**
+
 - Robust example content included
 - Royalty free illustrations included
 
 **Code**
+
 - No hardcoded content in the layouts
 - Plenty of examples of using `range` and `where` to loop over various sections/content types
 - Examples of `range` by Param
@@ -62,7 +70,7 @@ To use this theme you will first need to have Hugo installed. Please follow the 
 
 ⚠️ **Note:** Check your Hugo version - **Hugo Extended** is required!
 
-This theme uses [Hugo Pipes](https://gohugo.io/hugo-pipes/scss-sass/) to compile SCSS and minify assets which means if you not using the Hugo extended version this theme will not work. To check your version of Hugo, run  `hugo version`. Make sure you see __/extended__ after the version number, for example _Hugo Static Site Generator v0.51/extended darwin/amd64 BuildDate: unknown_ You do not need to use version v0.51 specifically, it just needs to have the _/extended_ part.
+This theme uses [Hugo Pipes](https://gohugo.io/hugo-pipes/scss-sass/) to compile SCSS and minify assets which means if you not using the Hugo extended version this theme will not work. To check your version of Hugo, run `hugo version`. Make sure you see **/extended** after the version number, for example _Hugo Static Site Generator v0.51/extended darwin/amd64 BuildDate: unknown_ You do not need to use version v0.51 specifically, it just needs to have the _/extended_ part.
 
 **2. Create a new Hugo site**
 
@@ -89,16 +97,6 @@ Copy the entire contents of the `mynewsite/themes/hugo-serif-theme/exampleSite/`
 cp -a themes/hugo-serif-theme/exampleSite/. .
 ```
 
-**5. Update config.toml**
-
-After you copy the `config.toml` into the root folder of your Hugo site you will need to update the `baseURL`, `themesDir` and `theme` values in `mynewsite/config.toml`
-
-```
-baseURL = "/"
-themesDir = "themes"
-theme = "hugo-serif-theme"
-```
-
 **6. Run Hugo**
 
 After installing the theme for the first time, generate the Hugo site.
@@ -117,7 +115,6 @@ hugo server
 
 Now enter [`localhost:1313`](http://localhost:1313) in the address bar of your browser.
 
-
 ## Deployment
 
 ### Netlify
@@ -125,7 +122,6 @@ Now enter [`localhost:1313`](http://localhost:1313) in the address bar of your b
 Use Netlify to deploy this theme. This theme contains a valid and tested `netlify.toml` - Feel free to use the 1-click deploy below.
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/zerostaticthemes/hugo-serif-theme)
-
 
 ## Configuring Theme
 
@@ -149,7 +145,7 @@ You can edit the logo from the `config.toml`
 This theme uses Google fonts. You can change the google font in the `config.toml` - These fonts are injected into the `style.scss` as SCSS variables.
 
 ```toml
-# config.toml 
+# config.toml
 
   [params.fonts]
     # sets the google font link in layouts/partials/google-fonts.html
@@ -175,10 +171,10 @@ You can edit the themes main colors in the `config.toml`. These colors are injec
 
 ### Intro Image
 
-List pages such as the homepage, services and team can have a Intro image. 
+List pages such as the homepage, services and team can have a Intro image.
 
 ```yml
-# content/_index.md 
+# content/_index.md
 ---
 intro_image: "https://source.unsplash.com/wOGhHamMqLc"
 intro_image_absolute: false
@@ -186,10 +182,9 @@ intro_image_hide_on_mobile: true
 ---
 ```
 
-While this themes default content uses illustrations, its easy to change the image to a photo and it will still look great. 
+While this themes default content uses illustrations, its easy to change the image to a photo and it will still look great.
 
 the front-matter field `intro_image_absolute: true` let's illustrations "break out" (in CSS terms, it uses `position: absolute`) of the grid and is an intended stylistic effect. When using photos or normal images it's recommended to set this field to false and the photo will align with the grid. See `content/team/_index.md` for an example.
-
 
 ### Google Analytics
 
@@ -203,15 +198,17 @@ Put your Google Analytics ID in the `google_analytics_id` field in the `config.t
   google_tag_manager_id = ""
 ```
 
- You can also set the Google Analytics ID using a [Netlify environment variable](https://docs.netlify.com/configure-builds/environment-variables/) `HUGO_GOOGLE_ANALYTICS_ID`
- 
+You can also set the Google Analytics ID using a [Netlify environment variable](https://docs.netlify.com/configure-builds/environment-variables/) `HUGO_GOOGLE_ANALYTICS_ID`
+
 ### Meta tags
 
-A pages `<title>` is generated from the front-matter `title` and the site title set in `config.toml`. You can override the `<title>` on any page by using the `meta_title` field in the front-matter. See `content/_index.md` for an example.
+A pages `<title>` is generated from the front-matter `meta_title` else it will use the `title` property. This allows you to have a different heading on the page to what is shown in the SEO title. See `content/_index.md` for an example.
 
 The meta description field is generated from the front-matter `description`
 
-OG meta data for Facebook and Twitter is also generated. 
+OG meta data for Facebook and Twitter is also generated on a per page basis. The `image` field is used for the og:image for Twitter and Facebook.
+
+You can configure og meta data global settings in the config.
 
 ```toml
 # config.toml
@@ -222,14 +219,12 @@ OG meta data for Facebook and Twitter is also generated.
     meta_og_image = "https://www.zerostatic.io/theme/hugo-serif/hugo-serif-screenshot.png"
 ```
 
-## Extras
-
 ### License
 
-- Don't create ports or new versions of this theme without asking me
+- Don't create ports of this theme without asking me
 - You can't re-distribute or re-sell this theme as your own template
 
-### Credits 
+### Credits
 
 - Beautiful royalty free Illustrations by Icons8 - https://icons8.com/illustrations/style--pixeltrue
 - Stock images by Unsplash - https://unsplash.com/
@@ -237,13 +232,11 @@ OG meta data for Facebook and Twitter is also generated.
 
 ### Other Hugo Themes by Zerostatic
 
-
-- [Hugo Hero](https://github.com/zerostaticthemes/hugo-serif-theme) - Free: business theme
-- [Hugo Whisper](https://github.com/zerostaticthemes/hugo-whisper-theme) - Free: documentation theme
-- [Hugo Winston](https://github.com/zerostaticthemes/hugo-winston-theme) Free:- blog theme
+- [Hugo Hero](https://github.com/zerostaticthemes/hugo-serif-theme) - Open Source: business theme
+- [Hugo Whisper](https://github.com/zerostaticthemes/hugo-whisper-theme) - Open Source: documentation theme
+- [Hugo Winston](https://github.com/zerostaticthemes/hugo-winston-theme) Open Source:- blog theme
 - [Hugo Advance](https://www.zerostatic.io/theme/hugo-advance/) Premium: advanced multi page business and marketing theme
 - [Hugo Paradigm](https://www.zerostatic.io/theme/hugo-paradigm/) Premium: landing page / site builder theme
-
 
 🇦🇺 **Made in Australia** by Robert Austin - leave a star mate!
 

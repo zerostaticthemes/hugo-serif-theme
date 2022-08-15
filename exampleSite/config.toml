@@ -1,22 +1,22 @@
-baseURL = "https://example.com"
+baseURL = "/"
+themesDir = "themes"
+theme = "hugo-serif-theme"
 languageCode = "en-us"
 title = "Hugo Serif Theme"
-themesDir = "../.."
-theme = "hugo-serif-theme"
 
 [module]
   [module.hugoVersion]
     extended = true
     min = "0.55.0"
-    
+
 [params]
   # In most cases you will only want to set the google_analytics_id OR the google_tag_manager_id. If you have Google Analytics included in your GTM tags don't put your GA ID here. Otherwise your data might be useless.
   google_analytics_id = ""
   google_tag_manager_id = ""
 
   [params.homepage]
-    show_contact_box = true # show / hide the contaxt box on the homepage
-    show_services_button = true  # show / hide the "view all services" button
+    show_contact_box = true     # show / hide the contaxt box on the homepage
+    show_services_button = true # show / hide the "view all services" button
 
   [params.logo]
     mobile = "images/logo/logo-mobile.svg"
@@ -44,7 +44,7 @@ theme = "hugo-serif-theme"
     meta_og_image = "https://www.zerostatic.io/theme/hugo-serif/hugo-serif-screenshot.png"
 
   [params.team]
-    summary_large_truncate = 120  # How many characters to include in the summary of the team bios (large layout) before truncating
+    summary_large_truncate = 120 # How many characters to include in the summary of the team bios (large layout) before truncating
 
   [params.footer]
     copyright_text = 'Free Hugo theme by <a class="zerostatic" href="https://www.zerostatic.io">www.zerostatic.io</a>'
@@ -54,30 +54,30 @@ theme = "hugo-serif-theme"
   [[menu.main]]
     name = "Services"
     url = "/services/"
-      weight = 1
+    weight = 1
 
   [[menu.main]]
-      name = "Team"
-      url = "/team/"
-      weight = 2
+    name = "Team"
+    url = "/team/"
+    weight = 2
 
   [[menu.main]]
-      name = "About"
-      url = "/about/"
-      weight = 3
+    name = "About"
+    url = "/about/"
+    weight = 3
 
   [[menu.main]]
-      name = "Contact"
-      url = "/contact/"
-      weight = 4
+    name = "Contact"
+    url = "/contact/"
+    weight = 4
 
   # Footer Menu
   [[menu.footer]]
     name = "Home"
     url = "/"
-      weight = 1
+    weight = 1
 
   [[menu.footer]]
     name = "Contact"
     url = "/contact/"
-      weight = 2
+    weight = 2

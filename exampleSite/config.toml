@@ -43,6 +43,9 @@ title = "Hugo Serif Theme"
     meta_twitter_creator = "@zerostaticio"
     meta_og_image = "https://www.zerostatic.io/theme/hugo-serif/hugo-serif-screenshot.png"
 
+  [params.services]
+    summary_truncate = 120 # How many characters to include in the summary of the services before truncating
+
   [params.team]
     summary_large_truncate = 120 # How many characters to include in the summary of the team bios (large layout) before truncating
 

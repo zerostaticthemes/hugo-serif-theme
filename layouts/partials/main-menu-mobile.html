@@ -2,7 +2,9 @@
   <ul>
     {{ $currentPage := . }}
     {{ range .Site.Menus.main }}
-    <li class="menu-item-{{ .Name | lower }}{{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}">
+    {{ $active := or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
+    {{ $active = or $active (eq (.URL | relLangURL) ($currentPage.RelPermalink | relLangURL)) }}
+    <li class="menu-item-{{ .Name | lower }} {{ if $active }}active{{ end }}">
       <a href="{{ .URL }}">
         <span>{{ .Name }}</span>
       </a>

@@ -232,7 +232,7 @@ You can configure og meta data global settings in the config.
 
 ### Other Hugo Themes by Zerostatic
 
-- [Hugo Hero](https://github.com/zerostaticthemes/hugo-serif-theme) - Open Source: business theme
+- [Hugo Hero](https://github.com/zerostaticthemes/hugo-hero-theme) - Open Source: business theme
 - [Hugo Whisper](https://github.com/zerostaticthemes/hugo-whisper-theme) - Open Source: documentation theme
 - [Hugo Winston](https://github.com/zerostaticthemes/hugo-winston-theme) Open Source:- blog theme
 - [Hugo Advance](https://www.zerostatic.io/theme/hugo-advance/) Premium: advanced multi page business and marketing theme

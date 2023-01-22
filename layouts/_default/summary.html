@@ -2,5 +2,5 @@
     <h2>
       <a href="{{ .RelPermalink }}">{{ .Title }}</a>
     </h2>
-    {{ .Content | truncate 120 "…" }}
+    {{ .Summary | truncate 120 "…" }}
 </div>

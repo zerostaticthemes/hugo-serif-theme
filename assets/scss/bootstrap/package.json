@@ -1,0 +1,26 @@
+{
+  "name": "bootstrap-scss",
+  "version": "5.2.3",
+  "description": "Bootstrap's SCSS files (only)",
+  "main": "bootstrap.scss",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crissdev/bootstrap-scss.git"
+  },
+  "bugs": {
+    "url": "https://github.com/crissdev/bootstrap-scss/issues"
+  },
+  "keywords": [
+    "bootstrap",
+    "bootstrap-scss",
+    "responsive",
+    "scss"
+  ],
+  "author": {
+    "name": "Cristian Trifan",
+    "url": "https://crissdev.com",
+    "email": "criss.trifan@gmail.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/crissdev/bootstrap-scss"
+}

@@ -19,7 +19,7 @@ Serif is a modern business theme for Hugo. It contains multiple content types an
 
 - SCSS (Hugo Pipelines)
 - Fully Responsive design
-- Bootstrap 4 grid and media queries only
+- Bootstrap 5 grid and media queries only
 - Uncomment `@import 'bootstrap/bootstrap';` in `style.scss` to use the entire Bootstrap framework
 - Configure Google fonts from `config.toml`
 - Configure primary theme colors from `config.toml`

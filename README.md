@@ -139,6 +139,18 @@ You can edit the logo from the `config.toml`
     desktop_height = "36px"
     alt = "Serif - A Hugo Business Theme"
 ```
+### Favicon
+
+You can edit the favicon from the `config.toml`
+
+```toml
+# config.toml
+
+[params]
+  google_analytics_id = "UA-XXX-1"
+  google_tag_manager_id = ""
+  favicon = "favicon-32x32.svg"
+```
 
 ### Fonts
 

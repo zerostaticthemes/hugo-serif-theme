@@ -1,0 +1,58 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1300px,
+);
+
+$container-max-widths: (
+  sm: 566px,
+  md: 740px,
+  lg: 960px,
+  xl: 1140px,
+);
+
+$grid-gutter-width: 30px;
+
+$spacer: 1rem;
+$spacers: ();
+$spacers: map-merge(
+  (
+    0: 0,
+    1: 10px,
+    2: 20px,
+    3: 30px,
+    4: 40px,
+    5: 50px,
+    6: 60px,
+    7: 70px,
+    8: 80px,
+    9: 90px,
+    10: 100px,
+    11: 110px,
+    12: 120px,
+    13: 130px,
+    14: 140px,
+    15: 150px,
+    16: 160px,
+    17: 170px,
+    18: 180px,
+    19: 190px,
+    20: 200px,
+  ),
+  $spacers
+);
+
+// Links
+$link-color: $primary;
+$link-decoration: none;
+$link-hover-decoration: underline;
+
+// Footer
+$footer-background-color: $primary;
+$footer-text-color: $white;
+$sub-footer-background-color: darken($primary, 10%);
+$sub-footer-text-color: $white;
+
+$min-contrast-ratio: 2.5;

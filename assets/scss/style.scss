@@ -1,3 +1,4 @@
+// Any variables that need to use Hugo configuration need to be declared here
 // Colors
 $primary: {{ .Site.Params.colors.primary | default "#f24088" }};
 $black: {{ .Site.Params.colors.black | default "#2f2f41" }};
@@ -9,23 +10,15 @@ $grey: {{ .Site.Params.colors.grey | default "#5C5A5A" }};
 $font-family-base: {{ .Site.Params.fonts.base }}, Helvetica, Arial, sans-serif, -apple-system;
 $font-family-heading: {{ .Site.Params.fonts.heading }}, serif, -apple-system;
 
-// Links
-$link-color: $primary;
-$link-decoration: none;
-$link-hover-decoration: underline;
 
-// Footer
-$footer-background-color: $primary;
-$footer-text-color: $white;
-$sub-footer-background-color: darken($primary, 10%);
-$sub-footer-text-color: $white;
+// Variables - Override Bootstrap variables and set your own here
+@import 'variables';
 
 // Bootstrap
-@import 'bootstrap-variables';
 @import 'bootstrap/bootstrap-reboot';
 @import 'bootstrap/bootstrap-grid';
+@import 'bootstrap/bootstrap-utilities';
 // @import 'bootstrap/bootstrap'; // Uncomment this line to import the entire Bootstrap library
-
 
 // Libraries
 @import 'libraries/hamburgers/hamburgers';

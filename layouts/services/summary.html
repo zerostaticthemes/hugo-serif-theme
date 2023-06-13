@@ -3,6 +3,6 @@
     <h2 class="service-title">
       <a href="{{ .RelPermalink }}">{{ .Title }}</a>
     </h2>
-    <p>{{ .Content | plainify | htmlUnescape | truncate (.Site.Params.services.summary_truncate | default 120 ) "…" }}</p>
+    <p>{{ .Summary | plainify | htmlUnescape }}</p>
   </div>
 </div>

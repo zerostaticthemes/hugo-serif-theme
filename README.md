@@ -123,6 +123,14 @@ Use Netlify to deploy this theme. This theme contains a valid and tested `netlif
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/zerostaticthemes/hugo-serif-theme)
 
+
+####
+You can run this site without installing as a hugo theme using the following command. I use this for theme development.
+
+```
+hugo server --source=exampleSite --theme=../../
+```
+
 ## Configuring Theme
 
 ### Logo
@@ -249,7 +257,4 @@ You can configure og meta data global settings in the config.
 - [Hugo Winston](https://github.com/zerostaticthemes/hugo-winston-theme) Open Source:- blog theme
 - [Hugo Advance](https://www.zerostatic.io/theme/hugo-advance/) Premium: advanced multi page business and marketing theme
 - [Hugo Paradigm](https://www.zerostatic.io/theme/hugo-paradigm/) Premium: landing page / site builder theme
-
-🇦🇺 **Made in Australia** by Robert Austin - leave a star mate!
-
-<a href="https://www.buymeacoffee.com/zerostatic" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+- [Hugo Lever](https://www.zerostatic.io/theme/hugo-lever/) Premium: bio / resume / personal theme

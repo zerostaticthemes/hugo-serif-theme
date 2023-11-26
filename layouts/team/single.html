@@ -1,0 +1,25 @@
+{{ define "body_classes" }}page-default-single{{ end }}
+
+{{ define "main" }}
+<div class="container pb-6 pt-6 pt-md-14 pb-md-14">
+  <div class="row justify-content-start">
+    <div class="col-12 col-md-8">
+      {{ if .Params.image }}
+        <div>
+          <img width="320" height="320" alt="Photo of {{ .Title }}" class="img-fluid mb-2" src="{{ .Params.image | relURL }}" />
+        </div>
+      {{ end }}
+      <div class="team-summary">
+        <div class="team-meta mb-2">
+          <h1 class="team-name">{{ .Title }}</h1>
+          <p class="team-description">{{ .Params.Jobtitle }}</p>
+          {{ if .Params.Linkedinurl }}
+            <a target="_blank" rel="noreferrer" href="{{ .Params.Linkedinurl }}">LinkedIn</a>
+          {{ end }}
+        </div>
+        <div class="content">{{.Content}}</div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}

@@ -5,7 +5,9 @@
   </div>
   {{ end }}
   <div class="team-meta">
-    <h2 class="team-name">{{ .Title }}</h2>
+    <h2 class="team-name">
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </h2>
     <p class="team-description">{{ .Params.Jobtitle }}</p>
     {{ if .Params.Linkedinurl }}
     <a target="_blank" rel="noreferrer" href="{{ .Params.Linkedinurl }}">LinkedIn</a> {{ end }}

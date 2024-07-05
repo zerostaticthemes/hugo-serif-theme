@@ -7,3 +7,14 @@ menuTrigger.onclick = function() {
     menuTrigger.classList.toggle('is-active')
     body.classList.toggle('lock-scroll')
 }
+
+window.onscroll = function() {makesticky()};
+var header = document.getElementById("stickyHeader");
+var sticky = header.offsetTop;
+function makesticky() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+} 

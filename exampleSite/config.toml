@@ -16,6 +16,7 @@ title = "Hugo Serif Theme"
   favicon = "favicon-32x32.svg"
 
   [params.homepage]
+    sticky_header = false
     show_contact_box = true      # show / hide the contaxt box on the homepage
     show_services_button = false # show / hide the "view all services" button
 

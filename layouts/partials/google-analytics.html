@@ -1,4 +1,4 @@
-{{- if and (not .Site.IsServer) hugo.IsProduction -}}
+{{- if and (not hugo.IsServer) hugo.IsProduction -}}
 {{ with getenv "HUGO_GOOGLE_ANALYTICS_ID" | default .Site.Params.google_analytics_id }}
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id={{- . -}}"></script>

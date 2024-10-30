@@ -1,4 +1,8 @@
-<div class='header'>
+{{ if .Site.Params.homepage.sticky_header}}
+<div class='header' id="stickyHeader">
+{{ else }}
+<div class='header' >
+{{ end }}
   <div class="container">
     <div class="logo">
       <a href="{{ .Site.Home.RelPermalink }}"><img height={{ .Site.Params.logo.desktop_height }} alt="{{ .Site.Params.logo.alt }}" src="{{ .Site.Params.logo.desktop | relURL }}" /></a>

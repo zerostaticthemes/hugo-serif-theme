@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-12">
         <div class="sub-footer-inner">
-          {{ if .Site.Data.social }}
+          {{ if hugo.Data.social }}
             {{ partial "social.html" . }}
           {{ end }}
           {{ with .Site.Params.footer.copyright_text }}

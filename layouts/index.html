@@ -37,11 +37,11 @@
 </div>
 {{end}}
 
-{{if .Site.Data.features}}
+{{if hugo.Data.features}}
 <div class="strip strip-grey">
   <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
     <div class="row justify-content-center">
-      {{ range .Site.Data.features }}
+      {{ range hugo.Data.features }}
       <div class="col-12 col-md-6 col-lg-4 mb-2">
         <div class="feature">
           {{ if .image }}
